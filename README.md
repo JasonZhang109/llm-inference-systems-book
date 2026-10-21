@@ -4,6 +4,8 @@
 
 **18 章 · 61 张图 · 45 条证据缺口逐条核对 · 正文 CC BY 4.0**
 
+**作者 Jason Zhang**　·　公众号 **AI算力局**　·　[在线阅读](https://jasonzhang109.github.io/llm-inference-systems-book/)
+
 ---
 
 ## 这本书在讲什么
@@ -96,6 +98,7 @@ Settings → Pages → Source: Deploy from a branch → Branch: main / docs → 
 ├── 公开数据版说明_v0.10.md                这一版改了什么、怎么校验
 ├── 导读_v0.10.md                        按需求找文件
 ├── docs/index.html                      离线阅读版（单文件，供 Pages 使用）
+├── assets/                              仓库配图（公众号二维码等）
 └── book_support_v05 … v10/              各轮增补的图表、数据与绘图脚本
     ├── figures/                         SVG（正文引用）+ PNG
     ├── data/                            图背后的数值（CSV / JSON）
@@ -147,8 +150,22 @@ python book_support_v08/code/replot_v08.py     # 例：重绘 v0.8 轮的 16 张
 
 ```
 《大模型推理系统工程：性能、诊断与优化》v0.10（2026）。
-https://github.com/JasonZhang109/llm-inference-systems-book
+Jason Zhang. https://github.com/JasonZhang109/llm-inference-systems-book
 ```
+
+## 作者与公众号
+
+**Jason Zhang** — 本书作者。
+
+写这本书的动机很朴素：推理性能的讨论常常停在「换个框架试试」，而真正卡住人的是那些算不清的账——KV Cache 到底吃多少显存、这条链路的带宽上限在哪、该扩容还是该优化。
+
+公众号「**AI算力局**」放这本书装不下的东西：章节勘误、新版本框架的行为变化、推理与算力方向的工程笔记。读的过程中发现数字对不上、结论过期，欢迎到那里告诉我。
+
+<p align="center">
+  <img src="assets/wechat-ai-suanli-ju-qr.png" alt="微信扫码关注公众号 AI算力局" width="220">
+</p>
+
+<p align="center"><sub>微信扫码 · 或搜一搜「AI算力局」</sub></p>
 
 ---
 
