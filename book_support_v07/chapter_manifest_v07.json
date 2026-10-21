@@ -1,0 +1,228 @@
+[
+  {
+    "chapter": 1,
+    "source_file": "第01章_一次推理请求的完整路径(1).md",
+    "v06_sha256": "59d2e79651b2d20e1defdd3bb1b56eef92400904c17228eae5f001a174bdb59b",
+    "v06_lines": 1079,
+    "new_figures": [],
+    "output_sha256": "d018633add31049527378bf99d0e53bb9ca370fb86525b4d2cce4652848a92fe",
+    "output_lines": 1079,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 2,
+    "source_file": "第02章_Prefill、Decode 与模型执行(1).md",
+    "v06_sha256": "6f912127b1ad2cf6552bc374b03704a6c5b5344f4b256f52a6068096afd58103",
+    "v06_lines": 768,
+    "new_figures": [],
+    "output_sha256": "1a34faafe55b52f63d989c35f0af9b556ec0146e994c5df2936c34692e91d270",
+    "output_lines": 768,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 3,
+    "source_file": "第03章_计算、显存、带宽与通信模型.md",
+    "v06_sha256": "05985c2010727d695797ead22ff6a38af629677d090097b4ac9d8333b6e0bc4a",
+    "v06_lines": 508,
+    "new_figures": [],
+    "output_sha256": "def92650e269a381a607a26fb84759ac0479435686b9fba828d8d631243dc1e1",
+    "output_lines": 508,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 4,
+    "source_file": "第04章_KV Cache 与容量管理.md",
+    "v06_sha256": "c87cea33fa7bcbed2d40dacc2b75b871231b6ebde2f803c65f34299ecc58460c",
+    "v06_lines": 458,
+    "new_figures": [
+      "ch04_pa_sharing",
+      "ch04_lmcache_load"
+    ],
+    "output_sha256": "435b235b0a5e2047a3652540d898a2048524f5a679fb725e6036aaa9c489d7e6",
+    "output_lines": 507,
+    "addition_chars": 2153,
+    "sections_added": [
+      "x.10"
+    ]
+  },
+  {
+    "chapter": 5,
+    "source_file": "第05章_批处理、排队与调度.md",
+    "v06_sha256": "845cf7997cfe547a6bd9c28d81317b78604b435354714ff126edced420835806",
+    "v06_lines": 424,
+    "new_figures": [
+      "ch05_pa_batching"
+    ],
+    "output_sha256": "5238cf1a53e0037a094ada641fbe00de4c08075b9a8d07d6ec00f350b8c93f8a",
+    "output_lines": 459,
+    "addition_chars": 1352,
+    "sections_added": [
+      "x.10"
+    ]
+  },
+  {
+    "chapter": 6,
+    "source_file": "第06章_多卡并行、拓扑与 MoE.md",
+    "v06_sha256": "358c478f91d238438a08b0d5b7d8527ff1d5939ebde3af0edcaf0245e51bc926",
+    "v06_lines": 539,
+    "new_figures": [
+      "ch06_deepep_latency",
+      "ch06_nvlink_batch",
+      "ch06_nvlink_ep"
+    ],
+    "output_sha256": "565e220a9df0b76aa61791e9eaf11ff5b134120d75a3d2380c735c9c46a597a4",
+    "output_lines": 622,
+    "addition_chars": 3691,
+    "sections_added": [
+      "x.10"
+    ]
+  },
+  {
+    "chapter": 7,
+    "source_file": "第07章_服务目标与性能指标(1).md",
+    "v06_sha256": "25c40ce220af7ea8e154b3c8aebe65fd446c6b15b24d1d4f93788010b936204e",
+    "v06_lines": 820,
+    "new_figures": [],
+    "output_sha256": "94f6945f1f48087ada9b97ef307e492b99f1ae1569d2dbdaf7a16ad78a31cfe9",
+    "output_lines": 820,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 8,
+    "source_file": "第08章_业务负载与基准设计(1).md",
+    "v06_sha256": "7b49ee6419c92a8736603c6ba59503d6d8fb91aeb1edb91199a467f419ec4525",
+    "v06_lines": 685,
+    "new_figures": [],
+    "output_sha256": "0ab23f416b82d90e63d86027633f35ec139aee8b8e35a9dbc22969a9407cb9f4",
+    "output_lines": 685,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 9,
+    "source_file": "第09章_监控、日志与性能剖析(1).md",
+    "v06_sha256": "5482cda3c67a311436faeb8e841bb3baab293213340dcf78a3e7c25d6dd9825f",
+    "v06_lines": 704,
+    "new_figures": [],
+    "output_sha256": "aed95cec01ecb246ac51ff52230f0dc4fc28757cb0f29ff7d8b5fa1321b7a6b1",
+    "output_lines": 704,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 10,
+    "source_file": "第10章_瓶颈假设与受控实验.md",
+    "v06_sha256": "7ad1545af7e0e3973e955c9c3740cb10844fe659e0400fac4cc6062dd835b6da",
+    "v06_lines": 501,
+    "new_figures": [],
+    "output_sha256": "4799b84f2765d4883fbcec3d5da9d3ab4bad3b12bac555c16601b68ce838056b",
+    "output_lines": 501,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 11,
+    "source_file": "第11章_配置、执行与内存优化.md",
+    "v06_sha256": "ab21f19df12cc22f71b360fa164887dd55e2ce08fa1e788251e5e5ffc9407f68",
+    "v06_lines": 608,
+    "new_figures": [
+      "ch11_dispatch_precision"
+    ],
+    "output_sha256": "fd0df1c86f99d9dc303a1f45795af44fac9cf07abff276c3dc04f3700adfd9c5",
+    "output_lines": 644,
+    "addition_chars": 1516,
+    "sections_added": [
+      "x.10"
+    ]
+  },
+  {
+    "chapter": 12,
+    "source_file": "第12章_分布式推理服务_PD分离、状态传输与控制平面.md",
+    "v06_sha256": "631d7028ebd3e866c5d99b2df1e07d6a6d186bec160c8119da291e7e9c108f0f",
+    "v06_lines": 579,
+    "new_figures": [
+      "ch12_distserve_calibration"
+    ],
+    "output_sha256": "17ba1e93dbfa59df9e00e1ed5e88458662f854f682e7adc5c51ac4ebb34afd8e",
+    "output_lines": 617,
+    "addition_chars": 1659,
+    "sections_added": [
+      "x.10"
+    ]
+  },
+  {
+    "chapter": 13,
+    "source_file": "第13章_软件栈与硬件适配.md",
+    "v06_sha256": "6fdab00206c253bd380ca21e0e1fec99069a07064c981ceb4a5fee62e324b286",
+    "v06_lines": 454,
+    "new_figures": [],
+    "output_sha256": "e14ca6c9b9cf2a1087d76c738b5cf61f08afbaad403d30ec44400d0d3c430908",
+    "output_lines": 454,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 14,
+    "source_file": "第14章_跨平台比较与迁移验收.md",
+    "v06_sha256": "144bb25c5cb872185d2159a5138d31f675ce185e8daef1351fbf4180e63a0135",
+    "v06_lines": 405,
+    "new_figures": [],
+    "output_sha256": "f038bd572dbfed389e2ef7f924379c323a044a3be6e4eb81bec45dca923dfc5a",
+    "output_lines": 405,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 15,
+    "source_file": "第15章_国产加速器推理实践.md",
+    "v06_sha256": "f448d67441a4bc2c6fd2b9238605b139b18491424b4aa15e0f6e0458285274f7",
+    "v06_lines": 432,
+    "new_figures": [
+      "ch15_ascend_prefill",
+      "ch15_ascend_mtp"
+    ],
+    "output_sha256": "d4f5fce2d2952a5b98fde5bdd61fc393eb72702c07c302ba9a8e7e071be64a4b",
+    "output_lines": 483,
+    "addition_chars": 2037,
+    "sections_added": [
+      "x.10"
+    ]
+  },
+  {
+    "chapter": 16,
+    "source_file": "第16章_容量规划与扩容决策.md",
+    "v06_sha256": "d8b847157a8a884d8b52cb3db239077907f2fcd0838390093691af18fef84778",
+    "v06_lines": 406,
+    "new_figures": [],
+    "output_sha256": "b69d4f9e4b2b0c1a7e52d22f20e0a2695f357c627cc8572fa1d25ab38e463c33",
+    "output_lines": 406,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 17,
+    "source_file": "第17章_成本、效率与优化收益.md",
+    "v06_sha256": "30f92938eb27905735fc381f8210fbb85268a9cafd9493f36e7f27c235379580",
+    "v06_lines": 405,
+    "new_figures": [],
+    "output_sha256": "4e9fd7c816bb34a51036b88457363e409e2ecbb62b33cb4e61ca2436a82bc835",
+    "output_lines": 405,
+    "addition_chars": 3,
+    "sections_added": []
+  },
+  {
+    "chapter": 18,
+    "source_file": "第18章_端到端案例、回归测试与版本治理.md",
+    "v06_sha256": "8e226381cc51f016850dce8fe10d209e5fa95a6727b8768959847b2383baf874",
+    "v06_lines": 420,
+    "new_figures": [],
+    "output_sha256": "d156fe139dc822fafb3c5893a8cb21b87b9c79369f24c75733d90e4d2426bd65",
+    "output_lines": 420,
+    "addition_chars": 3,
+    "sections_added": []
+  }
+]

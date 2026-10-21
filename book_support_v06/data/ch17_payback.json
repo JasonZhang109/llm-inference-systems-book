@@ -1,0 +1,505 @@
+{
+  "figure_id": "图17-V1",
+  "slug": "ch17_payback",
+  "chapter": 17,
+  "title": "技术收益要扣掉维护，才是回本曲线",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书17.5、17.8",
+  "conditions": "年毛节省122640元、一次投入36000元；维护8000/24000元；均匀发生、未折现",
+  "limitations": "经济模型，不代表当前采购、电价、云价格或必能兑现的现金节省。",
+  "formula": "cash=-36000+(122640-maintenance)*month/12",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "maintenance_cny_year": 8000,
+      "month": 0.0,
+      "cumulative_net_cny": -36000.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 0.25,
+      "cumulative_net_cny": -33611.666666666664
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 0.5,
+      "cumulative_net_cny": -31223.333333333332
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 0.75,
+      "cumulative_net_cny": -28835.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 1.0,
+      "cumulative_net_cny": -26446.666666666664
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 1.25,
+      "cumulative_net_cny": -24058.333333333336
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 1.5,
+      "cumulative_net_cny": -21670.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 1.75,
+      "cumulative_net_cny": -19281.666666666668
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 2.0,
+      "cumulative_net_cny": -16893.333333333332
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 2.25,
+      "cumulative_net_cny": -14505.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 2.5,
+      "cumulative_net_cny": -12116.666666666668
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 2.75,
+      "cumulative_net_cny": -9728.333333333332
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 3.0,
+      "cumulative_net_cny": -7340.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 3.25,
+      "cumulative_net_cny": -4951.666666666668
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 3.5,
+      "cumulative_net_cny": -2563.3333333333358
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 3.75,
+      "cumulative_net_cny": -175.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 4.0,
+      "cumulative_net_cny": 2213.3333333333358
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 4.25,
+      "cumulative_net_cny": 4601.666666666664
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 4.5,
+      "cumulative_net_cny": 6990.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 4.75,
+      "cumulative_net_cny": 9378.333333333336
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 5.0,
+      "cumulative_net_cny": 11766.666666666664
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 5.25,
+      "cumulative_net_cny": 14155.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 5.5,
+      "cumulative_net_cny": 16543.333333333336
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 5.75,
+      "cumulative_net_cny": 18931.666666666664
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 6.0,
+      "cumulative_net_cny": 21320.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 6.25,
+      "cumulative_net_cny": 23708.333333333336
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 6.5,
+      "cumulative_net_cny": 26096.666666666664
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 6.75,
+      "cumulative_net_cny": 28485.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 7.0,
+      "cumulative_net_cny": 30873.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 7.25,
+      "cumulative_net_cny": 33261.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 7.5,
+      "cumulative_net_cny": 35650.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 7.75,
+      "cumulative_net_cny": 38038.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 8.0,
+      "cumulative_net_cny": 40426.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 8.25,
+      "cumulative_net_cny": 42815.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 8.5,
+      "cumulative_net_cny": 45203.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 8.75,
+      "cumulative_net_cny": 47591.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 9.0,
+      "cumulative_net_cny": 49980.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 9.25,
+      "cumulative_net_cny": 52368.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 9.5,
+      "cumulative_net_cny": 54756.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 9.75,
+      "cumulative_net_cny": 57145.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 10.0,
+      "cumulative_net_cny": 59533.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 10.25,
+      "cumulative_net_cny": 61921.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 10.5,
+      "cumulative_net_cny": 64310.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 10.75,
+      "cumulative_net_cny": 66698.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 11.0,
+      "cumulative_net_cny": 69086.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 11.25,
+      "cumulative_net_cny": 71475.0
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 11.5,
+      "cumulative_net_cny": 73863.33333333333
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 11.75,
+      "cumulative_net_cny": 76251.66666666667
+    },
+    {
+      "maintenance_cny_year": 8000,
+      "month": 12.0,
+      "cumulative_net_cny": 78640.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 0.0,
+      "cumulative_net_cny": -36000.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 0.25,
+      "cumulative_net_cny": -33945.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 0.5,
+      "cumulative_net_cny": -31890.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 0.75,
+      "cumulative_net_cny": -29835.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 1.0,
+      "cumulative_net_cny": -27780.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 1.25,
+      "cumulative_net_cny": -25725.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 1.5,
+      "cumulative_net_cny": -23670.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 1.75,
+      "cumulative_net_cny": -21615.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 2.0,
+      "cumulative_net_cny": -19560.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 2.25,
+      "cumulative_net_cny": -17505.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 2.5,
+      "cumulative_net_cny": -15450.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 2.75,
+      "cumulative_net_cny": -13395.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 3.0,
+      "cumulative_net_cny": -11340.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 3.25,
+      "cumulative_net_cny": -9285.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 3.5,
+      "cumulative_net_cny": -7230.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 3.75,
+      "cumulative_net_cny": -5175.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 4.0,
+      "cumulative_net_cny": -3120.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 4.25,
+      "cumulative_net_cny": -1065.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 4.5,
+      "cumulative_net_cny": 990.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 4.75,
+      "cumulative_net_cny": 3045.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 5.0,
+      "cumulative_net_cny": 5100.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 5.25,
+      "cumulative_net_cny": 7155.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 5.5,
+      "cumulative_net_cny": 9210.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 5.75,
+      "cumulative_net_cny": 11265.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 6.0,
+      "cumulative_net_cny": 13320.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 6.25,
+      "cumulative_net_cny": 15375.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 6.5,
+      "cumulative_net_cny": 17430.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 6.75,
+      "cumulative_net_cny": 19485.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 7.0,
+      "cumulative_net_cny": 21540.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 7.25,
+      "cumulative_net_cny": 23595.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 7.5,
+      "cumulative_net_cny": 25650.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 7.75,
+      "cumulative_net_cny": 27705.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 8.0,
+      "cumulative_net_cny": 29760.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 8.25,
+      "cumulative_net_cny": 31815.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 8.5,
+      "cumulative_net_cny": 33870.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 8.75,
+      "cumulative_net_cny": 35925.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 9.0,
+      "cumulative_net_cny": 37980.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 9.25,
+      "cumulative_net_cny": 40035.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 9.5,
+      "cumulative_net_cny": 42090.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 9.75,
+      "cumulative_net_cny": 44145.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 10.0,
+      "cumulative_net_cny": 46200.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 10.25,
+      "cumulative_net_cny": 48255.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 10.5,
+      "cumulative_net_cny": 50310.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 10.75,
+      "cumulative_net_cny": 52365.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 11.0,
+      "cumulative_net_cny": 54420.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 11.25,
+      "cumulative_net_cny": 56475.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 11.5,
+      "cumulative_net_cny": 58530.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 11.75,
+      "cumulative_net_cny": 60585.0
+    },
+    {
+      "maintenance_cny_year": 24000,
+      "month": 12.0,
+      "cumulative_net_cny": 62640.0
+    }
+  ],
+  "display_table": "| 年维护/元 | 年净持续节省/元 | 简单回本/月 | 首年净收益/元 |\n|---|---|---|---|\n| 8000 | 114640 | 3.768 | 78640 |\n| 24000 | 98640 | 4.38 | 62640 |"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "ch03_tp_latency",
+  "chapter": 3,
+  "figure_id": "图3-T2",
+  "title": "存储层级的代价：四个数量级的延迟差（第三方实测）",
+  "evidence_type": "THIRD_PARTY_MEASURED",
+  "source_id": "Z05",
+  "columns": [
+    "层级",
+    "RTX 4090/cycles",
+    "A100/cycles",
+    "H800/cycles"
+  ],
+  "rows": [
+    [
+      "Shared Memory",
+      30.1,
+      29.0,
+      29.0
+    ],
+    [
+      "L1 Cache",
+      43.4,
+      37.9,
+      40.7
+    ],
+    [
+      "L2 Cache",
+      273.0,
+      261.5,
+      263.0
+    ],
+    [
+      "Global Memory",
+      541.5,
+      466.3,
+      478.8
+    ]
+  ],
+  "conditions": "Hopper 架构剖析（arXiv:2402.13499v1）Table IV；另与 Ampere 剖析（arXiv:2208.11174，A100 Global 290 / L2 200 / L1 33 / Shared 23-19）互为交叉参考。",
+  "limitations": "单 SM/warp 级微基准；两篇论文的测量方法不同（Hopper 用 P-chase 变体），跨论文数值不完全可比。",
+  "interpretation": "从 Shared 到 Global 延迟相差约 18 倍，且 Global 比 L2 又高约 2 倍。**这解释了为什么 FlashAttention 这类 IO-aware 算法收益巨大：它不是减少了计算，而是把访存从 Global 挪到了片上。**也说明\"带宽够不够\"和\"延迟忍不忍得住\"是两个独立问题。",
+  "display_table": "| 层级 | RTX 4090/cycles | A100/cycles | H800/cycles |\n|---|---|---|---|\n| Shared Memory | 30.1 | 29.0 | 29.0 |\n| L1 Cache | 43.4 | 37.9 | 40.7 |\n| L2 Cache | 273.0 | 261.5 | 263.0 |\n| Global Memory | 541.5 | 466.3 | 478.8 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_group",
+    "groups": [
+      "Shared Memory",
+      "L1 Cache",
+      "L2 Cache",
+      "Global Memory"
+    ],
+    "series": [
+      [
+        "RTX 4090/cycles",
+        [
+          30.1,
+          43.4,
+          273.0,
+          541.5
+        ]
+      ],
+      [
+        "A100/cycles",
+        [
+          29.0,
+          37.9,
+          261.5,
+          466.3
+        ]
+      ],
+      [
+        "H800/cycles",
+        [
+          29.0,
+          40.7,
+          263.0,
+          478.8
+        ]
+      ]
+    ],
+    "logy": true,
+    "xlabel": "存储层级",
+    "ylabel": "延迟 / cycles（对数轴）",
+    "id": "ch03_tp_latency",
+    "title": "存储层级的代价：四个数量级的延迟差（第三方实测）"
+  },
+  "plot_note": "第三方 GPU 解剖微基准的 cycles 值；跨架构 cycles 与 ns 不可直接换算，只作层级量级对比。"
+}

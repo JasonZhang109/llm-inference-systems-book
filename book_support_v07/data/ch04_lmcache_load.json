@@ -1,0 +1,36 @@
+{
+  "id": "ch04_lmcache_load",
+  "chapter": 4,
+  "title": "CPU KV加载：别把Gbps误读成GB/s",
+  "evidence_type": "PUBLISHED_MICROBENCHMARK",
+  "source_id": "Y02",
+  "columns": [
+    "方法",
+    "报告加载带宽/Gbps",
+    "换算GB/s"
+  ],
+  "rows": [
+    [
+      "vLLM native CPU offload",
+      88,
+      11
+    ],
+    [
+      "LMCache",
+      400,
+      50
+    ]
+  ],
+  "conditions": "LMCache v0.3.6；CPU加载消融基线vLLM v0.11.0；整体实验台单节点8×H100，Table5未独立给参与GPU数和模型。",
+  "limitations": "第三列为本书单位换算；加载约4.55倍不等于服务吞吐约4.55倍；表级完整配置缺失。",
+  "plot": {
+    "type": "bars",
+    "x": 0,
+    "y": 1,
+    "ylabel": "CPU KV加载带宽 / Gbps"
+  },
+  "interpretation": "400/88≈4.55只是加载阶段之比。CPU逐page搬运与按chunk搬运的固定开销不同；采用之前还要计入等待、计算重叠和缓存命中。",
+  "author_hardware_measured": false,
+  "figure_id": "图4-E2",
+  "display_table": "| 方法 | 报告加载带宽/Gbps | 换算GB/s |\n|---|---|---|\n| vLLM native CPU offload | 88 | 11 |\n| LMCache | 400 | 50 |"
+}

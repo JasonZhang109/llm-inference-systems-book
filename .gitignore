@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 构建产物：离线阅读版按版本另存，不入库（docs/index.html 是例外，供 GitHub Pages 使用）
+电子书阅读版_v*.html
+公开数据速览_v*.html
+*.zip
+
+# 编辑器
+.vscode/
+.idea/

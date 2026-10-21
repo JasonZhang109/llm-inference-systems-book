@@ -1,0 +1,73 @@
+{
+  "id": "ch03_tp_achieved",
+  "chapter": 3,
+  "figure_id": "图3-T1",
+  "title": "标称不等于可达：第三方微基准的达成率（第三方实测）",
+  "evidence_type": "THIRD_PARTY_MEASURED",
+  "source_id": "Z05",
+  "columns": [
+    "项目",
+    "RTX 4090",
+    "A100",
+    "H800"
+  ],
+  "rows": [
+    [
+      "显存带宽达成率/%",
+      92,
+      90,
+      91
+    ],
+    [
+      "Tensor Core mma 达成率/%",
+      "—",
+      95,
+      62.9
+    ]
+  ],
+  "conditions": "Hopper 架构剖析（arXiv:2402.13499v1）Table V/III/VII/VIII；CUDA 12.1/12.2；指令级微基准。",
+  "limitations": "【重要】被测 Hopper 卡是 H800 PCIe（NVLink 削减、350W 功耗墙），不是 H100 SXM；未测 H100 SXM 的 HBM3 3352 GB/s 达成率；A100 的 95% 为\"超过 95%\"的表述。",
+  "interpretation": "显存带宽普遍能到标称的 90%–92%，属于\"标称可信\"的量级；但 Tensor Core 的 mma 指令在 Hopper 上平均只到 62.9%，而同卡的 wgmma 指令超过 95%。**同一个\"峰值算力\"数字，换一条指令路径就能差 1.5 倍。**Roofline 用标称值算出的屋顶，必须再乘一个\"用哪条指令\"的折扣。",
+  "display_table": "| 项目 | RTX 4090 | A100 | H800 |\n|---|---|---|---|\n| 显存带宽达成率/% | 92 | 90 | 91 |\n| Tensor Core mma 达成率/% | — | 95 | 62.9 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_group",
+    "groups": [
+      "显存带宽达成率/%",
+      "Tensor Core mma 达成率/%"
+    ],
+    "series": [
+      [
+        "RTX 4090",
+        [
+          92.0,
+          null
+        ]
+      ],
+      [
+        "A100",
+        [
+          90.0,
+          95.0
+        ]
+      ],
+      [
+        "H800",
+        [
+          91.0,
+          62.9
+        ]
+      ]
+    ],
+    "logy": false,
+    "ylim": [
+      0,
+      110
+    ],
+    "xlabel": "项目",
+    "ylabel": "达成率 / %",
+    "id": "ch03_tp_achieved",
+    "title": "标称不等于可达：第三方微基准的达成率（第三方实测）"
+  },
+  "plot_note": "第三方 GPU 解剖微基准；\"达成率\"是微基准测得/标称之比，不等于应用内核可达比例。"
+}

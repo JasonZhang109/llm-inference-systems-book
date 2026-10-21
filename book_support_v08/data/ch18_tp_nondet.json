@@ -1,0 +1,90 @@
+{
+  "id": "ch18_tp_nondet",
+  "chapter": 18,
+  "figure_id": "图18-T2",
+  "title": "评测噪声的两个来源：基准污染与内核非确定性（第三方实测）",
+  "evidence_type": "THIRD_PARTY_MEASURED",
+  "source_id": "Z18",
+  "columns": [
+    "现象",
+    "数值",
+    "口径"
+  ],
+  "rows": [
+    [
+      "GSM8K 去污染后准确率下降",
+      22.9,
+      "%（Inference-Time Decontamination）"
+    ],
+    [
+      "MMLU 去污染后准确率下降",
+      19.0,
+      "%（Inference-Time Decontamination）"
+    ],
+    [
+      "temperature=0 重复 1000 次得到的不同结果数",
+      80,
+      "个（batch 不变性缺失）"
+    ],
+    [
+      "替换为 batch 不变内核后的不同结果数",
+      1,
+      "个（1000 次完全一致）"
+    ]
+  ],
+  "conditions": "ITD（arXiv:2406.13990）：对泄漏样本做难度保持改写，GSM8K 8-shot CoT、MMLU 官方 5-shot、greedy；Thinking Machines Lab：vLLM + FlexAttention，temperature=0，重复 1000 次贪心采样。",
+  "limitations": "ITD 去污染依赖检测器精度（报告检测到 62.7%/79.4% 泄漏），残留污染仍会高估；其证明性实验为人工注入污染，下降幅度不能等同真实污染程度。非确定性实验来自单一团队、集中于 vLLM 与少数内核；batch 不变内核的端到端开销随实现而变。",
+  "interpretation": "两个方向相反的噪声同时存在：**污染让分数虚高**（GSM8K −22.9%、MMLU −19.0% 是挤掉水分后的下降），**非确定性让分数抖动**（同一提示、temperature=0、重复 1000 次竟得到 80 个不同结果，换成 batch 不变内核后才收敛为 1 个）。第18章说\"版本对比要先固定制品与运行条件\"，依据就在这里：不固定内核与批处理，连自己和自己都比不了。",
+  "display_table": "| 现象 | 数值 | 口径 |\n|---|---|---|\n| GSM8K 去污染后准确率下降 | 22.9 | %（Inference-Time Decontamination） |\n| MMLU 去污染后准确率下降 | 19.0 | %（Inference-Time Decontamination） |\n| temperature=0 重复 1000 次得到的不同结果数 | 80 | 个（batch 不变性缺失） |\n| 替换为 batch 不变内核后的不同结果数 | 1 | 个（1000 次完全一致） |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "range_panels",
+    "panels": [
+      {
+        "title": "去污染后准确率下降（百分点）",
+        "xlabel": "下降 / %",
+        "kind": "bars",
+        "groups": [
+          "GSM8K",
+          "MMLU"
+        ],
+        "values": [
+          22.9,
+          19.0
+        ],
+        "colors": [
+          "#c0504d",
+          "#dd8830"
+        ],
+        "ylim": [
+          0,
+          28
+        ]
+      },
+      {
+        "title": "temperature=0 重复 1000 次的不同结果数",
+        "xlabel": "不同结果数 / 个",
+        "kind": "bars",
+        "groups": [
+          "默认内核",
+          "batch 不变内核"
+        ],
+        "values": [
+          80,
+          1
+        ],
+        "colors": [
+          "#c0504d",
+          "#198779"
+        ],
+        "ylim": [
+          0,
+          96
+        ]
+      }
+    ],
+    "id": "ch18_tp_nondet",
+    "title": "评测噪声的两个来源：基准污染与内核非确定性（第三方实测）"
+  },
+  "plot_note": "左：污染让分数虚高；右：非确定性让分数抖动，换 batch 不变内核后 1000 次收敛为 1。两者方向相反，须分别治理。"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "ch01_tp_tail",
+  "chapter": 1,
+  "figure_id": "图1-T2",
+  "title": "尾延迟放大：p50 到 p99 不是同一个世界（第三方实测）",
+  "evidence_type": "THIRD_PARTY_MEASURED",
+  "source_id": "Z02",
+  "columns": [
+    "模型",
+    "框架",
+    "分位",
+    "TTFT/s",
+    "总时延/s",
+    "TPOT/s"
+  ],
+  "rows": [
+    [
+      "LLaMA-2-70B",
+      "vLLM",
+      "p50",
+      0.87,
+      31.24,
+      0.122
+    ],
+    [
+      "LLaMA-2-70B",
+      "vLLM",
+      "p95",
+      2.34,
+      58.92,
+      0.231
+    ],
+    [
+      "LLaMA-2-70B",
+      "vLLM",
+      "p99",
+      3.67,
+      87.45,
+      0.343
+    ],
+    [
+      "LLaMA-2-70B",
+      "TGI",
+      "p50",
+      0.64,
+      39.87,
+      0.157
+    ],
+    [
+      "LLaMA-2-70B",
+      "TGI",
+      "p95",
+      1.45,
+      82.14,
+      0.323
+    ],
+    [
+      "LLaMA-2-70B",
+      "TGI",
+      "p99",
+      2.18,
+      127.39,
+      0.501
+    ]
+  ],
+  "conditions": "Kolluru（arXiv:2511.17593v1）Table 1；4×A100-80GB，25 并发，ShareGPT，prompt 均值 512 / 生成均值 256 tokens，每配置 1000 请求取中位数；vLLM v0.6.1 与 TGI v2.3.0。",
+  "limitations": "单作者预印本，未经同行评审；无误差棒；框架版本为 2024 年。",
+  "interpretation": "vLLM 的 TTFT p50 比 TGI 高（0.87 对 0.64 s），但总时延与 TPOT 全面更低。更关键的是放大倍数：总时延 p99/p50，vLLM 为 2.80 倍、TGI 为 3.20 倍。**只报平均值会同时掩盖两件事：框架间的取舍，以及尾部被放大后的真实体验。**",
+  "display_table": "| 模型 | 框架 | 分位 | TTFT/s | 总时延/s | TPOT/s |\n|---|---|---|---|---|---|\n| LLaMA-2-70B | vLLM | p50 | 0.87 | 31.24 | 0.122 |\n| LLaMA-2-70B | vLLM | p95 | 2.34 | 58.92 | 0.231 |\n| LLaMA-2-70B | vLLM | p99 | 3.67 | 87.45 | 0.343 |\n| LLaMA-2-70B | TGI | p50 | 0.64 | 39.87 | 0.157 |\n| LLaMA-2-70B | TGI | p95 | 1.45 | 82.14 | 0.323 |\n| LLaMA-2-70B | TGI | p99 | 2.18 | 127.39 | 0.501 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_group",
+    "groups": [
+      "vLLM p50",
+      "vLLM p95",
+      "vLLM p99",
+      "TGI p50",
+      "TGI p95",
+      "TGI p99"
+    ],
+    "series": [
+      [
+        "TTFT",
+        [
+          0.87,
+          2.34,
+          3.67,
+          0.64,
+          1.45,
+          2.18
+        ]
+      ],
+      [
+        "总时延",
+        [
+          31.24,
+          58.92,
+          87.45,
+          39.87,
+          82.14,
+          127.39
+        ]
+      ],
+      [
+        "TPOT",
+        [
+          0.122,
+          0.231,
+          0.343,
+          0.157,
+          0.323,
+          0.501
+        ]
+      ]
+    ],
+    "logy": true,
+    "xlabel": "框架 · 分位",
+    "ylabel": "秒（对数轴）",
+    "rotate": 22,
+    "id": "ch01_tp_tail",
+    "title": "尾延迟放大：p50 到 p99 不是同一个世界（第三方实测）"
+  },
+  "plot_note": "4×A100-80GB、25 并发、ShareGPT；单作者预印本，无误差棒；TTFT/总时延/TPOT 单位均为秒。"
+}

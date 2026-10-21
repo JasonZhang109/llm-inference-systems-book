@@ -1,0 +1,255 @@
+{
+  "scope": "numeric and artifact validation only; no hardware experiment",
+  "passed": 62,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "ch01_tp_phases_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch01_tp_phases_assets",
+      "passed": true
+    },
+    {
+      "name": "ch01_tp_phases_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch01_tp_tail_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch01_tp_tail_assets",
+      "passed": true
+    },
+    {
+      "name": "ch01_tp_tail_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch02_tp_kvpool_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch02_tp_kvpool_assets",
+      "passed": true
+    },
+    {
+      "name": "ch02_tp_kvpool_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch02_tp_kvlen_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch02_tp_kvlen_assets",
+      "passed": true
+    },
+    {
+      "name": "ch02_tp_kvlen_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch03_tp_achieved_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch03_tp_achieved_assets",
+      "passed": true
+    },
+    {
+      "name": "ch03_tp_achieved_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch03_tp_latency_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch03_tp_latency_assets",
+      "passed": true
+    },
+    {
+      "name": "ch03_tp_latency_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch07_tp_slo_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch07_tp_slo_assets",
+      "passed": true
+    },
+    {
+      "name": "ch07_tp_slo_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch07_tp_percentiles_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch07_tp_percentiles_assets",
+      "passed": true
+    },
+    {
+      "name": "ch07_tp_percentiles_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch14_tp_throughput_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch14_tp_throughput_assets",
+      "passed": true
+    },
+    {
+      "name": "ch14_tp_throughput_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch14_tp_latency_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch14_tp_latency_assets",
+      "passed": true
+    },
+    {
+      "name": "ch14_tp_latency_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch16_tp_burst_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch16_tp_burst_assets",
+      "passed": true
+    },
+    {
+      "name": "ch16_tp_burst_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch16_tp_lengths_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch16_tp_lengths_assets",
+      "passed": true
+    },
+    {
+      "name": "ch16_tp_lengths_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch17_tp_price_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch17_tp_price_assets",
+      "passed": true
+    },
+    {
+      "name": "ch17_tp_price_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch17_tp_cost_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch17_tp_cost_assets",
+      "passed": true
+    },
+    {
+      "name": "ch17_tp_cost_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch18_tp_drift_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch18_tp_drift_assets",
+      "passed": true
+    },
+    {
+      "name": "ch18_tp_drift_has_rows",
+      "passed": true
+    },
+    {
+      "name": "ch18_tp_nondet_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch18_tp_nondet_assets",
+      "passed": true
+    },
+    {
+      "name": "ch18_tp_nondet_has_rows",
+      "passed": true
+    },
+    {
+      "name": "sixteen_new_charts",
+      "passed": true
+    },
+    {
+      "name": "eight_target_chapters",
+      "passed": true
+    },
+    {
+      "name": "two_per_chapter",
+      "passed": true
+    },
+    {
+      "name": "all_third_party",
+      "passed": true
+    },
+    {
+      "name": "splitwise_e2e_ratio",
+      "passed": true
+    },
+    {
+      "name": "kvquant_1M_linear",
+      "passed": true
+    },
+    {
+      "name": "hopper_h800_mma_gap",
+      "passed": true
+    },
+    {
+      "name": "mlperf_slo_orders",
+      "passed": true
+    },
+    {
+      "name": "h200_ttft_p99_over_p50",
+      "passed": true
+    },
+    {
+      "name": "burst_window_dependence",
+      "passed": true
+    },
+    {
+      "name": "llmflation_1000x",
+      "passed": true
+    },
+    {
+      "name": "h100_rent_gap",
+      "passed": true
+    },
+    {
+      "name": "drift_prime_drop",
+      "passed": true
+    },
+    {
+      "name": "nondet_80_vs_1",
+      "passed": true
+    }
+  ]
+}

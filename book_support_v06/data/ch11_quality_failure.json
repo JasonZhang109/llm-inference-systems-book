@@ -1,0 +1,27 @@
+{
+  "figure_id": "图11-V3",
+  "slug": "ch11_quality_failure",
+  "chapter": 11,
+  "title": "质量回归：更低精度并不自动保持正确性",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X05 Figure 1",
+  "conditions": "Hopper、FA3 FP8长上下文路径；两级累加修复；具体模型、样本数未披露",
+  "limitations": "91→13→89是不同配置的公开结果，不是时间序列；89不能证明与91统计等价。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "BF16基线",
+      91
+    ],
+    [
+      "FP8修复前",
+      13
+    ],
+    [
+      "FP8修复后",
+      89
+    ]
+  ],
+  "display_table": "| 配置 | 公开准确率/% |\n|---|---|\n| BF16基线 | 91 |\n| FP8修复前 | 13 |\n| FP8修复后 | 89 |"
+}

@@ -1,0 +1,6 @@
+﻿benchmark,model,source_raw_score,source_id,author_measured,score_scale_normalized
+GPQA,GLM-5.2,92.165,N09,False,False
+GPQA,Kimi K3,92.42,N09,False,False
+GPQA,DeepSeek-V4-Flash,91.67,N09,False,False
+GPQA,DeepSeek-V4-Pro,91.92,N09,False,False
+OCRBench,Kimi K3,0.88,N09,False,False

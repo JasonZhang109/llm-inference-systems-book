@@ -1,0 +1,30 @@
+{
+  "figure_id": "图8-V1",
+  "slug": "ch08_public_lengths",
+  "chapter": 8,
+  "title": "三类公开负载：均值已足以提醒不要混为一谈",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X07 Figure 7",
+  "conditions": "OPT评测；LongBench输入被限制到2048；数值为原图图例avg标签；tokenizer未披露",
+  "limitations": "只有边际均值，不是联合分布、样本直方图或现代长上下文数据集全貌。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "ShareGPT",
+      755.5,
+      200.3
+    ],
+    [
+      "HumanEval",
+      171.3,
+      98.2
+    ],
+    [
+      "LongBench",
+      1738.3,
+      90.7
+    ]
+  ],
+  "display_table": "| 论文工作负载 | 输入均值/Token | 输出均值/Token |\n|---|---|---|\n| ShareGPT | 755.5 | 200.3 |\n| HumanEval | 171.3 | 98.2 |\n| LongBench | 1738.3 | 90.7 |"
+}

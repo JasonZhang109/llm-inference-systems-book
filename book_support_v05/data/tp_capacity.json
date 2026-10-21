@@ -1,0 +1,29 @@
+[
+  {
+    "tp": 8,
+    "replicas": 1,
+    "pool_bytes_per_rank": 58500000000,
+    "kv_bytes_per_rank": 67108864,
+    "slots_per_replica": 871,
+    "cluster_slots": 871,
+    "run_type": "SYNTHETIC_CALCULATION"
+  },
+  {
+    "tp": 4,
+    "replicas": 2,
+    "pool_bytes_per_rank": 41000000000,
+    "kv_bytes_per_rank": 134217728,
+    "slots_per_replica": 305,
+    "cluster_slots": 610,
+    "run_type": "SYNTHETIC_CALCULATION"
+  },
+  {
+    "tp": 2,
+    "replicas": 4,
+    "pool_bytes_per_rank": 6000000000,
+    "kv_bytes_per_rank": 268435456,
+    "slots_per_replica": 22,
+    "cluster_slots": 88,
+    "run_type": "SYNTHETIC_CALCULATION"
+  }
+]

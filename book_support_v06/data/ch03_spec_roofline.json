@@ -1,0 +1,1315 @@
+{
+  "figure_id": "图3-V1",
+  "slug": "ch03_spec_roofline",
+  "chapter": 3,
+  "title": "规格给出的只是屋顶：稠密BF16 Roofline",
+  "evidence_type": "SPEC_DERIVED",
+  "source": "X03 / X04",
+  "conditions": "A100 312TFLOP/s与2.039TB/s；H100约989.5TFLOP/s与3.35TB/s；十进制单位",
+  "limitations": "H100官网1979为含稀疏峰值；此图不能解释实机利用率或服务吞吐。",
+  "formula": "roof=min(F_peak,B_peak*I)",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.1,
+      "roof_tflops": 0.20390000000000003
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.1083636739618461,
+      "roof_tflops": 0.2209535312082042
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.11742685834509284,
+      "roof_tflops": 0.2394333641656443
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.12724805792071525,
+      "roof_tflops": 0.2594587901003384
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.137890670607985,
+      "roof_tflops": 0.28115907736968143
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.14942339672143998,
+      "roof_tflops": 0.30467430591501615
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.16192068244593705,
+      "roof_tflops": 0.3301562715072657
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.17546320040251143,
+      "roof_tflops": 0.3577694656207208
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.19013837040719814,
+      "roof_tflops": 0.387692137260277
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.20604092378442346,
+      "roof_tflops": 0.42011744359643943
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.22327351487772842,
+      "roof_tflops": 0.4552546968356883
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.24194738370525562,
+      "roof_tflops": 0.49333071537501627
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.2621830740375799,
+      "roof_tflops": 0.5345912879626254
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.28411121153322866,
+      "roof_tflops": 0.5793027603162533
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.30787334695491886,
+      "roof_tflops": 0.6277537544410796
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.33362286990965156,
+      "roof_tflops": 0.6802570317457796
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.3615259990110487,
+      "roof_tflops": 0.7371515119835284
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.3917628548556398,
+      "roof_tflops": 0.7988044610506495
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.4245286227393859,
+      "roof_tflops": 0.865613861765608
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.46003481262002377,
+      "roof_tflops": 0.9380109829322285
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.49851062445855227,
+      "roof_tflops": 1.0164631632709882
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.5402044277534286,
+      "roof_tflops": 1.1014768281892409
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.5853853648181818,
+      "roof_tflops": 1.1936007588642727
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.6343450881519379,
+      "roof_tflops": 1.2934296347418015
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.6873996431179511,
+      "roof_tflops": 1.4016078723175023
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.7448915080832303,
+      "roof_tflops": 1.5188337849817068
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.8071918051887902,
+      "roof_tflops": 1.6458640907799433
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.8747026960215206,
+      "roof_tflops": 1.7835187971878808
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 0.9478599776522384,
+      "roof_tflops": 1.9326864944329143
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.027135895797899,
+      "roof_tflops": 2.0943300915319165
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.1130421932675227,
+      "roof_tflops": 2.269493032072479
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.2061334133701989,
+      "roof_tflops": 2.4593060298618354
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.307010479609368,
+      "roof_tflops": 2.6649943679235015
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.4163245747710569,
+      "roof_tflops": 2.887885807958185
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.5347813444464107,
+      "roof_tflops": 3.1294191613262314
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.663145452123147,
+      "roof_tflops": 3.391153576879097
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.8022455152499985,
+      "roof_tflops": 3.674778605594747
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1.952979454137502,
+      "roof_tflops": 3.982125106986367
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2.116320288223404,
+      "roof_tflops": 4.315177067687521
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2.2933224171188114,
+      "roof_tflops": 4.676084408505257
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2.485128426980557,
+      "roof_tflops": 5.067176862613357
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2.692976466146365,
+      "roof_tflops": 5.490979014472439
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2.918208237644092,
+      "roof_tflops": 5.950226596556304
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 3.1622776601683795,
+      "roof_tflops": 6.447884149083326
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 3.4267602534331587,
+      "roof_tflops": 6.987164156750211
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 3.713363308484438,
+      "roof_tflops": 7.57154778599977
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 4.023936908624899,
+      "roof_tflops": 8.20480735668617
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 4.360485872092675,
+      "roof_tflops": 8.891030693196965
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 4.725182693586866,
+      "roof_tflops": 9.634647512223621
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 5.12038156818005,
+      "roof_tflops": 10.440458017519122
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 5.548633588145092,
+      "roof_tflops": 11.313663886227845
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 6.012703210795031,
+      "roof_tflops": 12.25990184681107
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 6.515586103639378,
+      "roof_tflops": 13.285280065320693
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 7.0605284820511285,
+      "roof_tflops": 14.396417574902252
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 7.6510480642731675,
+      "roof_tflops": 15.60048700305299
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 8.290956779033115,
+      "roof_tflops": 16.905260872448522
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 8.984385372349017,
+      "roof_tflops": 18.319161774219648
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 9.735810072368084,
+      "roof_tflops": 19.851316737558523
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 10.550081484365524,
+      "roof_tflops": 21.511616146621304
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 11.432455902426954,
+      "roof_tflops": 23.31077758504856
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 12.388629239937776,
+      "roof_tflops": 25.26041502023313
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 13.424773797908092,
+      "roof_tflops": 27.3731137739346
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 14.547578108480472,
+      "roof_tflops": 29.662511763191684
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 15.76429011081868,
+      "roof_tflops": 32.14338753595929
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 17.082763938087105,
+      "roof_tflops": 34.83175566975961
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 18.511510617540534,
+      "roof_tflops": 37.74497014916515
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 20.05975301100415,
+      "roof_tflops": 40.90183638943747
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 21.737485350396145,
+      "roof_tflops": 44.32273262945775
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 23.555537752607318,
+      "roof_tflops": 48.029741477566326
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 25.52564613019497,
+      "roof_tflops": 52.046792459467554
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 27.66052794917907,
+      "roof_tflops": 56.399816488376125
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 29.973964322973725,
+      "roof_tflops": 61.11691325454343
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 32.480888972387326,
+      "roof_tflops": 66.22853261469777
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 35.19748462594703,
+      "roof_tflops": 71.767671152306
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 38.141287482832155,
+      "roof_tflops": 77.77008517749476
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 41.331300412746614,
+      "roof_tflops": 84.27452154159035
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 44.7881156234599,
+      "roof_tflops": 91.32296775623475
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 48.53404758786075,
+      "roof_tflops": 98.96092303164806
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 52.593277088596665,
+      "roof_tflops": 107.2376919836486
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 56.992007310137204,
+      "roof_tflops": 116.20670290536977
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 61.75863298586859,
+      "roof_tflops": 125.92585265818606
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 66.92392369209978,
+      "roof_tflops": 136.45788040819144
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 72.52122247218162,
+      "roof_tflops": 147.87077262077833
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 78.58666107289997,
+      "roof_tflops": 160.23820192764305
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 85.15939318253837,
+      "roof_tflops": 173.64000269919575
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 92.2818471762125,
+      "roof_tflops": 188.1626863922973
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 100.0,
+      "roof_tflops": 203.9
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 108.36367396184612,
+      "roof_tflops": 220.95353120820425
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 117.42685834509287,
+      "roof_tflops": 239.43336416564438
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 127.2480579207152,
+      "roof_tflops": 259.4587901003383
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 137.8906706079849,
+      "roof_tflops": 281.15907736968126
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 149.42339672143996,
+      "roof_tflops": 304.6743059150161
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 161.92068244593705,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 175.46320040251143,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 190.13837040719815,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 206.04092378442348,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 223.2735148777283,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 241.94738370525548,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 262.18307403757984,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 284.11121153322864,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 307.8733469549188,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 333.62286990965157,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 361.52599901104884,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 391.76285485563994,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 424.5286227393857,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 460.0348126200236,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 498.5106244585521,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 540.2044277534285,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 585.3853648181819,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 634.3450881519381,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 687.3996431179515,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 744.89150808323,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 807.19180518879,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 874.7026960215204,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 947.8599776522383,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1027.1358957978991,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1113.0421932675229,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1206.1334133701996,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1307.0104796093688,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1416.3245747710575,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1534.7813444464123,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1663.1454521231453,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1802.2455152499965,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 1952.9794541375,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2116.3202882234027,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2293.32241711881,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2485.128426980556,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2692.9764661463646,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 2918.208237644092,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "A100 80GB SXM",
+      "intensity_flop_per_byte": 3162.2776601683795,
+      "roof_tflops": 312.0
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.1,
+      "roof_tflops": 0.335
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.1083636739618461,
+      "roof_tflops": 0.3630183077721844
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.11742685834509284,
+      "roof_tflops": 0.393379975456061
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.12724805792071525,
+      "roof_tflops": 0.4262809940343961
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.137890670607985,
+      "roof_tflops": 0.46193374653674973
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.14942339672143998,
+      "roof_tflops": 0.5005683790168239
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.16192068244593705,
+      "roof_tflops": 0.5424342861938891
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.17546320040251143,
+      "roof_tflops": 0.5878017213484132
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.19013837040719814,
+      "roof_tflops": 0.6369635408641138
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.20604092378442346,
+      "roof_tflops": 0.6902370946778186
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.22327351487772842,
+      "roof_tflops": 0.7479662748403902
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.24194738370525562,
+      "roof_tflops": 0.8105237354126064
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.2621830740375799,
+      "roof_tflops": 0.8783132980258926
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.28411121153322866,
+      "roof_tflops": 0.951772558636316
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.30787334695491886,
+      "roof_tflops": 1.0313757122989782
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.33362286990965156,
+      "roof_tflops": 1.1176366141973328
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.3615259990110487,
+      "roof_tflops": 1.2111120966870133
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.3917628548556398,
+      "roof_tflops": 1.3124055637663934
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.4245286227393859,
+      "roof_tflops": 1.4221708861769429
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.46003481262002377,
+      "roof_tflops": 1.5411166222770796
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.49851062445855227,
+      "roof_tflops": 1.67001059193615
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.5402044277534286,
+      "roof_tflops": 1.8096848329739859
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.5853853648181818,
+      "roof_tflops": 1.9610409721409092
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.6343450881519379,
+      "roof_tflops": 2.125056045308992
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.6873996431179511,
+      "roof_tflops": 2.3027888044451363
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.7448915080832303,
+      "roof_tflops": 2.4953865520788217
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.8071918051887902,
+      "roof_tflops": 2.704092547382447
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.8747026960215206,
+      "roof_tflops": 2.930254031672094
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 0.9478599776522384,
+      "roof_tflops": 3.1753309251349986
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.027135895797899,
+      "roof_tflops": 3.4409052509229623
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.1130421932675227,
+      "roof_tflops": 3.728691347446201
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.2061334133701989,
+      "roof_tflops": 4.040546934790166
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.307010479609368,
+      "roof_tflops": 4.378485106691383
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.4163245747710569,
+      "roof_tflops": 4.74468732548304
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.5347813444464107,
+      "roof_tflops": 5.141517503895476
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.663145452123147,
+      "roof_tflops": 5.571537264612543
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.8022455152499985,
+      "roof_tflops": 6.037522476087496
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1.952979454137502,
+      "roof_tflops": 6.542481171360632
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2.116320288223404,
+      "roof_tflops": 7.089672965548403
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2.2933224171188114,
+      "roof_tflops": 7.682630097348018
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2.485128426980557,
+      "roof_tflops": 8.325180230384866
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2.692976466146365,
+      "roof_tflops": 9.021471161590323
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2.918208237644092,
+      "roof_tflops": 9.775997596107707
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 3.1622776601683795,
+      "roof_tflops": 10.593630161564072
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 3.4267602534331587,
+      "roof_tflops": 11.479646849001082
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 3.713363308484438,
+      "roof_tflops": 12.439767083422868
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 4.023936908624899,
+      "roof_tflops": 13.480188643893412
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 4.360485872092675,
+      "roof_tflops": 14.607627671510462
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 4.725182693586866,
+      "roof_tflops": 15.829362023516003
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 5.12038156818005,
+      "roof_tflops": 17.153278253403165
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 5.548633588145092,
+      "roof_tflops": 18.58792252028606
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 6.012703210795031,
+      "roof_tflops": 20.142555756163354
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 6.515586103639378,
+      "roof_tflops": 21.827213447191916
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 7.0605284820511285,
+      "roof_tflops": 23.65277041487128
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 7.6510480642731675,
+      "roof_tflops": 25.631011015315114
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 8.290956779033115,
+      "roof_tflops": 27.774705209760935
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 8.984385372349017,
+      "roof_tflops": 30.09769099736921
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 9.735810072368084,
+      "roof_tflops": 32.61496374243308
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 10.550081484365524,
+      "roof_tflops": 35.34277297262451
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 11.432455902426954,
+      "roof_tflops": 38.2987272731303
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 12.388629239937776,
+      "roof_tflops": 41.50190795379155
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 13.424773797908092,
+      "roof_tflops": 44.97299222299211
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 14.547578108480472,
+      "roof_tflops": 48.73438666340958
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 15.76429011081868,
+      "roof_tflops": 52.81037187124258
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 17.082763938087105,
+      "roof_tflops": 57.2272591925918
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 18.511510617540534,
+      "roof_tflops": 62.01356056876079
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 20.05975301100415,
+      "roof_tflops": 67.20017258686391
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 21.737485350396145,
+      "roof_tflops": 72.82057592382709
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 23.555537752607318,
+      "roof_tflops": 78.91105147123452
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 25.52564613019497,
+      "roof_tflops": 85.51091453615315
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 27.66052794917907,
+      "roof_tflops": 92.66276862974989
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 29.973964322973725,
+      "roof_tflops": 100.41278048196197
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 32.480888972387326,
+      "roof_tflops": 108.81097805749755
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 35.19748462594703,
+      "roof_tflops": 117.91157349692254
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 38.141287482832155,
+      "roof_tflops": 127.77331306748772
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 41.331300412746614,
+      "roof_tflops": 138.45985638270116
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 44.7881156234599,
+      "roof_tflops": 150.04018733859067
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 48.53404758786075,
+      "roof_tflops": 162.58905941933352
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 52.593277088596665,
+      "roof_tflops": 176.18747824679883
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 56.992007310137204,
+      "roof_tflops": 190.92322448895965
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 61.75863298586859,
+      "roof_tflops": 206.89142050265977
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 66.92392369209978,
+      "roof_tflops": 224.19514436853427
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 72.52122247218162,
+      "roof_tflops": 242.94609528180843
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 78.58666107289997,
+      "roof_tflops": 263.2653145942149
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 85.15939318253837,
+      "roof_tflops": 285.28396716150354
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 92.2818471762125,
+      "roof_tflops": 309.14418804031186
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 100.0,
+      "roof_tflops": 335.0
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 108.36367396184612,
+      "roof_tflops": 363.0183077721845
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 117.42685834509287,
+      "roof_tflops": 393.3799754560611
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 127.2480579207152,
+      "roof_tflops": 426.2809940343959
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 137.8906706079849,
+      "roof_tflops": 461.9337465367494
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 149.42339672143996,
+      "roof_tflops": 500.5683790168239
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 161.92068244593705,
+      "roof_tflops": 542.4342861938891
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 175.46320040251143,
+      "roof_tflops": 587.8017213484134
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 190.13837040719815,
+      "roof_tflops": 636.9635408641138
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 206.04092378442348,
+      "roof_tflops": 690.2370946778187
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 223.2735148777283,
+      "roof_tflops": 747.9662748403898
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 241.94738370525548,
+      "roof_tflops": 810.5237354126059
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 262.18307403757984,
+      "roof_tflops": 878.3132980258925
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 284.11121153322864,
+      "roof_tflops": 951.7725586363159
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 307.8733469549188,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 333.62286990965157,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 361.52599901104884,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 391.76285485563994,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 424.5286227393857,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 460.0348126200236,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 498.5106244585521,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 540.2044277534285,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 585.3853648181819,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 634.3450881519381,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 687.3996431179515,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 744.89150808323,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 807.19180518879,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 874.7026960215204,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 947.8599776522383,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1027.1358957978991,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1113.0421932675229,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1206.1334133701996,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1307.0104796093688,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1416.3245747710575,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1534.7813444464123,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1663.1454521231453,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1802.2455152499965,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 1952.9794541375,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2116.3202882234027,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2293.32241711881,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2485.128426980556,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2692.9764661463646,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 2918.208237644092,
+      "roof_tflops": 989.5
+    },
+    {
+      "device": "H100 SXM",
+      "intensity_flop_per_byte": 3162.2776601683795,
+      "roof_tflops": 989.5
+    }
+  ],
+  "display_table": "| 设备 | BF16稠密 TFLOP/s | TB/s | 交点 FLOP/byte |\n|---|---|---|---|\n| A100 80GB SXM | 312 | 2.039 | 153.02 |\n| H100 SXM | 989.5 | 3.35 | 295.37 |"
+}

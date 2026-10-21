@@ -1,0 +1,75 @@
+{
+  "id": "ch14_tp_throughput",
+  "chapter": 14,
+  "figure_id": "图14-T1",
+  "title": "同规则同条件下的跨平台吞吐：可比的三个与不可比的一个（第三方实测）",
+  "evidence_type": "THIRD_PARTY_BENCHMARK",
+  "source_id": "Z09",
+  "columns": [
+    "系统",
+    "加速器数",
+    "可用性",
+    "tokens/s",
+    "是否可直接比较"
+  ],
+  "rows": [
+    [
+      "H200-SXM-141GB ×8",
+      8,
+      "Available",
+      32789.74,
+      "可（同轮次/同模型/同场景/同加速器数）"
+    ],
+    [
+      "DGX-H100 H100-SXM-80GB ×8",
+      8,
+      "Available",
+      21605.79,
+      "可"
+    ],
+    [
+      "8×MI300X + 2×EPYC-9374F",
+      8,
+      "Available",
+      21028.23,
+      "可"
+    ],
+    [
+      "B200-SXM-180GB ×1",
+      1,
+      "Preview",
+      10755.59,
+      "不可（加速器数=1 且可用性=Preview）"
+    ]
+  ],
+  "conditions": "MLPerf Inference v4.1，Closed division，llama2-70b-99.9，Server 场景，统一约束 TTFT≤2s 且 TPOT≤200ms；各系统 performance/run_1/mlperf_log_summary.txt。",
+  "limitations": "提交方为各硬件厂商（NVIDIA/AMD），运行于 MLCommons 统一规则并经受审收录；仅覆盖 NVIDIA 与 AMD 两家具备可比条目的 LLM 加速器；软件栈不同。",
+  "interpretation": "同为 8 加速器、同模型、同精度档、同场景、同可用性时，H200×8 为 32,789.74、H100×8 为 21,605.79、MI300X×8 为 21,028.23 tokens/s。**第四根柱是刻意放进来的反例**：B200×1 的 10,755.59 不能与前三个排名，因为加速器数量与可用性分类都不同。跨平台比较的第一条纪律不是\"选哪个指标\"，而是\"条件是否等价\"。",
+  "display_table": "| 系统 | 加速器数 | 可用性 | tokens/s | 是否可直接比较 |\n|---|---|---|---|---|\n| H200-SXM-141GB ×8 | 8 | Available | 32789.74 | 可（同轮次/同模型/同场景/同加速器数） |\n| DGX-H100 H100-SXM-80GB ×8 | 8 | Available | 21605.79 | 可 |\n| 8×MI300X + 2×EPYC-9374F | 8 | Available | 21028.23 | 可 |\n| B200-SXM-180GB ×1 | 1 | Preview | 10755.59 | 不可（加速器数=1 且可用性=Preview） |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "barh_simple",
+    "groups": [
+      "H200-SXM-141GB ×8\n8卡 · Available",
+      "DGX-H100 H100-SXM-80GB ×8\n8卡 · Available",
+      "8×MI300X + 2×EPYC-9374F\n8卡 · Available",
+      "B200-SXM-180GB ×1\n1卡 · Preview"
+    ],
+    "values": [
+      32789.74,
+      21605.79,
+      21028.23,
+      10755.59
+    ],
+    "colors": [
+      "#198779",
+      "#198779",
+      "#198779",
+      "#c0504d"
+    ],
+    "xlabel": "tokens/s",
+    "id": "ch14_tp_throughput",
+    "title": "同规则同条件下的跨平台吞吐：可比的三个与不可比的一个（第三方实测）"
+  },
+  "plot_note": "MLPerf Inference 同轮次/同模型/同场景；绿色=可比较，红色=B200 为 1 卡且 Preview，不可直接比较。"
+}

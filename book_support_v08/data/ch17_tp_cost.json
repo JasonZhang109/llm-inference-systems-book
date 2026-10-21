@@ -1,0 +1,103 @@
+{
+  "id": "ch17_tp_cost",
+  "chapter": 17,
+  "figure_id": "图17-T2",
+  "title": "成本口径必须先对齐：租金假设与能耗情景（第三方测算）",
+  "evidence_type": "THIRD_PARTY_MODELED_COST",
+  "source_id": "Z14",
+  "columns": [
+    "项目",
+    "数值",
+    "单位",
+    "口径"
+  ],
+  "rows": [
+    [
+      "H100 租金（Epoch 成本模型假设）",
+      2.0,
+      "美元/GPU-hour",
+      "作者选取的市场租金假设"
+    ],
+    [
+      "H100 租金（Silicon Data 指数读数）",
+      2.75,
+      "美元/GPU-hour",
+      "市场租赁价指数（含 neocloud 与私人租赁）"
+    ],
+    [
+      "美国数据中心用电（2023）",
+      176,
+      "TWh",
+      "历史估算"
+    ],
+    [
+      "美国数据中心用电（2028 情景）",
+      "325–580",
+      "TWh",
+      "情景区间"
+    ]
+  ],
+  "conditions": "Epoch AI《Inference economics of language models》（arXiv:2506.04645，H100 3.3 TB/s 显存带宽）；Silicon Data SDH100RT 指数（2026-10-01 读数）；LBNL《2024 United States Data Center Energy Usage Report》。",
+  "limitations": "【测算非实测】Epoch 成本模型作者自称 crude，口径只含 GPU 租金，未系统包含折旧、电费、PUE、运维与闲置；Silicon Data 为租赁价指数而非 TCO；LBNL 为国家/行业级情景估算，不能直接换算单次推理电费；2028 区间跨度大。",
+  "interpretation": "同为\"H100 一小时\"，成本模型的假设是 2.00 美元，市场租赁价指数读数是 2.75 美元——差 37.5%，而两者都还不含折旧、电费与运维。**做回本测算时，这个差异比大多数优化收益都大。**右侧的能耗情景则提醒另一件事：规模化推理的电费不是零头，176 TWh 到 325–580 TWh 的区间意味着单次推理成本里必须给电留位置。",
+  "display_table": "| 项目 | 数值 | 单位 | 口径 |\n|---|---|---|---|\n| H100 租金（Epoch 成本模型假设） | 2.00 | 美元/GPU-hour | 作者选取的市场租金假设 |\n| H100 租金（Silicon Data 指数读数） | 2.75 | 美元/GPU-hour | 市场租赁价指数（含 neocloud 与私人租赁） |\n| 美国数据中心用电（2023） | 176 | TWh | 历史估算 |\n| 美国数据中心用电（2028 情景） | 325–580 | TWh | 情景区间 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "range_panels",
+    "panels": [
+      {
+        "title": "H100 租金：模型假设 vs 市场指数",
+        "xlabel": "美元 / GPU-hour",
+        "kind": "bars",
+        "groups": [
+          "Epoch 成本模型假设",
+          "Silicon Data 指数读数"
+        ],
+        "values": [
+          2.0,
+          2.75
+        ],
+        "colors": [
+          "#176b96",
+          "#dd8830"
+        ],
+        "ylim": [
+          0,
+          3.4
+        ]
+      },
+      {
+        "title": "美国数据中心用电",
+        "xlabel": "TWh / 年",
+        "kind": "bars_range",
+        "groups": [
+          "2023 历史",
+          "2028 情景"
+        ],
+        "values": [
+          176,
+          176
+        ],
+        "range_hi": [
+          null,
+          580
+        ],
+        "range_lo": [
+          null,
+          325
+        ],
+        "colors": [
+          "#198779",
+          "#8e69af"
+        ],
+        "ylim": [
+          0,
+          700
+        ]
+      }
+    ],
+    "id": "ch17_tp_cost",
+    "title": "成本口径必须先对齐：租金假设与能耗情景（第三方测算）"
+  },
+  "plot_note": "同为\"H100 一小时\"：2.00 与 2.75 差 37.5%，且都不含折旧/电费/运维；右侧为国家/行业级情景，不能换算单次推理电费。"
+}

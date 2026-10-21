@@ -1,0 +1,60 @@
+{
+  "id": "ch06_nvlink_ep",
+  "chapter": 6,
+  "title": "固定每rank batch，扩大EP通信域并非免费",
+  "evidence_type": "PUBLISHED_MICROBENCHMARK",
+  "source_id": "Y04",
+  "columns": [
+    "EP ranks",
+    "Dispatch/us",
+    "Combine/us",
+    "Dispatch逻辑GB/s",
+    "Combine逻辑GB/s"
+  ],
+  "rows": [
+    [
+      8,
+      311.8,
+      322.6,
+      753.28,
+      728.2
+    ],
+    [
+      16,
+      343.3,
+      348.4,
+      684.1,
+      674.15
+    ],
+    [
+      32,
+      373.7,
+      369.5,
+      628.54,
+      635.66
+    ],
+    [
+      64,
+      399.2,
+      372.1,
+      588.34,
+      631.18
+    ]
+  ],
+  "conditions": "同Y04 BF16扫描，每rank batch=2048，EP8/16/32/64，256总专家，GB200 NVL72域内。",
+  "limitations": "全局Token数随EP增加；这是固定局部负载的通信扩展，不是同模型2/4/8卡吞吐强扩展。",
+  "plot": {
+    "type": "lines",
+    "x": 0,
+    "ys": [
+      1,
+      2
+    ],
+    "xlabel": "EP ranks",
+    "ylabel": "内核延迟 / μs"
+  },
+  "interpretation": "EP8→64，dispatch311.8→399.2μs，combine322.6→372.1μs。由点值判断通信开销，不能直接推模型服务扩展效率。",
+  "author_hardware_measured": false,
+  "figure_id": "图6-E3",
+  "display_table": "| EP ranks | Dispatch/us | Combine/us | Dispatch逻辑GB/s | Combine逻辑GB/s |\n|---|---|---|---|---|\n| 8 | 311.8 | 322.6 | 753.28 | 728.2 |\n| 16 | 343.3 | 348.4 | 684.1 | 674.15 |\n| 32 | 373.7 | 369.5 | 628.54 | 635.66 |\n| 64 | 399.2 | 372.1 | 588.34 | 631.18 |"
+}

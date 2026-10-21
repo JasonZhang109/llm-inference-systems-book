@@ -1,0 +1,10 @@
+# 统一换行，避免 Windows 贡献者把整本文件都标成已修改
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+
+# 离线阅读版是生成的单文件（12 MB），不参与 diff，也不计入语言统计
+docs/index.html linguist-generated=true -diff

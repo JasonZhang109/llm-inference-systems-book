@@ -1,0 +1,27 @@
+{
+  "figure_id": "图14-V1",
+  "slug": "ch14_two_tracks",
+  "chapter": 14,
+  "title": "约束匹配轨与平台优化轨，结论可以反向",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书14.4.1；X12只支持比较纪律",
+  "conditions": "数字沿用原稿；轨道内需相同质量/SLO/负载；不混用卡、节点、资源池边界",
+  "limitations": "不能映射为任何真实厂商排名；调参预算、精度、功耗和软件差异均需披露。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "约束匹配轨",
+      5.2,
+      4.6,
+      "A较B高13.04%"
+    ],
+    [
+      "平台优化轨",
+      5.8,
+      6.1,
+      "B较A高5.17%"
+    ]
+  ],
+  "display_table": "| 轨道 | A req/s | B req/s | 该轨道结论 |\n|---|---|---|---|\n| 约束匹配轨 | 5.2 | 4.6 | A较B高13.04% |\n| 平台优化轨 | 5.8 | 6.1 | B较A高5.17% |"
+}

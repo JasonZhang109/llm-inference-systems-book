@@ -1,0 +1,477 @@
+[
+  {
+    "path": "README_v0.5.md",
+    "bytes": 2777,
+    "sha256": "b7f0c03053eaa10b132e7fcddff58f47ab25afb11d8ae2e30d06714204ec2d90"
+  },
+  {
+    "path": "book_support_v05/code/e0_reference.py",
+    "bytes": 18066,
+    "sha256": "ad09d9fbd58a2ce18afa6e867dcbfd721c51ffd9ae177abc922631acec2ed06a"
+  },
+  {
+    "path": "book_support_v05/code/make_figures.py",
+    "bytes": 11455,
+    "sha256": "2405f7d508b8333b1fb265dfc30bfe3bc6fd2380319d11327bb1276305293a3c"
+  },
+  {
+    "path": "book_support_v05/code/msprof_wrapper_example.sh",
+    "bytes": 454,
+    "sha256": "ac88f139374d6ea25a3bac03089f5f25a89c174aef4903479e4fe5ce08756fed"
+  },
+  {
+    "path": "book_support_v05/data/ascend_public_quality.csv",
+    "bytes": 288,
+    "sha256": "1c754c0ab175ed3498bc880b3d836a60becc4030b82449c3b77a648680447ceb"
+  },
+  {
+    "path": "book_support_v05/data/ch01_timeline.csv",
+    "bytes": 325,
+    "sha256": "920010d271a9b52fa746068766e17da20e6a436f540bfd3cff96f70514b190e8"
+  },
+  {
+    "path": "book_support_v05/data/ch03_roofline.csv",
+    "bytes": 3671,
+    "sha256": "34a29a50faed96450582c27841b1afcc9838e36bc9e9ae2c49584474e8ae50c6"
+  },
+  {
+    "path": "book_support_v05/data/ch05_queue.csv",
+    "bytes": 3534,
+    "sha256": "b064e0d02298598c099d60a9b4c21f36b26bde4f58dcc6c7b2bf83c75e47f377"
+  },
+  {
+    "path": "book_support_v05/data/ch06_tp_capacity.csv",
+    "bytes": 262,
+    "sha256": "775d3dc977841eab945098dadac0ddee907e9755a1dbf6cf1ff4e0aebcd09d98"
+  },
+  {
+    "path": "book_support_v05/data/ch07_quantile.csv",
+    "bytes": 93,
+    "sha256": "763f6e81a136ccb2496c5d7b262e8879841770fae6f1e8336d3192cf3a0b1e71"
+  },
+  {
+    "path": "book_support_v05/data/ch08_public_loading.csv",
+    "bytes": 128,
+    "sha256": "73fc0feb2266c2a553f0b30cbaf3b8a5197572ac2cad317644208b294cab3f52"
+  },
+  {
+    "path": "book_support_v05/data/ch11_public_initialization.csv",
+    "bytes": 128,
+    "sha256": "25ff246c080279981724d59e540bf90d5525f265a2145b7e663265b4d2735733"
+  },
+  {
+    "path": "book_support_v05/data/ch11_speculative.csv",
+    "bytes": 13308,
+    "sha256": "49383f038840025db7fec8dd57e8d3b058a2458ef96c2d268342b6b346671116"
+  },
+  {
+    "path": "book_support_v05/data/ch12_distserve.csv",
+    "bytes": 171,
+    "sha256": "d3ab1838b13298f94815df5bdb8579fc8c2b9b24aa51763a5eb9f44142a89cce"
+  },
+  {
+    "path": "book_support_v05/data/ch15_public_regression.csv",
+    "bytes": 100,
+    "sha256": "419b206af568e3ba7b16e0d56d44112414fada9b2b1490621d1d8dbc2e488f58"
+  },
+  {
+    "path": "book_support_v05/data/ch16_control_delay.csv",
+    "bytes": 518,
+    "sha256": "ff8a112ca3a7e181b69742f07fdad71639034788cbbb7616923968587b3ccc1e"
+  },
+  {
+    "path": "book_support_v05/data/ch17_replica_steps.csv",
+    "bytes": 1746,
+    "sha256": "92a8d752c54baa0a5bd88f05cd017cddae50189664d2a6f9321a30a4ed115b71"
+  },
+  {
+    "path": "book_support_v05/data/e0_test_results.json",
+    "bytes": 15543,
+    "sha256": "ad96e43168f0d6bcf815eb6a2156f3c86988bd403ca5c26db5a3bb76436fce02"
+  },
+  {
+    "path": "book_support_v05/data/e0_test_results.md",
+    "bytes": 5135,
+    "sha256": "363faf92caf9e9e1682c7a7bd74e04dada1e7ab0841bf539a9ff5d71a30c1beb"
+  },
+  {
+    "path": "book_support_v05/data/plot_runtime.json",
+    "bytes": 67,
+    "sha256": "8fabb7e613b4ee0be931f3a47f802e9b81bf3269fe615e843b43c6e46321160e"
+  },
+  {
+    "path": "book_support_v05/data/sample_b0.json",
+    "bytes": 414,
+    "sha256": "9c0dc29176817946f5400249323a1d9cbf210b2ef9e5dc30a5496511d1b9212d"
+  },
+  {
+    "path": "book_support_v05/data/shell_syntax_check.json",
+    "bytes": 132,
+    "sha256": "16671128422fc32dd31224b88e46a52a485d273d9a475ed972ff241d1f58f852"
+  },
+  {
+    "path": "book_support_v05/data/tp_capacity.json",
+    "bytes": 637,
+    "sha256": "2ebfe4730ec95a8ec03c70055a96b994ea74b8a3cbf1444100afaabc93050d81"
+  },
+  {
+    "path": "book_support_v05/figure_catalog.json",
+    "bytes": 5684,
+    "sha256": "1d2d42ba3384c913a411714615c19814e4438820e545b8c55095ce746a371d79"
+  },
+  {
+    "path": "book_support_v05/figures/ch01_timeline.png",
+    "bytes": 125820,
+    "sha256": "f6e7efe355e7b13a22c8015eced6401b8256b221a2795f21602d470e77de2205"
+  },
+  {
+    "path": "book_support_v05/figures/ch01_timeline.svg",
+    "bytes": 96365,
+    "sha256": "3c6dc7f7d18ee8b8d71a31e6a30411398ae77ab9698f5c4f9cf69d69494e75cf"
+  },
+  {
+    "path": "book_support_v05/figures/ch03_roofline.png",
+    "bytes": 119977,
+    "sha256": "e79e2deacc8fe5efc32cadea1653f0bdcb6c8b71f7929c6265fdb96041daed31"
+  },
+  {
+    "path": "book_support_v05/figures/ch03_roofline.svg",
+    "bytes": 101617,
+    "sha256": "d70d0e7e51b9e75b7c0bb4ebf77058091845cd9b1dddae583ab055326c867cc8"
+  },
+  {
+    "path": "book_support_v05/figures/ch05_queue.png",
+    "bytes": 116927,
+    "sha256": "8c0d1344d0193a2a448e2fdb74f6075e5d02c637142bb5319ae61bd86dfcbb31"
+  },
+  {
+    "path": "book_support_v05/figures/ch05_queue.svg",
+    "bytes": 81388,
+    "sha256": "64df746355fd52150f4d9cd69beed452f86f321875f1494f5ae0fb36ea49e8aa"
+  },
+  {
+    "path": "book_support_v05/figures/ch06_tp_capacity.png",
+    "bytes": 101866,
+    "sha256": "6909d5a88d5e477c29222f19784005b14752a00b5c12ae0af9bd1201a5c63c89"
+  },
+  {
+    "path": "book_support_v05/figures/ch06_tp_capacity.svg",
+    "bytes": 90564,
+    "sha256": "fa78b20ff44b5c95267233ab6974f5251f6fa154a1a606bca9365fe03119c3d0"
+  },
+  {
+    "path": "book_support_v05/figures/ch07_quantile.png",
+    "bytes": 90693,
+    "sha256": "826f9b741b8570767b3e47c60c820ecf6f5625475d5a7173e3b752d5261a1fa2"
+  },
+  {
+    "path": "book_support_v05/figures/ch07_quantile.svg",
+    "bytes": 77679,
+    "sha256": "f07186b2d8330d9ecec2809c0166ce2601d470b9fb278f16e994c1634bd7a42e"
+  },
+  {
+    "path": "book_support_v05/figures/ch08_public_loading.png",
+    "bytes": 102316,
+    "sha256": "49995e6a7b4141a752ad7f5940b46e65ad71ddf6c842264217388ab93f404a34"
+  },
+  {
+    "path": "book_support_v05/figures/ch08_public_loading.svg",
+    "bytes": 82570,
+    "sha256": "95b56f090c8350a9f68726a1fee77198cd7eccc3eac4732cd1059bad5ff8adec"
+  },
+  {
+    "path": "book_support_v05/figures/ch11_public_initialization.png",
+    "bytes": 98004,
+    "sha256": "f97720c1c99b0b09afeee1d5d261b52a595cb52e2b81cd94c96d0c59d24485b6"
+  },
+  {
+    "path": "book_support_v05/figures/ch11_public_initialization.svg",
+    "bytes": 81554,
+    "sha256": "2ab4563f6e9b08694835eb07f4a0654c6f6e9359d5937271d7b65e2e8bd3e9c8"
+  },
+  {
+    "path": "book_support_v05/figures/ch11_speculative.png",
+    "bytes": 177472,
+    "sha256": "464bb24712c4257112106fde108c4095185e1df0a27828b0649dd738e8f29d42"
+  },
+  {
+    "path": "book_support_v05/figures/ch11_speculative.svg",
+    "bytes": 108019,
+    "sha256": "bd4bc0afb5ce4d4bc6f538d689e2b245459cab91853866fec6ffad51d94775b1"
+  },
+  {
+    "path": "book_support_v05/figures/ch12_distserve.png",
+    "bytes": 99557,
+    "sha256": "84d14f8154b338d57bdbcd19cdc9b47326a46054ce77ffd7f8e674300ef385cf"
+  },
+  {
+    "path": "book_support_v05/figures/ch12_distserve.svg",
+    "bytes": 87513,
+    "sha256": "2e97072bb14dbd96b3f731531fc20927c0cc6e4f62d34dc4a3e748d8fe4f6f0f"
+  },
+  {
+    "path": "book_support_v05/figures/ch15_public_regression.png",
+    "bytes": 104654,
+    "sha256": "507442461a1c61882c1fb19bb513495146ab834cd9f9c3d77534c09fb4a67b39"
+  },
+  {
+    "path": "book_support_v05/figures/ch15_public_regression.svg",
+    "bytes": 97207,
+    "sha256": "1f59ce6e07bf62555c077f00b09e3233f53826434f4ba7193cdc9a4b889b4b7a"
+  },
+  {
+    "path": "book_support_v05/figures/ch16_control_delay.png",
+    "bytes": 120147,
+    "sha256": "6ae536fa94e65e7ffee4e05118278ab365744637694f43cd6d60036a91f84ee1"
+  },
+  {
+    "path": "book_support_v05/figures/ch16_control_delay.svg",
+    "bytes": 86264,
+    "sha256": "11bc18700da32a7315dd2b9b59d3dfddd0c5af7ffcf4000537fbdfe789b55fba"
+  },
+  {
+    "path": "book_support_v05/figures/ch17_replica_steps.png",
+    "bytes": 106224,
+    "sha256": "8ac3bbd7d6734fc25ca7a1f6c08c64e8d003c0482cc7e57888386b137f7d9c7b"
+  },
+  {
+    "path": "book_support_v05/figures/ch17_replica_steps.svg",
+    "bytes": 92544,
+    "sha256": "5ad612117bcdf178ec914d9213a3f4a9e978e4876246703b99e21cad2896ff57"
+  },
+  {
+    "path": "book_support_v05/figures.md",
+    "bytes": 2318,
+    "sha256": "acd2aab1bf10f0038fe166b969e2e2ff126b3c934fe1e243a85c182db266d901"
+  },
+  {
+    "path": "book_support_v05/legacy_references.md",
+    "bytes": 27885,
+    "sha256": "7627405b4b944d06ef09edb31ce15ec8d2730fb90ad5a779b211fa9826755001"
+  },
+  {
+    "path": "book_support_v05/metrics_dict_v05.md",
+    "bytes": 5087,
+    "sha256": "aa118077b71c9a9905e0339f6db868cc5abc4c0820a1b1413c2747a937e0b653"
+  },
+  {
+    "path": "book_support_v05/references.md",
+    "bytes": 32337,
+    "sha256": "2dffccca44713dc304ac295fc18d3878588b3dd53866ab3b26158b1ced38d224"
+  },
+  {
+    "path": "book_support_v05/review/ch01.diff",
+    "bytes": 40286,
+    "sha256": "e8934ff450fde927c55cdf8da3f268a52d68687f2c3507133b72902b32dad71e"
+  },
+  {
+    "path": "book_support_v05/review/ch02.diff",
+    "bytes": 30657,
+    "sha256": "2a1f1bf80f4052ac235cccaa704e722e07ee75ba8bf29ca5eff08c05f7d6ca2f"
+  },
+  {
+    "path": "book_support_v05/review/ch03.diff",
+    "bytes": 24322,
+    "sha256": "4d1e03506b8ce2871d4d3712b48fb8907ed19073f57fa8c1c7b223b9d461e26c"
+  },
+  {
+    "path": "book_support_v05/review/ch04.diff",
+    "bytes": 18680,
+    "sha256": "dec2f842f07dc379a9fcae0232b07af7a57465fc1df6deddc159b3965d6e20f0"
+  },
+  {
+    "path": "book_support_v05/review/ch05.diff",
+    "bytes": 20888,
+    "sha256": "97ab8bd1678734baa6f407a646f88f5c29eb90221a380b29d5148b3854e67e14"
+  },
+  {
+    "path": "book_support_v05/review/ch06.diff",
+    "bytes": 27494,
+    "sha256": "a9891da296f8b623869e469bbe60db89b36bb2fa8aa837c0d259d867c0d947c4"
+  },
+  {
+    "path": "book_support_v05/review/ch07.diff",
+    "bytes": 39252,
+    "sha256": "62f9c53f07332d01c701f150f1822efd89c31a86e94fe0050b50228397659417"
+  },
+  {
+    "path": "book_support_v05/review/ch08.diff",
+    "bytes": 22693,
+    "sha256": "88ccc7434d8938d79f4e090fdfa976706f1adc505b7732be42c380f665848262"
+  },
+  {
+    "path": "book_support_v05/review/ch09.diff",
+    "bytes": 23412,
+    "sha256": "522475a27dc0946cd5aee66fc2b6b0e8087ae5d406d9eddfe22aa6c294a7c5d3"
+  },
+  {
+    "path": "book_support_v05/review/ch10.diff",
+    "bytes": 20070,
+    "sha256": "8737b0719dbefbcd33795a197bc495b60c8b5cc272cf80cf72cd7f059531cdc5"
+  },
+  {
+    "path": "book_support_v05/review/ch11.diff",
+    "bytes": 25173,
+    "sha256": "639568d42b3035cfcf11455d2305505d190c0867387fefc9522f49b5f685a3a4"
+  },
+  {
+    "path": "book_support_v05/review/ch12.diff",
+    "bytes": 27142,
+    "sha256": "3fe70fc1ef905b568f0048ba003202e27a889dedb6588943977470ed2e1f2a6d"
+  },
+  {
+    "path": "book_support_v05/review/ch13.diff",
+    "bytes": 18355,
+    "sha256": "b33b1c6ec9fec6b63bca55daa0b98fac354ecd6c57f97d1556f9dcbf1b4f16e4"
+  },
+  {
+    "path": "book_support_v05/review/ch14.diff",
+    "bytes": 14893,
+    "sha256": "a169bc1dd7be8b3921e4007947c75d991185b8142356a4045a9f7ff26c8da067"
+  },
+  {
+    "path": "book_support_v05/review/ch15.diff",
+    "bytes": 17956,
+    "sha256": "4d2ee1c8a93116e4774f436029e2ad6db15027851fd7f49389509ddafa83a244"
+  },
+  {
+    "path": "book_support_v05/review/ch16.diff",
+    "bytes": 19985,
+    "sha256": "9506d39da51462ad58f98b26bdeeeb32e3cf6070ba58dc853d6424f08aef90b9"
+  },
+  {
+    "path": "book_support_v05/review/ch17.diff",
+    "bytes": 15974,
+    "sha256": "d7585a86191a87cf9e1e9f82350eee2ac5f1a9ea0e99e0fe67cbb0000a96b5f7"
+  },
+  {
+    "path": "book_support_v05/review/ch18.diff",
+    "bytes": 13250,
+    "sha256": "f1b28fb90acca18563d67013d6abe18ca57483a1b12b742ac4e1040ac6ca6bdf"
+  },
+  {
+    "path": "book_support_v05/review/changes.json",
+    "bytes": 87371,
+    "sha256": "49fc75a9ee29f04a545846846ea49c1edad96d136f103adb0e8ee8c27492370d"
+  },
+  {
+    "path": "book_support_v05/review/changes.md",
+    "bytes": 20363,
+    "sha256": "e145bcd8fcad34fee135ffef94ed104c7fc3a1d13775b1d47504a9127d106674"
+  },
+  {
+    "path": "book_support_v05/review/chapter_manifest.json",
+    "bytes": 7397,
+    "sha256": "ebb0790d74f03439bb2411e3357f19dd182fee0273771b8b17132d93210ee4f9"
+  },
+  {
+    "path": "book_support_v05/review/package_validation.json",
+    "bytes": 13924,
+    "sha256": "2dc696ea513b3bfee4e80c5ca67b8339ca018230a67e40a87ce8c1d4793da4bc"
+  },
+  {
+    "path": "book_support_v05/source_registry.json",
+    "bytes": 17817,
+    "sha256": "5f89bd9d40bee4afec2b8afc9aaf43501fe9bb22ced96fbddf189501adee163d"
+  },
+  {
+    "path": "大模型推理系统工程_18章审校增强稿_v0.5.md",
+    "bytes": 632618,
+    "sha256": "4cd8922de066fe66059f649b1f483498fb85a90d1441747844ce72a7e8a3470d"
+  },
+  {
+    "path": "审校报告_18章_v0.5.md",
+    "bytes": 14160,
+    "sha256": "d19ecd66e944b0b17c3b05da76706fb0791aa23a93d15304f923f9332fd5252b"
+  },
+  {
+    "path": "第01章_一次推理请求的完整路径(1).md",
+    "bytes": 88118,
+    "sha256": "b6c88c8e59bca7b03bc7f1b41ffaac5776b34aa3cb80776364432646bb127a9a"
+  },
+  {
+    "path": "第02章_Prefill、Decode 与模型执行(1).md",
+    "bytes": 47923,
+    "sha256": "6c9e64f2647aaaf378e93e82841f81106cf3c9c45ca4b3a89635828e5f49c90b"
+  },
+  {
+    "path": "第03章_计算、显存、带宽与通信模型.md",
+    "bytes": 30113,
+    "sha256": "0089c4c8384c40d396c60203101b76e84218875b1d0031b5aed17693ca0f33fb"
+  },
+  {
+    "path": "第04章_KV Cache 与容量管理.md",
+    "bytes": 28102,
+    "sha256": "ec151cbb2870e5b54c07ee21b66dcf41f769f1426e3938b7b682f0f70c2df867"
+  },
+  {
+    "path": "第05章_批处理、排队与调度.md",
+    "bytes": 25714,
+    "sha256": "24d80dd6e1c7404bab56f59f6b051a6dcdf483082a31890e209edbdc39afe50e"
+  },
+  {
+    "path": "第06章_多卡并行、拓扑与 MoE.md",
+    "bytes": 35751,
+    "sha256": "95751a62d974ce9b3a060d006ae7571544fa3ae023131743c7b0e533622bf98e"
+  },
+  {
+    "path": "第07章_服务目标与性能指标(1).md",
+    "bytes": 55494,
+    "sha256": "e3d831ecfb535de4481e59d3afb1c95d96f42b4e5487624c8e18401e2a7acfb8"
+  },
+  {
+    "path": "第08章_业务负载与基准设计(1).md",
+    "bytes": 44170,
+    "sha256": "9469e11cf66cb0681ceef7d39376b87bdd6a01e31f3b0e871f0b0b9000482c25"
+  },
+  {
+    "path": "第09章_监控、日志与性能剖析(1).md",
+    "bytes": 43679,
+    "sha256": "88ccf1b45a4d2fe0398c7ddcd6ebf0861660cd106e947f1e46823596661ae755"
+  },
+  {
+    "path": "第10章_瓶颈假设与受控实验.md",
+    "bytes": 29604,
+    "sha256": "a678cef7901a8d166df02ee22350d865ab09a9e39a95ab6ab7695761a0e705f6"
+  },
+  {
+    "path": "第11章_配置、执行与内存优化.md",
+    "bytes": 33592,
+    "sha256": "878caa067158ad3e33a0c8c71f201b28e083aea1f3f436a8c5bf7288b40fdb18"
+  },
+  {
+    "path": "第12章_分布式推理服务_PD分离、状态传输与控制平面.md",
+    "bytes": 33591,
+    "sha256": "9d294d330b79be1f540ba3933907cb31be6a4514416092e53e56199760b57000"
+  },
+  {
+    "path": "第13章_软件栈与硬件适配.md",
+    "bytes": 25267,
+    "sha256": "fdb8e23ee92f4cac1a628b77d50f6321ebafff3f7349c51273988aecf2a9224d"
+  },
+  {
+    "path": "第14章_跨平台比较与迁移验收.md",
+    "bytes": 21356,
+    "sha256": "affd3b0b698471589f213a1f56eb35158f24441ccac89da13e94a954ea686f6b"
+  },
+  {
+    "path": "第15章_国产加速器推理实践.md",
+    "bytes": 23891,
+    "sha256": "ed86491868bd9b002a447e6ba77a02b543c54fa550d96e79ef82f31fd6c38f14"
+  },
+  {
+    "path": "第16章_容量规划与扩容决策.md",
+    "bytes": 22396,
+    "sha256": "c19b867b5384d9f375333edcf7ce6e9e65f7cd3882558ce0f8c82e8374ad9e1f"
+  },
+  {
+    "path": "第17章_成本、效率与优化收益.md",
+    "bytes": 20584,
+    "sha256": "1162d7f60aa2651c04934527c8b94f46d2f08644b8d562971d0eeb112a0f7055"
+  },
+  {
+    "path": "第18章_端到端案例、回归测试与版本治理.md",
+    "bytes": 21668,
+    "sha256": "945985b1fd4d50cd133b256d7b16549c9e71fc38806fb08b0994d48a228bea2d"
+  }
+]

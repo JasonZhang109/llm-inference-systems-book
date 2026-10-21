@@ -1,0 +1,618 @@
+{
+  "status": "PASS",
+  "checks": 122,
+  "failed": 0,
+  "items": [
+    {
+      "check": "18_chapter_files",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch01_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch01_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch01_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch01_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch01_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch02_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch02_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch02_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch02_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch02_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch03_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch03_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch03_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch03_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch03_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch04_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch04_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch04_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch04_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch04_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch05_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch05_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch05_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch05_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch05_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch06_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch06_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch06_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch06_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch06_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch07_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch07_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch07_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch07_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch07_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch08_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch08_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch08_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch08_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch08_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch09_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch09_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch09_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch09_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch09_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch10_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch10_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch10_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch10_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch10_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch11_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch11_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch11_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch11_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch11_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch12_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch12_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch12_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch12_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch12_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch13_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch13_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch13_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch13_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch13_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch14_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch14_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch14_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch14_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch14_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch15_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch15_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch15_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch15_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch15_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch16_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch16_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch16_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch16_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch16_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch17_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch17_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch17_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch17_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch17_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch18_hash",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch18_depth_section",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch18_balanced_code_fences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch18_no_replacement_character",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ch18_lab_not_executed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第03章_计算、显存、带宽与通信模型.md:book_support_v05/figures/ch03_roofline.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第01章_一次推理请求的完整路径(1).md:book_support_v05/figures/ch01_timeline.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第11章_配置、执行与内存优化.md:book_support_v05/figures/ch11_speculative.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第11章_配置、执行与内存优化.md:book_support_v05/figures/ch11_public_initialization.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch01_timeline.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch03_roofline.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch05_queue.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch06_tp_capacity.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch07_quantile.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch08_public_loading.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch11_speculative.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch11_public_initialization.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch12_distserve.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch15_public_regression.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch16_control_delay.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:大模型推理系统工程_18章审校增强稿_v0.5.md:book_support_v05/figures/ch17_replica_steps.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第12章_分布式推理服务_PD分离、状态传输与控制平面.md:book_support_v05/figures/ch12_distserve.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第06章_多卡并行、拓扑与 MoE.md:book_support_v05/figures/ch06_tp_capacity.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第16章_容量规划与扩容决策.md:book_support_v05/figures/ch16_control_delay.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第05章_批处理、排队与调度.md:book_support_v05/figures/ch05_queue.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第15章_国产加速器推理实践.md:book_support_v05/figures/ch15_public_regression.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第17章_成本、效率与优化收益.md:book_support_v05/figures/ch17_replica_steps.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第07章_服务目标与性能指标(1).md:book_support_v05/figures/ch07_quantile.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "image_target:第08章_业务负载与基准设计(1).md:book_support_v05/figures/ch08_public_loading.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "e0_98_tests_passed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "12_png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "12_svg",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "29_new_sources",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_false_local_runtime",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_font_files",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell_syntax_only",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scope": "文件完整性、链接、代码围栏、数据标记；不代表全部技术命题已自动验证。"
+}

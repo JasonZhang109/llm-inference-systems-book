@@ -1,0 +1,7 @@
+{
+  "command": "bash -n msprof_wrapper_example.sh",
+  "status": "PASS",
+  "msprof_executed": false,
+  "stdout": "",
+  "stderr": ""
+}

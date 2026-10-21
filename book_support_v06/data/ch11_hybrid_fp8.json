@@ -1,0 +1,36 @@
+{
+  "figure_id": "图11-V2",
+  "slug": "ch11_hybrid_fp8",
+  "chapter": 11,
+  "title": "混合注意力：有选择地量化比一刀切更合理",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X05 Table 5",
+  "conditions": "150请求、并发8、约20k输入/2k输出±15%；H100/FA3上下文；skip-SW保留滑窗层BF16",
+  "limitations": "这不是Llama的数据；不得把两个模型的柱高比较解释成优化优劣。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "BF16",
+      468.9,
+      8.09,
+      364.2,
+      831.6
+    ],
+    [
+      "FP8",
+      451.7,
+      7.9,
+      355.1,
+      853.0
+    ],
+    [
+      "FP8 skip-SW",
+      456.4,
+      7.7,
+      347.4,
+      871.8
+    ]
+  ],
+  "display_table": "| KV策略 | TTFT中位数/ms | ITL中位数/ms | 总时长/s | 输出Token/s |\n|---|---|---|---|---|\n| BF16 | 468.9 | 8.09 | 364.2 | 831.6 |\n| FP8 | 451.7 | 7.9 | 355.1 | 853.0 |\n| FP8 skip-SW | 456.4 | 7.7 | 347.4 | 871.8 |"
+}

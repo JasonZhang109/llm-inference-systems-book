@@ -1,0 +1,14 @@
+{
+  "provenance": "Official config fields obtained through web text extraction, not byte-identical HTTP payload",
+  "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V3/raw/main/config.json",
+  "access_date": "2026-09-30",
+  "fields": {
+    "model": "deepseek-ai/DeepSeek-V3",
+    "hidden_size": 7168,
+    "num_hidden_layers": 61,
+    "num_attention_heads": 128,
+    "kv_lora_rank": 512,
+    "qk_rope_head_dim": 64,
+    "torch_dtype": "bfloat16"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ch06_deepep_latency",
+  "chapter": 6,
+  "title": "DeepEP历史低延迟内核：EP扩大后的通信代价",
+  "evidence_type": "PUBLISHED_MICROBENCHMARK",
+  "source_id": "Y03",
+  "columns": [
+    "EP ranks",
+    "Dispatch/us",
+    "Combine/us",
+    "Dispatch报告GB/s",
+    "Combine报告GB/s"
+  ],
+  "rows": [
+    [
+      8,
+      163,
+      318,
+      46,
+      46
+    ],
+    [
+      16,
+      173,
+      329,
+      43,
+      44
+    ],
+    [
+      32,
+      182,
+      350,
+      41,
+      41
+    ],
+    [
+      64,
+      186,
+      353,
+      40,
+      41
+    ],
+    [
+      128,
+      192,
+      369,
+      39,
+      39
+    ],
+    [
+      256,
+      194,
+      360,
+      39,
+      40
+    ]
+  ],
+  "conditions": "固定3b1045db43ed；H800，每GPU配CX7 400Gb/s；每rank128Token，hidden7168、top8、FP8 dispatch/BF16 combine。",
+  "limitations": "每rank负载固定，EP增大全局量也变；不是固定任务强扩展。各EP专家总数未公开；图不外推当前DeepEP版本。",
+  "plot": {
+    "type": "lines",
+    "x": 0,
+    "ys": [
+      1,
+      2
+    ],
+    "xlabel": "EP ranks（对数刻度）",
+    "ylabel": "单内核延迟 / μs",
+    "logx": true
+  },
+  "interpretation": "EP8→256，dispatch为163→194μs，combine为318→360μs；不同dtype与数据量不能仅比较高低判断内核优劣。",
+  "author_hardware_measured": false,
+  "figure_id": "图6-E1",
+  "display_table": "| EP ranks | Dispatch/us | Combine/us | Dispatch报告GB/s | Combine报告GB/s |\n|---|---|---|---|---|\n| 8 | 163 | 318 | 46 | 46 |\n| 16 | 173 | 329 | 43 | 44 |\n| 32 | 182 | 350 | 41 | 41 |\n| 64 | 186 | 353 | 40 | 41 |\n| 128 | 192 | 369 | 39 | 39 |\n| 256 | 194 | 360 | 39 | 40 |"
+}

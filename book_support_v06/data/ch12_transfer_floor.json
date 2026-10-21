@@ -1,0 +1,30 @@
+{
+  "figure_id": "图12-V1",
+  "slug": "ch12_transfer_floor",
+  "chapter": 12,
+  "title": "状态转移：带宽足够才有讨论分离的前提",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书12.5、12.6",
+  "conditions": "S=512MiB=536870912byte；带宽0.5/3/20GB/s均为假设；重算285ms",
+  "limitations": "仅payload理想时间，不含排队、序列化、注册、复制和重传；不代表真实链路。",
+  "formula": "T_ms=S_bytes/(B_GBs*10^9)*1000",
+  "author_hardware_measured": false,
+  "records": [
+    [
+      0.5,
+      1073.742,
+      0.265
+    ],
+    [
+      3,
+      178.957,
+      1.593
+    ],
+    [
+      20,
+      26.844,
+      10.617
+    ]
+  ],
+  "display_table": "| 有效带宽假设/GB每秒 | 理想payload/ms | 285ms与传输时间之比 |\n|---|---|---|\n| 0.5 | 1073.742 | 0.265 |\n| 3 | 178.957 | 1.593 |\n| 20 | 26.844 | 10.617 |"
+}

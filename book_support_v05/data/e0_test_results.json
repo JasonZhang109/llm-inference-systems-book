@@ -1,0 +1,761 @@
+{
+  "run_type": "E0_CALCULATION_TEST",
+  "hardware_experiments_executed": false,
+  "python_version": "3.13.5",
+  "script_sha256": "ad09d9fbd58a2ce18afa6e867dcbfd721c51ffd9ae177abc922631acec2ed06a",
+  "total": 98,
+  "passed": 98,
+  "failed": 0,
+  "results": [
+    {
+      "test": "TTFT_server_ms",
+      "chapters": "1,7",
+      "status": "PASS",
+      "expected": 613.0,
+      "actual": 613.0
+    },
+    {
+      "test": "E2E_content_ms",
+      "chapters": "1,7",
+      "status": "PASS",
+      "expected": 4189.0,
+      "actual": 4189.0
+    },
+    {
+      "test": "E2E_terminal_ms",
+      "chapters": "1,7",
+      "status": "PASS",
+      "expected": 4192.0,
+      "actual": 4192.0
+    },
+    {
+      "test": "TPOT_content_ms",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 11.92,
+      "actual": 11.92
+    },
+    {
+      "test": "TPOT_terminal_ms",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 11.93,
+      "actual": 11.93
+    },
+    {
+      "test": "TPOT_one_token_null",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "test": "TPOT_zero_token_null",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "test": "reject_cross_domain",
+      "chapters": "1,7",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "reject_reversed_time",
+      "chapters": "1,7",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "event_interval_no_token_interpolation",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": [
+        10.0,
+        30.0
+      ],
+      "actual": [
+        10.0,
+        30.0
+      ]
+    },
+    {
+      "test": "empty_stream_no_intervals",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": [],
+      "actual": []
+    },
+    {
+      "test": "reject_negative_count",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "P999_inverted_cdf",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 100.0,
+      "actual": 100.0
+    },
+    {
+      "test": "P999_linear",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 104.9,
+      "actual": 104.89999999988413
+    },
+    {
+      "test": "P9995_inverted_cdf",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 5000.0,
+      "actual": 5000.0
+    },
+    {
+      "test": "quantile_min",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 100.0,
+      "actual": 100.0
+    },
+    {
+      "test": "quantile_max",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 5000.0,
+      "actual": 5000.0
+    },
+    {
+      "test": "reject_empty_quantile",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "reject_nan_quantile",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "mean_local_P99_not_global",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 750.0,
+      "actual": 750.0
+    },
+    {
+      "test": "pooled_P99",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 500.0,
+      "actual": 500.0
+    },
+    {
+      "test": "joint_lower_bound",
+      "chapters": "7",
+      "status": "PASS",
+      "expected": 0.9,
+      "actual": 0.8999999999999999
+    },
+    {
+      "test": "three_positive_sign_test_two_sided",
+      "chapters": "8",
+      "status": "PASS",
+      "expected": 0.25,
+      "actual": 0.25
+    },
+    {
+      "test": "paired_mean_difference",
+      "chapters": "8",
+      "status": "PASS",
+      "expected": 0.25666666666666665,
+      "actual": 0.25666666666666665
+    },
+    {
+      "test": "toy_KV_bytes_per_token",
+      "chapters": "2,4",
+      "status": "PASS",
+      "expected": 131072,
+      "actual": 131072
+    },
+    {
+      "test": "toy_4096_KV_MiB",
+      "chapters": "2,4",
+      "status": "PASS",
+      "expected": 512.0,
+      "actual": 512.0
+    },
+    {
+      "test": "Qwen25_config_KiB",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 56.0,
+      "actual": 56.0
+    },
+    {
+      "test": "Qwen25_4096_MiB",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 224.0,
+      "actual": 224.0
+    },
+    {
+      "test": "DSV3_compressed_MLA_KiB",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 68.625,
+      "actual": 68.625
+    },
+    {
+      "test": "KV_replication_TP8_h4",
+      "chapters": "4",
+      "status": "PASS",
+      "expected": 1073741824,
+      "actual": 1073741824
+    },
+    {
+      "test": "reject_nondivisible_heads",
+      "chapters": "4",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "blocks_aligned_zero_waste",
+      "chapters": "4",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "test": "blocks_4097_waste_KiB",
+      "chapters": "4",
+      "status": "PASS",
+      "expected": 1920.0,
+      "actual": 1920.0
+    },
+    {
+      "test": "empty_sequence_zero_blocks",
+      "chapters": "4",
+      "status": "PASS",
+      "expected": [
+        0,
+        0
+      ],
+      "actual": [
+        0,
+        0
+      ]
+    },
+    {
+      "test": "causal_pairs_128",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 8256,
+      "actual": 8256
+    },
+    {
+      "test": "causal_pairs_prefix4096_new128",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 532544,
+      "actual": 532544
+    },
+    {
+      "test": "causal_pairs_all4224",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 8923200,
+      "actual": 8923200
+    },
+    {
+      "test": "causal_pairs_ratio_rounded_1dp",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 64.5,
+      "actual": 64.5
+    },
+    {
+      "test": "dense_linear_4096_TFLOP",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 57.344,
+      "actual": 57.344
+    },
+    {
+      "test": "full_attention_4096_TFLOP",
+      "chapters": "2",
+      "status": "PASS",
+      "expected": 8.796093022208,
+      "actual": 8.796093022208
+    },
+    {
+      "test": "GEMM_flops",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 268435456,
+      "actual": 268435456
+    },
+    {
+      "test": "GEMM_bytes",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 33685504,
+      "actual": 33685504
+    },
+    {
+      "test": "GEMM_bandwidth_bound_us",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 16.842752,
+      "actual": 16.842752
+    },
+    {
+      "test": "exact_roof_ridge_minimum_M",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 662,
+      "actual": 662
+    },
+    {
+      "test": "phasewise_bounds_are_stronger",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 20,
+      "actual": 20
+    },
+    {
+      "test": "aggregated_bound_weak",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 11,
+      "actual": 11
+    },
+    {
+      "test": "Amdahl_speedup",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 1.0526315789473684,
+      "actual": 1.0526315789473684
+    },
+    {
+      "test": "Amdahl_latency_reduction",
+      "chapters": "3",
+      "status": "PASS",
+      "expected": 0.05,
+      "actual": 0.04999999999999993
+    },
+    {
+      "test": "TP8_capacity",
+      "chapters": "6",
+      "status": "PASS",
+      "expected": [
+        871,
+        871
+      ],
+      "actual": [
+        871,
+        871
+      ]
+    },
+    {
+      "test": "TP4_capacity",
+      "chapters": "6",
+      "status": "PASS",
+      "expected": [
+        305,
+        610
+      ],
+      "actual": [
+        305,
+        610
+      ]
+    },
+    {
+      "test": "TP2_capacity",
+      "chapters": "6",
+      "status": "PASS",
+      "expected": [
+        22,
+        88
+      ],
+      "actual": [
+        22,
+        88
+      ]
+    },
+    {
+      "test": "DAG_e2e_seconds",
+      "chapters": "1",
+      "status": "PASS",
+      "expected": 6.7,
+      "actual": 6.7
+    },
+    {
+      "test": "DAG_tool_end_seconds",
+      "chapters": "1",
+      "status": "PASS",
+      "expected": 0.88,
+      "actual": 0.88
+    },
+    {
+      "test": "DAG_decode30pct",
+      "chapters": "1",
+      "status": "PASS",
+      "expected": 5.77,
+      "actual": 5.77
+    },
+    {
+      "test": "DAG_decode_zero",
+      "chapters": "1",
+      "status": "PASS",
+      "expected": 3.6,
+      "actual": 3.6
+    },
+    {
+      "test": "reject_DAG_cycle",
+      "chapters": "1",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "device_union_ms",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 3775.0,
+      "actual": 3775.0
+    },
+    {
+      "test": "device_idle_ms",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 414.0,
+      "actual": 414.0
+    },
+    {
+      "test": "overlap_not_double_counted",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 15.0,
+      "actual": 15.0
+    },
+    {
+      "test": "union_clips_window",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 12.0,
+      "actual": 12.0
+    },
+    {
+      "test": "sample_30_at_1pct",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 0.2602996266117198,
+      "actual": 0.2602996266117198
+    },
+    {
+      "test": "sample_30_at_5pct",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 0.7853612360570628,
+      "actual": 0.7853612360570628
+    },
+    {
+      "test": "non_matrix_busy_time",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 162,
+      "actual": 162
+    },
+    {
+      "test": "idle_separate_time",
+      "chapters": "9",
+      "status": "PASS",
+      "expected": 12,
+      "actual": 12
+    },
+    {
+      "test": "spec_drafts_07_k4",
+      "chapters": "2,11",
+      "status": "PASS",
+      "expected": 1.7731,
+      "actual": 1.7731
+    },
+    {
+      "test": "spec_progress_07_k4",
+      "chapters": "2,11",
+      "status": "PASS",
+      "expected": 2.7731,
+      "actual": 2.7731
+    },
+    {
+      "test": "spec_alpha0",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": 1.0,
+      "actual": 1.0
+    },
+    {
+      "test": "spec_alpha1",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": 5.0,
+      "actual": 5.0
+    },
+    {
+      "test": "spec_k0",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": 1.0,
+      "actual": 1.0
+    },
+    {
+      "test": "reject_bad_acceptance",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "spec_exact_distribution",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "actual": [
+        0.2,
+        0.3,
+        0.5000000000000001
+      ]
+    },
+    {
+      "test": "spec_draft_zero_support",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "actual": [
+        0.2,
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "test": "spec_identical_distributions",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": [
+        0.2,
+        0.8
+      ],
+      "actual": [
+        0.2,
+        0.8
+      ]
+    },
+    {
+      "test": "request_graph_fallback_not_iteration",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": 0.9831296806411504,
+      "actual": 0.9831296806411504
+    },
+    {
+      "test": "AB_interaction_tokens_s",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": -50,
+      "actual": -50
+    },
+    {
+      "test": "NVFP4_block_effective_bits",
+      "chapters": "3,11",
+      "status": "PASS",
+      "expected": 4.5,
+      "actual": 4.5
+    },
+    {
+      "test": "MXFP4_block_effective_bits",
+      "chapters": "11",
+      "status": "PASS",
+      "expected": 4.25,
+      "actual": 4.25
+    },
+    {
+      "test": "handoff_minimum_GBs",
+      "chapters": "12",
+      "status": "PASS",
+      "expected": 13.4217728,
+      "actual": 13.4217728
+    },
+    {
+      "test": "DistServe_ideal_GPU_normalized_NOT_MEASURED",
+      "chapters": "12",
+      "status": "PASS",
+      "expected": 3.3333333333333335,
+      "actual": 3.3333333333333335
+    },
+    {
+      "test": "MG1_CV2_0_mean_wait_s",
+      "chapters": "5",
+      "status": "PASS",
+      "expected": 0.04,
+      "actual": 0.04000000000000001
+    },
+    {
+      "test": "MG1_CV2_1_mean_wait_s",
+      "chapters": "5",
+      "status": "PASS",
+      "expected": 0.08,
+      "actual": 0.08000000000000002
+    },
+    {
+      "test": "MG1_CV2_4_mean_wait_s",
+      "chapters": "5",
+      "status": "PASS",
+      "expected": 0.2,
+      "actual": 0.20000000000000004
+    },
+    {
+      "test": "reject_unstable_queue",
+      "chapters": "5",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "test": "finite_window_inflight_balance",
+      "chapters": "5,16",
+      "status": "PASS",
+      "expected": 23,
+      "actual": 23
+    },
+    {
+      "test": "burst_backlog_requests",
+      "chapters": "16",
+      "status": "PASS",
+      "expected": 900,
+      "actual": 900
+    },
+    {
+      "test": "burst_recovery_seconds",
+      "chapters": "16",
+      "status": "PASS",
+      "expected": 180.0,
+      "actual": 180.0
+    },
+    {
+      "test": "scale_out_delay_range",
+      "chapters": "16",
+      "status": "PASS",
+      "expected": [
+        145.0,
+        160.0
+      ],
+      "actual": [
+        145.0,
+        160.0
+      ]
+    },
+    {
+      "test": "one_confirmation_delay",
+      "chapters": "16",
+      "status": "PASS",
+      "expected": [
+        115.0,
+        130.0
+      ],
+      "actual": [
+        115.0,
+        130.0
+      ]
+    },
+    {
+      "test": "Nplus1_baseline_replicas",
+      "chapters": "16,17",
+      "status": "PASS",
+      "expected": 6,
+      "actual": 6
+    },
+    {
+      "test": "Nplus1_candidate_replicas",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "test": "board_yearly_energy_cost",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 39244.8,
+      "actual": 39244.8
+    },
+    {
+      "test": "system_yearly_energy_cost",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 68678.4,
+      "actual": 68678.40000000001
+    },
+    {
+      "test": "net_simple_payback_months",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 3.768318213538032,
+      "actual": 3.7683182135380324
+    },
+    {
+      "test": "first_year_net_saving",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 78640,
+      "actual": 78640
+    },
+    {
+      "test": "maintenance_sensitivity",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 0.36363636363636365,
+      "actual": 0.36363636363636354
+    },
+    {
+      "test": "throughput30_not_resource30",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 0.23076923076923078,
+      "actual": 0.23076923076923084
+    },
+    {
+      "test": "unit_effective_task_cost",
+      "chapters": "17",
+      "status": "PASS",
+      "expected": 0.096,
+      "actual": 0.096
+    },
+    {
+      "test": "multi_test_false_alarm_example",
+      "chapters": "18",
+      "status": "PASS",
+      "expected": 0.6415140775914581,
+      "actual": 0.6415140775914581
+    }
+  ]
+}

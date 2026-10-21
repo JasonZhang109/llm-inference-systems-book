@@ -1,0 +1,55 @@
+{
+  "id": "ch11_dispatch_precision",
+  "chapter": 11,
+  "title": "通信前量化：少搬字节与实际时延并非等比例",
+  "evidence_type": "PUBLISHED_MICROBENCHMARK",
+  "source_id": "Y04",
+  "columns": [
+    "dispatch格式",
+    "byte/Token",
+    "Dispatch/us",
+    "报告逻辑GB/s",
+    "BF16字节数/当前字节数"
+  ],
+  "rows": [
+    [
+      "BF16",
+      14336,
+      311.8,
+      753.3,
+      1.0
+    ],
+    [
+      "MXFP8",
+      7392,
+      172.2,
+      703.4,
+      1.94
+    ],
+    [
+      "NVFP4",
+      4032,
+      101.7,
+      649.3,
+      3.56
+    ]
+  ],
+  "conditions": "Post-Quant Dispatch表，batch2048；性能章节写GB200 NVL72，EP8按同一BF16基线和复现命令对应，表未单独标EP。",
+  "limitations": "图像alt标B200、章节写GB200 NVL72，本书不作更细硬件保证；未含量化质量验收；仅dispatch，不是整轮。",
+  "plot": {
+    "type": "panels",
+    "x": 0,
+    "ys": [
+      1,
+      2
+    ],
+    "panel_ylabels": [
+      "传输payload / byte每Token",
+      "Dispatch / μs"
+    ]
+  },
+  "interpretation": "NVFP4 payload为BF16的28.125%，通信时延为32.617%。差额提示仍有固定开销；不把局部3.06倍写成模型3.06倍。",
+  "author_hardware_measured": false,
+  "figure_id": "图11-E1",
+  "display_table": "| dispatch格式 | byte/Token | Dispatch/us | 报告逻辑GB/s | BF16字节数/当前字节数 |\n|---|---|---|---|---|\n| BF16 | 14336 | 311.8 | 753.3 | 1.0 |\n| MXFP8 | 7392 | 172.2 | 703.4 | 1.94 |\n| NVFP4 | 4032 | 101.7 | 649.3 | 3.56 |"
+}

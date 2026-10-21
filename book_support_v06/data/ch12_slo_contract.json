@@ -1,0 +1,40 @@
+{
+  "figure_id": "图12-V2",
+  "slug": "ch12_slo_contract",
+  "chapter": 12,
+  "title": "同一论文，不同任务采用不同服务目标",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X07 Table 1",
+  "conditions": "OPT-13B/66B/175B；FP16；论文全局测试床4节点32×A100-80GB；不同实验使用相应子集",
+  "limitations": "图中是门槛不是测得的延迟；不混用arXiv v2的0.2/0.4s聊天TTFT。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "对话13B",
+      250,
+      100
+    ],
+    [
+      "对话66B",
+      2500,
+      150
+    ],
+    [
+      "对话175B",
+      4000,
+      200
+    ],
+    [
+      "代码66B",
+      125,
+      200
+    ],
+    [
+      "摘要66B",
+      15000,
+      150
+    ]
+  ],
+  "display_table": "| 任务/模型 | TTFT门槛/ms | TPOT门槛/ms |\n|---|---|---|\n| 对话13B | 250 | 100 |\n| 对话66B | 2500 | 150 |\n| 对话175B | 4000 | 200 |\n| 代码66B | 125 | 200 |\n| 摘要66B | 15000 | 150 |"
+}

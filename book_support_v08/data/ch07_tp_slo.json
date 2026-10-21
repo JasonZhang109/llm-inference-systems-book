@@ -1,0 +1,116 @@
+{
+  "id": "ch07_tp_slo",
+  "chapter": 7,
+  "figure_id": "图7-T1",
+  "title": "SLO 档位决定目标：Interactive 比 Conversational 紧一个量级（第三方规则）",
+  "evidence_type": "THIRD_PARTY_RULES",
+  "source_id": "Z07",
+  "columns": [
+    "基准/模型",
+    "档位",
+    "TTFT约束/ms",
+    "TPOT约束/ms"
+  ],
+  "rows": [
+    [
+      "Llama2-70B (QA)",
+      "Conversational",
+      2000,
+      200
+    ],
+    [
+      "Llama2-70b-interactive",
+      "Interactive",
+      450,
+      40
+    ],
+    [
+      "Llama3.1-8B (摘要)",
+      "Conversational",
+      2000,
+      100
+    ],
+    [
+      "Llama3.1-8B (摘要)",
+      "Interactive",
+      500,
+      30
+    ],
+    [
+      "Llama3.1-405B (文本生成)",
+      "Server",
+      6000,
+      175
+    ],
+    [
+      "Llama3.1-405B (文本生成)",
+      "Interactive",
+      4500,
+      80
+    ],
+    [
+      "DeepSeek-r1 (推理)",
+      "Server",
+      2000,
+      80
+    ],
+    [
+      "DeepSeek-r1 (推理)",
+      "Interactive",
+      1500,
+      15
+    ]
+  ],
+  "conditions": "MLCommons 现行 inference_rules.adoc 的 LLM TTFT/TPOT 目标列；Server 场景尾延迟取 P99，指标为约束下最大 Poisson 吞吐参数。",
+  "limitations": "规则文本随轮次演进，与历史轮次（如 v4.1）可能存在模型与约束差异；规则本身不含实测数值；这是\"门槛\"，不是\"达成值\"。",
+  "interpretation": "同为 Llama2-70B，从 Conversational 切到 Interactive，TTFT 门槛收紧 4.4 倍、TPOT 收紧 5 倍。**这意味着同一套硬件在两个档位下的\"可交付吞吐\"根本不是同一个数。**报容量时若不说档位，数字就没有意义——这正是第7章联合 SLO 讨论的现实依据。",
+  "display_table": "| 基准/模型 | 档位 | TTFT约束/ms | TPOT约束/ms |\n|---|---|---|---|\n| Llama2-70B (QA) | Conversational | 2000 | 200 |\n| Llama2-70b-interactive | Interactive | 450 | 40 |\n| Llama3.1-8B (摘要) | Conversational | 2000 | 100 |\n| Llama3.1-8B (摘要) | Interactive | 500 | 30 |\n| Llama3.1-405B (文本生成) | Server | 6000 | 175 |\n| Llama3.1-405B (文本生成) | Interactive | 4500 | 80 |\n| DeepSeek-r1 (推理) | Server | 2000 | 80 |\n| DeepSeek-r1 (推理) | Interactive | 1500 | 15 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "barh_group",
+    "groups": [
+      "Llama2-70B (QA)\nConversational",
+      "Llama2-70b-interactive\nInteractive",
+      "Llama3.1-8B (摘要)\nConversational",
+      "Llama3.1-8B (摘要)\nInteractive",
+      "Llama3.1-405B (文本生成)\nServer",
+      "Llama3.1-405B (文本生成)\nInteractive",
+      "DeepSeek-r1 (推理)\nServer",
+      "DeepSeek-r1 (推理)\nInteractive"
+    ],
+    "series": [
+      [
+        "TTFT约束/ms",
+        [
+          2000.0,
+          450.0,
+          2000.0,
+          500.0,
+          6000.0,
+          4500.0,
+          2000.0,
+          1500.0
+        ]
+      ],
+      [
+        "TPOT约束/ms",
+        [
+          200.0,
+          40.0,
+          100.0,
+          30.0,
+          175.0,
+          80.0,
+          80.0,
+          15.0
+        ]
+      ]
+    ],
+    "logx": true,
+    "xlabel": "毫秒（对数轴，越左越紧）",
+    "ylabel": "基准/模型 · 档位",
+    "id": "ch07_tp_slo",
+    "title": "SLO 档位决定目标：Interactive 比 Conversational 紧一个量级（第三方规则）"
+  },
+  "plot_note": "MLPerf Inference 约束档位；Interactive 比 Conversational 紧一个量级；同一行的两根柱是同一配置的两个约束。"
+}

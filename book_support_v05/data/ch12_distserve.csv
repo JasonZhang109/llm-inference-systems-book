@@ -1,0 +1,4 @@
+﻿mode,max_rate_req_s,source,scope
+共置,1.6,N01,端到端共置
+仅Prefill,5.6,N01,阶段隔离，非完整服务
+仅Decode,10.0,N01,阶段隔离，非完整服务

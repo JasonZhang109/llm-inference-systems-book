@@ -1,0 +1,84 @@
+{
+  "id": "ch02_tp_kvpool",
+  "chapter": 2,
+  "figure_id": "图2-T1",
+  "title": "KV 池不是整卡显存：三个规模的公开部署配置（第三方实测部署）",
+  "evidence_type": "THIRD_PARTY_MEASURED",
+  "source_id": "Z03",
+  "columns": [
+    "模型规模",
+    "参数量/GB",
+    "KV池/GB",
+    "总显存/GB",
+    "最大KV槽位"
+  ],
+  "rows": [
+    [
+      "13B（1×A100 40GB）",
+      26,
+      12,
+      40,
+      "15.7K"
+    ],
+    [
+      "66B（4×A100）",
+      132,
+      21,
+      160,
+      "9.7K"
+    ],
+    [
+      "175B（8×A100-80GB）",
+      346,
+      264,
+      640,
+      "60.1K"
+    ]
+  ],
+  "conditions": "PagedAttention/vLLM（SOSP 2023）Table 1；OPT-13B/66B/175B；GCP A2 实例；KV 池为部署配置推算（总显存−权重−开销）。",
+  "limitations": "【原文数值自相矛盾】正文称 OPT-13B 每 token KV 为 800 KB，但其自身算式 2×5120×40×2 B ≈ 1.6 MB，相差 2 倍，引用时须同时标注。KV 池为部署配置推算，非 nvidia-smi 隔离实测。",
+  "interpretation": "KV 池占总显存的 30%（13B）到 41%（175B），而参数量占 65%–54%。**\"KV Cache 是瓶颈\"这句话只在特定规模与长度下成立**：13B 单卡时权重仍是最大项。这也是为什么分页管理（提高池内利用率）比单纯加显存更先被采用。",
+  "display_table": "| 模型规模 | 参数量/GB | KV池/GB | 总显存/GB | 最大KV槽位 |\n|---|---|---|---|---|\n| 13B（1×A100 40GB） | 26 | 12 | 40 | 15.7K |\n| 66B（4×A100） | 132 | 21 | 160 | 9.7K |\n| 175B（8×A100-80GB） | 346 | 264 | 640 | 60.1K |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_stacked",
+    "groups": [
+      "13B（1×A100 40GB）",
+      "66B（4×A100）",
+      "175B（8×A100-80GB）"
+    ],
+    "stack": [
+      [
+        "参数量/GB",
+        [
+          26.0,
+          132.0,
+          346.0
+        ]
+      ],
+      [
+        "KV池/GB",
+        [
+          12.0,
+          21.0,
+          264.0
+        ]
+      ]
+    ],
+    "totals": [
+      40.0,
+      160.0,
+      640.0
+    ],
+    "extra": [
+      "最大KV槽位 15.7K",
+      "最大KV槽位 9.7K",
+      "最大KV槽位 60.1K"
+    ],
+    "ylabel": "显存 / GB",
+    "xlabel": "公开部署配置",
+    "id": "ch02_tp_kvpool",
+    "title": "KV 池不是整卡显存：三个规模的公开部署配置（第三方实测部署）"
+  },
+  "plot_note": "PagedAttention Table 1：KV 池为部署配置推算，非 nvidia-smi 隔离实测；三行硬件规模不同。"
+}

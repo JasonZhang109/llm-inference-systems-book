@@ -1,0 +1,315 @@
+{
+  "figure_id": "图18-V1",
+  "slug": "ch18_multiple_tests",
+  "chapter": 18,
+  "title": "回归指标越多，误报至少一次的概率越高",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书18.8；概率复算",
+  "conditions": "所有零假设为真；独立检验时画精确族错误率；Bonferroni的≤5%保证不要求独立",
+  "limitations": "回归指标往往相关，红线不是实测误报率；统计显著也不能替代业务阈值。",
+  "formula": "FWER=1-(1-alpha)^m",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "m": 1,
+      "unadjusted_percent": 5.000000000000004,
+      "bonferroni_independent_percent": 5.000000000000004
+    },
+    {
+      "m": 2,
+      "unadjusted_percent": 9.750000000000004,
+      "bonferroni_independent_percent": 4.937500000000005
+    },
+    {
+      "m": 3,
+      "unadjusted_percent": 14.262500000000012,
+      "bonferroni_independent_percent": 4.917129629629646
+    },
+    {
+      "m": 4,
+      "unadjusted_percent": 18.549375000000012,
+      "bonferroni_independent_percent": 4.9070288085937275
+    },
+    {
+      "m": 5,
+      "unadjusted_percent": 22.621906250000023,
+      "bonferroni_independent_percent": 4.900995010000009
+    },
+    {
+      "m": 6,
+      "unadjusted_percent": 26.49081093750002,
+      "bonferroni_independent_percent": 4.896983531023591
+    },
+    {
+      "m": 7,
+      "unadjusted_percent": 30.166270390625026,
+      "bonferroni_independent_percent": 4.894123581227394
+    },
+    {
+      "m": 8,
+      "unadjusted_percent": 33.65795687109377,
+      "bonferroni_independent_percent": 4.891981559586811
+    },
+    {
+      "m": 9,
+      "unadjusted_percent": 36.97505902753909,
+      "bonferroni_independent_percent": 4.8903172817990175
+    },
+    {
+      "m": 10,
+      "unadjusted_percent": 40.12630607616213,
+      "bonferroni_independent_percent": 4.888986953422814
+    },
+    {
+      "m": 11,
+      "unadjusted_percent": 43.119990772354036,
+      "bonferroni_independent_percent": 4.88789922522731
+    },
+    {
+      "m": 12,
+      "unadjusted_percent": 45.96399123373634,
+      "bonferroni_independent_percent": 4.886993281129881
+    },
+    {
+      "m": 13,
+      "unadjusted_percent": 48.66579167204952,
+      "bonferroni_independent_percent": 4.886227064981796
+    },
+    {
+      "m": 14,
+      "unadjusted_percent": 51.23250208844705,
+      "bonferroni_independent_percent": 4.885570564866382
+    },
+    {
+      "m": 15,
+      "unadjusted_percent": 53.670876984024694,
+      "bonferroni_independent_percent": 4.885001789563237
+    },
+    {
+      "m": 16,
+      "unadjusted_percent": 55.98733313482347,
+      "bonferroni_independent_percent": 4.884504256936573
+    },
+    {
+      "m": 17,
+      "unadjusted_percent": 58.18796647808229,
+      "bonferroni_independent_percent": 4.884065370486401
+    },
+    {
+      "m": 18,
+      "unadjusted_percent": 60.27856815417818,
+      "bonferroni_independent_percent": 4.883675338038196
+    },
+    {
+      "m": 19,
+      "unadjusted_percent": 62.26463974646927,
+      "bonferroni_independent_percent": 4.883326432487012
+    },
+    {
+      "m": 20,
+      "unadjusted_percent": 64.15140775914581,
+      "bonferroni_independent_percent": 4.883012474683324
+    },
+    {
+      "m": 21,
+      "unadjusted_percent": 65.94383737118852,
+      "bonferroni_independent_percent": 4.882728464297081
+    },
+    {
+      "m": 22,
+      "unadjusted_percent": 67.6466455026291,
+      "bonferroni_independent_percent": 4.882470311503839
+    },
+    {
+      "m": 23,
+      "unadjusted_percent": 69.26431322749764,
+      "bonferroni_independent_percent": 4.882234638766814
+    },
+    {
+      "m": 24,
+      "unadjusted_percent": 70.80109756612276,
+      "bonferroni_independent_percent": 4.882018632241558
+    },
+    {
+      "m": 25,
+      "unadjusted_percent": 72.26104268781663,
+      "bonferroni_independent_percent": 4.881819928888687
+    },
+    {
+      "m": 26,
+      "unadjusted_percent": 73.64799055342579,
+      "bonferroni_independent_percent": 4.881636529671695
+    },
+    {
+      "m": 27,
+      "unadjusted_percent": 74.9655910257545,
+      "bonferroni_independent_percent": 4.8814667320673415
+    },
+    {
+      "m": 28,
+      "unadjusted_percent": 76.21731147446678,
+      "bonferroni_independent_percent": 4.88130907705423
+    },
+    {
+      "m": 29,
+      "unadjusted_percent": 77.40644590074345,
+      "bonferroni_independent_percent": 4.881162307083153
+    },
+    {
+      "m": 30,
+      "unadjusted_percent": 78.53612360570628,
+      "bonferroni_independent_percent": 4.8810253324615305
+    },
+    {
+      "m": 31,
+      "unadjusted_percent": 79.60931742542097,
+      "bonferroni_independent_percent": 4.8808972042497345
+    },
+    {
+      "m": 32,
+      "unadjusted_percent": 80.62885155414992,
+      "bonferroni_independent_percent": 4.8807770922485005
+    },
+    {
+      "m": 33,
+      "unadjusted_percent": 81.59740897644242,
+      "bonferroni_independent_percent": 4.880664266987367
+    },
+    {
+      "m": 34,
+      "unadjusted_percent": 82.51753852762029,
+      "bonferroni_independent_percent": 4.880558084899899
+    },
+    {
+      "m": 35,
+      "unadjusted_percent": 83.39166160123929,
+      "bonferroni_independent_percent": 4.880457976037933
+    },
+    {
+      "m": 36,
+      "unadjusted_percent": 84.22207852117732,
+      "bonferroni_independent_percent": 4.880363433838786
+    },
+    {
+      "m": 37,
+      "unadjusted_percent": 85.01097459511845,
+      "bonferroni_independent_percent": 4.880274006552043
+    },
+    {
+      "m": 38,
+      "unadjusted_percent": 85.76042586536254,
+      "bonferroni_independent_percent": 4.880189290020653
+    },
+    {
+      "m": 39,
+      "unadjusted_percent": 86.4724045720944,
+      "bonferroni_independent_percent": 4.880108921574933
+    },
+    {
+      "m": 40,
+      "unadjusted_percent": 87.1487843434897,
+      "bonferroni_independent_percent": 4.880032574840909
+    },
+    {
+      "m": 41,
+      "unadjusted_percent": 87.7913451263152,
+      "bonferroni_independent_percent": 4.8799599553123745
+    },
+    {
+      "m": 42,
+      "unadjusted_percent": 88.40177786999945,
+      "bonferroni_independent_percent": 4.8798907965524885
+    },
+    {
+      "m": 43,
+      "unadjusted_percent": 88.98168897649947,
+      "bonferroni_independent_percent": 4.87982485692865
+    },
+    {
+      "m": 44,
+      "unadjusted_percent": 89.5326045276745,
+      "bonferroni_independent_percent": 4.879761916790482
+    },
+    {
+      "m": 45,
+      "unadjusted_percent": 90.05597430129077,
+      "bonferroni_independent_percent": 4.879701776027268
+    },
+    {
+      "m": 46,
+      "unadjusted_percent": 90.55317558622625,
+      "bonferroni_independent_percent": 4.879644251941462
+    },
+    {
+      "m": 47,
+      "unadjusted_percent": 91.02551680691494,
+      "bonferroni_independent_percent": 4.8795891773937505
+    },
+    {
+      "m": 48,
+      "unadjusted_percent": 91.47424096656917,
+      "bonferroni_independent_percent": 4.879536399184259
+    },
+    {
+      "m": 49,
+      "unadjusted_percent": 91.90052891824072,
+      "bonferroni_independent_percent": 4.879485776626424
+    },
+    {
+      "m": 50,
+      "unadjusted_percent": 92.30550247232868,
+      "bonferroni_independent_percent": 4.879437180296864
+    },
+    {
+      "m": 51,
+      "unadjusted_percent": 92.69022734871226,
+      "bonferroni_independent_percent": 4.879390490929081
+    },
+    {
+      "m": 52,
+      "unadjusted_percent": 93.05571598127665,
+      "bonferroni_independent_percent": 4.879345598436746
+    },
+    {
+      "m": 53,
+      "unadjusted_percent": 93.40293018221281,
+      "bonferroni_independent_percent": 4.879302401047392
+    },
+    {
+      "m": 54,
+      "unadjusted_percent": 93.73278367310218,
+      "bonferroni_independent_percent": 4.8792608045304835
+    },
+    {
+      "m": 55,
+      "unadjusted_percent": 94.04614448944706,
+      "bonferroni_independent_percent": 4.879220721514887
+    },
+    {
+      "m": 56,
+      "unadjusted_percent": 94.34383726497471,
+      "bonferroni_independent_percent": 4.879182070872668
+    },
+    {
+      "m": 57,
+      "unadjusted_percent": 94.62664540172597,
+      "bonferroni_independent_percent": 4.879144777171951
+    },
+    {
+      "m": 58,
+      "unadjusted_percent": 94.89531313163967,
+      "bonferroni_independent_percent": 4.879108770186525
+    },
+    {
+      "m": 59,
+      "unadjusted_percent": 95.15054747505769,
+      "bonferroni_independent_percent": 4.879073984454596
+    },
+    {
+      "m": 60,
+      "unadjusted_percent": 95.3930201013048,
+      "bonferroni_independent_percent": 4.87904035887915
+    }
+  ],
+  "display_table": "| 指标数 | 未校正至少一次/% | Bonferroni独立例/% |\n|---|---|---|\n| 1 | 5.0 | 5.0 |\n| 5 | 22.622 | 4.901 |\n| 10 | 40.126 | 4.889 |\n| 20 | 64.151 | 4.883 |\n| 50 | 92.306 | 4.879 |"
+}

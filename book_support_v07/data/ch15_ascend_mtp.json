@@ -1,0 +1,46 @@
+{
+  "id": "ch15_ascend_mtp",
+  "chapter": 15,
+  "title": "昇腾Decode：接受率折算不是六次独立实测",
+  "evidence_type": "PUBLISHED_ACCEPTANCE_ADJUSTED",
+  "source_id": "Y06",
+  "columns": [
+    "MTP接受率/%",
+    "2K+2K、卡均72并发/输出Token每秒",
+    "1K+2K、卡均80并发/输出Token每秒"
+  ],
+  "rows": [
+    [
+      70,
+      723,
+      784
+    ],
+    [
+      80,
+      765,
+      830
+    ],
+    [
+      90,
+      808,
+      876
+    ]
+  ],
+  "conditions": "Atlas800I A2；Decode4节点/32卡；DeepSeek V3/R1、A8W8C16、MTP；TPOT≤100ms；报告默认70%接受率折算，80/90%为其他折算。",
+  "limitations": "全部点标为报告折算值，不称六组真实内容实验；不能把90%接受率当作任意业务可达值。",
+  "plot": {
+    "type": "lines",
+    "x": 0,
+    "ys": [
+      1,
+      2
+    ],
+    "xlabel": "用于折算的MTP接受率 / %",
+    "ylabel": "Decode卡均折算输出Token/s",
+    "derived": true
+  },
+  "interpretation": "723→808来自接受率折算条件改变，不是已验证的生产提速；更不能与Prefill的1622相加成端到端吞吐。",
+  "author_hardware_measured": false,
+  "figure_id": "图15-E2",
+  "display_table": "| MTP接受率/% | 2K+2K、卡均72并发/输出Token每秒 | 1K+2K、卡均80并发/输出Token每秒 |\n|---|---|---|\n| 70 | 723 | 784 |\n| 80 | 765 | 830 |\n| 90 | 808 | 876 |"
+}

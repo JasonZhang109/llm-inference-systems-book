@@ -1,0 +1,259 @@
+[
+  {
+    "chapter": 1,
+    "source_file": "第01章_一次推理请求的完整路径(1).md",
+    "source_sha256": "b6c88c8e59bca7b03bc7f1b41ffaac5776b34aa3cb80776364432646bb127a9a",
+    "source_lines": 1043,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch01_task_limit"
+    ],
+    "output_sha256": "59d2e79651b2d20e1defdd3bb1b56eef92400904c17228eae5f001a174bdb59b",
+    "output_lines": 1079,
+    "addition_chars": 1138
+  },
+  {
+    "chapter": 2,
+    "source_file": "第02章_Prefill、Decode 与模型执行(1).md",
+    "source_sha256": "6c9e64f2647aaaf378e93e82841f81106cf3c9c45ca4b3a89635828e5f49c90b",
+    "source_lines": 725,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch02_config_kv"
+    ],
+    "output_sha256": "6f912127b1ad2cf6552bc374b03704a6c5b5344f4b256f52a6068096afd58103",
+    "output_lines": 768,
+    "addition_chars": 1681
+  },
+  {
+    "chapter": 3,
+    "source_file": "第03章_计算、显存、带宽与通信模型.md",
+    "source_sha256": "0089c4c8384c40d396c60203101b76e84218875b1d0031b5aed17693ca0f33fb",
+    "source_lines": 473,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch03_spec_roofline"
+    ],
+    "output_sha256": "05985c2010727d695797ead22ff6a38af629677d090097b4ac9d8333b6e0bc4a",
+    "output_lines": 508,
+    "addition_chars": 1356
+  },
+  {
+    "chapter": 4,
+    "source_file": "第04章_KV Cache 与容量管理.md",
+    "source_sha256": "ec151cbb2870e5b54c07ee21b66dcf41f769f1426e3938b7b682f0f70c2df867",
+    "source_lines": 423,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch04_fp8_workload"
+    ],
+    "output_sha256": "c87cea33fa7bcbed2d40dacc2b75b871231b6ebde2f803c65f34299ecc58460c",
+    "output_lines": 458,
+    "addition_chars": 1279
+  },
+  {
+    "chapter": 5,
+    "source_file": "第05章_批处理、排队与调度.md",
+    "source_sha256": "24d80dd6e1c7404bab56f59f6b051a6dcdf483082a31890e209edbdc39afe50e",
+    "source_lines": 389,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch05_hrrn_relative"
+    ],
+    "output_sha256": "845cf7997cfe547a6bd9c28d81317b78604b435354714ff126edced420835806",
+    "output_lines": 424,
+    "addition_chars": 1212
+  },
+  {
+    "chapter": 6,
+    "source_file": "第06章_多卡并行、拓扑与 MoE.md",
+    "source_sha256": "95751a62d974ce9b3a060d006ae7571544fa3ae023131743c7b0e533622bf98e",
+    "source_lines": 498,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch06_rank_skew"
+    ],
+    "output_sha256": "358c478f91d238438a08b0d5b7d8527ff1d5939ebde3af0edcaf0245e51bc926",
+    "output_lines": 539,
+    "addition_chars": 1253
+  },
+  {
+    "chapter": 7,
+    "source_file": "第07章_服务目标与性能指标(1).md",
+    "source_sha256": "e3d831ecfb535de4481e59d3afb1c95d96f42b4e5487624c8e18401e2a7acfb8",
+    "source_lines": 785,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch07_joint_slo"
+    ],
+    "output_sha256": "25c40ce220af7ea8e154b3c8aebe65fd446c6b15b24d1d4f93788010b936204e",
+    "output_lines": 820,
+    "addition_chars": 1117
+  },
+  {
+    "chapter": 8,
+    "source_file": "第08章_业务负载与基准设计(1).md",
+    "source_sha256": "9469e11cf66cb0681ceef7d39376b87bdd6a01e31f3b0e871f0b0b9000482c25",
+    "source_lines": 649,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch08_public_lengths"
+    ],
+    "output_sha256": "7b49ee6419c92a8736603c6ba59503d6d8fb91aeb1edb91199a467f419ec4525",
+    "output_lines": 685,
+    "addition_chars": 1311
+  },
+  {
+    "chapter": 9,
+    "source_file": "第09章_监控、日志与性能剖析(1).md",
+    "source_sha256": "88ccf1b45a4d2fe0398c7ddcd6ebf0861660cd106e947f1e46823596661ae755",
+    "source_lines": 647,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch09_public_fit",
+      "ch09_sampling"
+    ],
+    "output_sha256": "5482cda3c67a311436faeb8e841bb3baab293213340dcf78a3e7c25d6dd9825f",
+    "output_lines": 704,
+    "addition_chars": 1816
+  },
+  {
+    "chapter": 10,
+    "source_file": "第10章_瓶颈假设与受控实验.md",
+    "source_sha256": "a678cef7901a8d166df02ee22350d865ab09a9e39a95ab6ab7695761a0e705f6",
+    "source_lines": 450,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch10_factorial",
+      "ch10_version_breakeven"
+    ],
+    "output_sha256": "7ad1545af7e0e3973e955c9c3740cb10844fe659e0400fac4cc6062dd835b6da",
+    "output_lines": 501,
+    "addition_chars": 1751
+  },
+  {
+    "chapter": 11,
+    "source_file": "第11章_配置、执行与内存优化.md",
+    "source_sha256": "878caa067158ad3e33a0c8c71f201b28e083aea1f3f436a8c5bf7288b40fdb18",
+    "source_lines": 540,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch11_eagle",
+      "ch11_hybrid_fp8",
+      "ch11_quality_failure"
+    ],
+    "output_sha256": "ab21f19df12cc22f71b360fa164887dd55e2ce08fa1e788251e5e5ffc9407f68",
+    "output_lines": 608,
+    "addition_chars": 2610
+  },
+  {
+    "chapter": 12,
+    "source_file": "第12章_分布式推理服务_PD分离、状态传输与控制平面.md",
+    "source_sha256": "9d294d330b79be1f540ba3933907cb31be6a4514416092e53e56199760b57000",
+    "source_lines": 523,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch12_transfer_floor",
+      "ch12_slo_contract"
+    ],
+    "output_sha256": "631d7028ebd3e866c5d99b2df1e07d6a6d186bec160c8119da291e7e9c108f0f",
+    "output_lines": 579,
+    "addition_chars": 2002
+  },
+  {
+    "chapter": 13,
+    "source_file": "第13章_软件栈与硬件适配.md",
+    "source_sha256": "fdb8e23ee92f4cac1a628b77d50f6321ebafff3f7349c51273988aecf2a9224d",
+    "source_lines": 417,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch13_declared_matrix"
+    ],
+    "output_sha256": "6fdab00206c253bd380ca21e0e1fec99069a07064c981ceb4a5fee62e324b286",
+    "output_lines": 454,
+    "addition_chars": 1380
+  },
+  {
+    "chapter": 14,
+    "source_file": "第14章_跨平台比较与迁移验收.md",
+    "source_sha256": "affd3b0b698471589f213a1f56eb35158f24441ccac89da13e94a954ea686f6b",
+    "source_lines": 370,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch14_two_tracks"
+    ],
+    "output_sha256": "144bb25c5cb872185d2159a5138d31f675ce185e8daef1351fbf4180e63a0135",
+    "output_lines": 405,
+    "addition_chars": 1174
+  },
+  {
+    "chapter": 15,
+    "source_file": "第15章_国产加速器推理实践.md",
+    "source_sha256": "ed86491868bd9b002a447e6ba77a02b543c54fa550d96e79ef82f31fd6c38f14",
+    "source_lines": 394,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch15_quality_scales"
+    ],
+    "output_sha256": "f448d67441a4bc2c6fd2b9238605b139b18491424b4aa15e0f6e0458285274f7",
+    "output_lines": 432,
+    "addition_chars": 1460
+  },
+  {
+    "chapter": 16,
+    "source_file": "第16章_容量规划与扩容决策.md",
+    "source_sha256": "c19b867b5384d9f375333edcf7ce6e9e65f7cd3882558ce0f8c82e8374ad9e1f",
+    "source_lines": 366,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch16_backlog"
+    ],
+    "output_sha256": "d8b847157a8a884d8b52cb3db239077907f2fcd0838390093691af18fef84778",
+    "output_lines": 406,
+    "addition_chars": 1325
+  },
+  {
+    "chapter": 17,
+    "source_file": "第17章_成本、效率与优化收益.md",
+    "source_sha256": "1162d7f60aa2651c04934527c8b94f46d2f08644b8d562971d0eeb112a0f7055",
+    "source_lines": 368,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch17_payback"
+    ],
+    "output_sha256": "30f92938eb27905735fc381f8210fbb85268a9cafd9493f36e7f27c235379580",
+    "output_lines": 405,
+    "addition_chars": 1184
+  },
+  {
+    "chapter": 18,
+    "source_file": "第18章_端到端案例、回归测试与版本治理.md",
+    "source_sha256": "945985b1fd4d50cd133b256d7b16549c9e71fc38806fb08b0994d48a228bea2d",
+    "source_lines": 380,
+    "chapter_fully_contained_in_original_merged": true,
+    "read_scope": "full chapter, labs, questions, evidence gaps and references",
+    "new_figures": [
+      "ch18_multiple_tests"
+    ],
+    "output_sha256": "8e226381cc51f016850dce8fe10d209e5fa95a6727b8768959847b2383baf874",
+    "output_lines": 420,
+    "addition_chars": 1305
+  }
+]

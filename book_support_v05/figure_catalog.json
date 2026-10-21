@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ch01_timeline",
+    "figure": "figures/ch01_timeline.png",
+    "svg": "figures/ch01_timeline.svg",
+    "data": "data/ch01_timeline.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第1章任务图",
+    "author_hardware_measured": false,
+    "caption": "构造数据＋依赖递推。S7不在关键路径；不能把它的0.45秒重复加入总耗时。"
+  },
+  {
+    "id": "ch03_roofline",
+    "figure": "figures/ch03_roofline.png",
+    "svg": "figures/ch03_roofline.svg",
+    "data": "data/ch03_roofline.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第3章公式",
+    "author_hardware_measured": false,
+    "caption": "设备：稠密峰值1000 TFLOP/s、HBM带宽2000 GB/s；矩阵4096×4096，BF16。\n曲线与点均为模型计算，不是任何产品的微基准。"
+  },
+  {
+    "id": "ch05_queue",
+    "figure": "figures/ch05_queue.png",
+    "svg": "figures/ch05_queue.svg",
+    "data": "data/ch05_queue.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第5.8节推导",
+    "author_hardware_measured": false,
+    "caption": "M/G/1模型：泊松到达、独立服务、单服务台、均值20 ms；不是连续批处理的容量预测器。"
+  },
+  {
+    "id": "ch06_tp_capacity",
+    "figure": "figures/ch06_tp_capacity.png",
+    "svg": "figures/ch06_tp_capacity.svg",
+    "data": "data/ch06_tp_capacity.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第6.1节修订公式",
+    "author_hardware_measured": false,
+    "caption": "组合：8卡，每卡80 GB；权重140 GB；每rank固定开销4 GB；逻辑KV为128 KiB/Token。\n只计算容量，不包含输出增长、工作区动态变化和SLO；不是吞吐或采购建议。"
+  },
+  {
+    "id": "ch07_quantile",
+    "figure": "figures/ch07_quantile.png",
+    "svg": "figures/ch07_quantile.svg",
+    "data": "data/ch07_quantile.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "N05 + 第7章样本",
+    "author_hardware_measured": false,
+    "caption": "样本：999条100 ms、1条5000 ms。两种P99.9均不能完整展示那个5000 ms极端值。\n差异来自统计定义，不是服务变快；算法语义参见N05。"
+  },
+  {
+    "id": "ch08_public_loading",
+    "figure": "figures/ch08_public_loading.png",
+    "svg": "figures/ch08_public_loading.svg",
+    "data": "data/ch08_public_loading.csv",
+    "provenance": "PUBLISHED_RESULT",
+    "source": "N18",
+    "author_hardware_measured": false,
+    "caption": "来源N18：SGLang v0.5.20发布说明；GLM-5.2，TP4，4×MI355X。\n仅重绘公开的505.7→40.4秒；未公开重复次数和误差条，不等于端到端服务同比提速。"
+  },
+  {
+    "id": "ch11_speculative",
+    "figure": "figures/ch11_speculative.png",
+    "svg": "figures/ch11_speculative.svg",
+    "data": "data/ch11_speculative.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第11章公式",
+    "author_hardware_measured": false,
+    "caption": "模型：k=4，各位置条件接受概率相同，忽略EOS截断；整轮包含草稿、验证、校正与同步。\n真实接受率和整轮成本必须测量，本图不代表任何草稿模型。"
+  },
+  {
+    "id": "ch11_public_initialization",
+    "figure": "figures/ch11_public_initialization.png",
+    "svg": "figures/ch11_public_initialization.svg",
+    "data": "data/ch11_public_initialization.csv",
+    "provenance": "PUBLISHED_RESULT",
+    "source": "N06",
+    "author_hardware_measured": false,
+    "caption": "来源N06：vLLM v0.30.0，H200，图捕获期间冻结GC。\n发布摘要未给完整模型／形状／重复条件；初始化可能包含图捕获，两组时间不可相加。"
+  },
+  {
+    "id": "ch12_distserve",
+    "figure": "figures/ch12_distserve.png",
+    "svg": "figures/ch12_distserve.svg",
+    "data": "data/ch12_distserve.csv",
+    "provenance": "PUBLISHED_RESULT",
+    "source": "N01",
+    "author_hardware_measured": false,
+    "caption": "来源N01：OSDI 2024论文图1及相邻正文；13B模型，单A100 80GB，输入512／输出64。\nP90 TTFT 0.4 s、TPOT 0.04 s。阶段隔离不是完整服务，不能用10÷1.6宣称端到端加速。"
+  },
+  {
+    "id": "ch15_public_regression",
+    "figure": "figures/ch15_public_regression.png",
+    "svg": "figures/ch15_public_regression.svg",
+    "data": "data/ch15_public_regression.csv",
+    "provenance": "PUBLISHED_RESULT",
+    "source": "N09",
+    "author_hardware_measured": false,
+    "caption": "来源N09已知问题：Qwen3-32B W8A8、A2、P/D共置pooling测试，2443→2313（约−5.32%）。\n不是当前RC对所有模型的支持承诺；报告未给完整负载和重复数据，不补造误差条。"
+  },
+  {
+    "id": "ch16_control_delay",
+    "figure": "figures/ch16_control_delay.png",
+    "svg": "figures/ch16_control_delay.svg",
+    "data": "data/ch16_control_delay.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第16章自定义策略；N19仅为方向性语义依据",
+    "author_hardware_measured": false,
+    "caption": "自定义策略：15秒采样、连续3次确认、启动115秒；额外等待为0。\n区间145—160秒；不是Kubernetes默认策略或真实控制器测量。"
+  },
+  {
+    "id": "ch17_replica_steps",
+    "figure": "figures/ch17_replica_steps.png",
+    "svg": "figures/ch17_replica_steps.svg",
+    "data": "data/ch17_replica_steps.csv",
+    "provenance": "SYNTHETIC_CALCULATION",
+    "source": "第16—17章整数模型",
+    "author_hardware_measured": false,
+    "caption": "完全同质副本的模型：n=ceil(需求/每副本能力)+1；无价格输入，不能据此承诺现金节省。"
+  }
+]

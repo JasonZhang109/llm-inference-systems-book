@@ -1,0 +1,29 @@
+{
+  "figure_id": "图4-V1",
+  "slug": "ch04_fp8_workload",
+  "chapter": 4,
+  "title": "FP8 KV并不意味着吞吐翻倍：公开负载对照",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X05 Table 4",
+  "conditions": "150请求、并发8、约20k输入/2k输出、±15%；H100/FA3与v0.19.1由文章上下文给出",
+  "limitations": "吞吐+14.92%是本书复算；没有逐请求数据，不制造P99或误差条。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "BF16",
+      763.6,
+      15.18,
+      672.6,
+      450.3
+    ],
+    [
+      "FP8",
+      742.8,
+      12.93,
+      585.2,
+      517.5
+    ]
+  ],
+  "display_table": "| KV格式 | TTFT中位数/ms | ITL中位数/ms | 总时长/s | 输出Token/s |\n|---|---|---|---|---|\n| BF16 | 763.6 | 15.18 | 672.6 | 450.3 |\n| FP8 | 742.8 | 12.93 | 585.2 | 517.5 |"
+}

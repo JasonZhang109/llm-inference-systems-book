@@ -1,0 +1,29 @@
+{
+  "figure_id": "图7-V1",
+  "slug": "ch07_joint_slo",
+  "chapter": 7,
+  "title": "两个95%达标，不保证联合达标95%",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书7.8.1",
+  "conditions": "100个请求；TTFT与TPOT分别95个达标；两种失败集合安排",
+  "limitations": "这是概率界的可达构造，不是对真实服务联合达标率的预测。",
+  "formula": "max(0,pA+pB-1)<=P(A∩B)<=min(pA,pB)",
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "不重叠",
+      95,
+      95,
+      90,
+      10
+    ],
+    [
+      "完全重叠",
+      95,
+      95,
+      95,
+      5
+    ]
+  ],
+  "display_table": "| 失败集合关系 | TTFT通过数 | TPOT通过数 | 联合通过数 | 至少一项失败数 |\n|---|---|---|---|---|\n| 不重叠 | 95 | 95 | 90 | 10 |\n| 完全重叠 | 95 | 95 | 95 | 5 |"
+}

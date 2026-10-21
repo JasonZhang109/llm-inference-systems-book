@@ -1,0 +1,89 @@
+{
+  "id": "ch16_tp_lengths",
+  "chapter": 16,
+  "figure_id": "图16-T2",
+  "title": "请求与响应不是同一个分布：长度决定容量怎么算（第三方真实 trace）",
+  "evidence_type": "THIRD_PARTY_TRACE",
+  "source_id": "Z10",
+  "columns": [
+    "类型",
+    "均值/tokens",
+    "p50/tokens",
+    "p90/tokens",
+    "p99/tokens",
+    "最大/tokens"
+  ],
+  "rows": [
+    [
+      "请求（输入）",
+      610.6,
+      251,
+      1796,
+      3387,
+      29665
+    ],
+    [
+      "响应（输出）",
+      123.3,
+      34,
+      272,
+      1491,
+      7315
+    ]
+  ],
+  "conditions": "BurstGPT data/BurstGPT_1.csv 本次复算；1,429,737 条请求；长度单位为 token。",
+  "limitations": "单一区域服务商子集；未按模型或服务类型分层；最大值受长尾极端样本影响。",
+  "interpretation": "输入的均值 610.6、p99 3387；输出的均值 123.3、p99 1491。**输入是长尾重（均值≈2.4×p50），输出相对集中在低位（均值≈3.6×p50）。**这意味着容量规划不能只用一个\"平均长度\"：Prefill 侧被 p99 输入主导，Decode 侧被输出长度分布主导，两者要用不同的分位数。",
+  "display_table": "| 类型 | 均值/tokens | p50/tokens | p90/tokens | p99/tokens | 最大/tokens |\n|---|---|---|---|---|---|\n| 请求（输入） | 610.6 | 251 | 1796 | 3387 | 29665 |\n| 响应（输出） | 123.3 | 34 | 272 | 1491 | 7315 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_group",
+    "groups": [
+      "请求（输入）",
+      "响应（输出）"
+    ],
+    "series": [
+      [
+        "均值/tokens",
+        [
+          610.6,
+          123.3
+        ]
+      ],
+      [
+        "p50/tokens",
+        [
+          251.0,
+          34.0
+        ]
+      ],
+      [
+        "p90/tokens",
+        [
+          1796.0,
+          272.0
+        ]
+      ],
+      [
+        "p99/tokens",
+        [
+          3387.0,
+          1491.0
+        ]
+      ],
+      [
+        "最大/tokens",
+        [
+          29665.0,
+          7315.0
+        ]
+      ]
+    ],
+    "logy": true,
+    "xlabel": "类型",
+    "ylabel": "tokens（对数轴）",
+    "id": "ch16_tp_lengths",
+    "title": "请求与响应不是同一个分布：长度决定容量怎么算（第三方真实 trace）"
+  },
+  "plot_note": "BurstGPT 真实 trace；请求与响应分布不同，容量必须分别按输入/输出长度分布计算。"
+}

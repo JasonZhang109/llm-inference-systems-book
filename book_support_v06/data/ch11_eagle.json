@@ -1,0 +1,30 @@
+{
+  "figure_id": "图11-V1",
+  "slug": "ch11_eagle",
+  "chapter": 11,
+  "title": "推测解码的公开单请求生成速率",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X06 Table 4",
+  "conditions": "LLaMA-Instruct 3.1 8B；SGLang团队实验；batch size=1；同一H100",
+  "limitations": "原表标题Latency但单位Token/s；不把此单请求速率当并发服务容量，未给误差条。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "无推测",
+      158.34,
+      1.0
+    ],
+    [
+      "EAGLE-2",
+      244.1,
+      1.5416
+    ],
+    [
+      "EAGLE-3",
+      373.25,
+      2.3573
+    ]
+  ],
+  "display_table": "| 方法 | Token/s | 相对基线/倍 |\n|---|---|---|\n| 无推测 | 158.34 | 1.0 |\n| EAGLE-2 | 244.1 | 1.5416 |\n| EAGLE-3 | 373.25 | 2.3573 |"
+}

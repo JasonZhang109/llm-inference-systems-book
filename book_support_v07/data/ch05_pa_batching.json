@@ -1,0 +1,49 @@
+{
+  "id": "ch05_pa_batching",
+  "chapter": 5,
+  "title": "分页之后实际组入了多少请求？",
+  "evidence_type": "PUBLISHED_EXPERIMENT",
+  "source_id": "Y01",
+  "columns": [
+    "策略",
+    "ShareGPT平均组批请求数",
+    "Alpaca平均组批请求数"
+  ],
+  "rows": [
+    [
+      "Orca Max",
+      7,
+      7
+    ],
+    [
+      "Orca Pow2",
+      9.81,
+      43.24
+    ],
+    [
+      "Orca Oracle",
+      13.62,
+      72.75
+    ],
+    [
+      "vLLM",
+      30.42,
+      132.44
+    ]
+  ],
+  "conditions": "OPT-13B，A100 40GB；ShareGPT 2req/s、Alpaca 30req/s；Figure13；两种负载分面显示。",
+  "limitations": "平均batched requests是占用/组批统计，不是req/s或SLO容量；不可把两种到达率的柱子当同一场景。",
+  "plot": {
+    "type": "panels",
+    "x": 0,
+    "ys": [
+      1,
+      2
+    ],
+    "ylabel": "平均组批请求数"
+  },
+  "interpretation": "相对Orca Oracle，vLLM组批数约2.23倍与1.82倍。它说明分页改善状态容纳和调度机会，而不是直接证明端到端加速。",
+  "author_hardware_measured": false,
+  "figure_id": "图5-E1",
+  "display_table": "| 策略 | ShareGPT平均组批请求数 | Alpaca平均组批请求数 |\n|---|---|---|\n| Orca Max | 7 | 7 |\n| Orca Pow2 | 9.81 | 43.24 |\n| Orca Oracle | 13.62 | 72.75 |\n| vLLM | 30.42 | 132.44 |"
+}

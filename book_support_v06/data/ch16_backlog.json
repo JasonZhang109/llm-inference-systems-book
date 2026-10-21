@@ -1,0 +1,1219 @@
+{
+  "figure_id": "图16-V1",
+  "slug": "ch16_backlog",
+  "chapter": 16,
+  "title": "一次60秒突发，会留下180秒恢复尾巴",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书16.8.2；X11仅支撑控制器语义",
+  "conditions": "服务25req/s；0—60s到达40，其后20；无取消、拒绝、重试，初始积压0",
+  "limitations": "与16.3.1的620/340s属于不同模型；不作为生产恢复时长保证。",
+  "formula": "Qpeak=(40-25)*60=900; recovery=900/(25-20)=180s",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "t_s": 0,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 1,
+      "backlog_requests": 15
+    },
+    {
+      "t_s": 2,
+      "backlog_requests": 30
+    },
+    {
+      "t_s": 3,
+      "backlog_requests": 45
+    },
+    {
+      "t_s": 4,
+      "backlog_requests": 60
+    },
+    {
+      "t_s": 5,
+      "backlog_requests": 75
+    },
+    {
+      "t_s": 6,
+      "backlog_requests": 90
+    },
+    {
+      "t_s": 7,
+      "backlog_requests": 105
+    },
+    {
+      "t_s": 8,
+      "backlog_requests": 120
+    },
+    {
+      "t_s": 9,
+      "backlog_requests": 135
+    },
+    {
+      "t_s": 10,
+      "backlog_requests": 150
+    },
+    {
+      "t_s": 11,
+      "backlog_requests": 165
+    },
+    {
+      "t_s": 12,
+      "backlog_requests": 180
+    },
+    {
+      "t_s": 13,
+      "backlog_requests": 195
+    },
+    {
+      "t_s": 14,
+      "backlog_requests": 210
+    },
+    {
+      "t_s": 15,
+      "backlog_requests": 225
+    },
+    {
+      "t_s": 16,
+      "backlog_requests": 240
+    },
+    {
+      "t_s": 17,
+      "backlog_requests": 255
+    },
+    {
+      "t_s": 18,
+      "backlog_requests": 270
+    },
+    {
+      "t_s": 19,
+      "backlog_requests": 285
+    },
+    {
+      "t_s": 20,
+      "backlog_requests": 300
+    },
+    {
+      "t_s": 21,
+      "backlog_requests": 315
+    },
+    {
+      "t_s": 22,
+      "backlog_requests": 330
+    },
+    {
+      "t_s": 23,
+      "backlog_requests": 345
+    },
+    {
+      "t_s": 24,
+      "backlog_requests": 360
+    },
+    {
+      "t_s": 25,
+      "backlog_requests": 375
+    },
+    {
+      "t_s": 26,
+      "backlog_requests": 390
+    },
+    {
+      "t_s": 27,
+      "backlog_requests": 405
+    },
+    {
+      "t_s": 28,
+      "backlog_requests": 420
+    },
+    {
+      "t_s": 29,
+      "backlog_requests": 435
+    },
+    {
+      "t_s": 30,
+      "backlog_requests": 450
+    },
+    {
+      "t_s": 31,
+      "backlog_requests": 465
+    },
+    {
+      "t_s": 32,
+      "backlog_requests": 480
+    },
+    {
+      "t_s": 33,
+      "backlog_requests": 495
+    },
+    {
+      "t_s": 34,
+      "backlog_requests": 510
+    },
+    {
+      "t_s": 35,
+      "backlog_requests": 525
+    },
+    {
+      "t_s": 36,
+      "backlog_requests": 540
+    },
+    {
+      "t_s": 37,
+      "backlog_requests": 555
+    },
+    {
+      "t_s": 38,
+      "backlog_requests": 570
+    },
+    {
+      "t_s": 39,
+      "backlog_requests": 585
+    },
+    {
+      "t_s": 40,
+      "backlog_requests": 600
+    },
+    {
+      "t_s": 41,
+      "backlog_requests": 615
+    },
+    {
+      "t_s": 42,
+      "backlog_requests": 630
+    },
+    {
+      "t_s": 43,
+      "backlog_requests": 645
+    },
+    {
+      "t_s": 44,
+      "backlog_requests": 660
+    },
+    {
+      "t_s": 45,
+      "backlog_requests": 675
+    },
+    {
+      "t_s": 46,
+      "backlog_requests": 690
+    },
+    {
+      "t_s": 47,
+      "backlog_requests": 705
+    },
+    {
+      "t_s": 48,
+      "backlog_requests": 720
+    },
+    {
+      "t_s": 49,
+      "backlog_requests": 735
+    },
+    {
+      "t_s": 50,
+      "backlog_requests": 750
+    },
+    {
+      "t_s": 51,
+      "backlog_requests": 765
+    },
+    {
+      "t_s": 52,
+      "backlog_requests": 780
+    },
+    {
+      "t_s": 53,
+      "backlog_requests": 795
+    },
+    {
+      "t_s": 54,
+      "backlog_requests": 810
+    },
+    {
+      "t_s": 55,
+      "backlog_requests": 825
+    },
+    {
+      "t_s": 56,
+      "backlog_requests": 840
+    },
+    {
+      "t_s": 57,
+      "backlog_requests": 855
+    },
+    {
+      "t_s": 58,
+      "backlog_requests": 870
+    },
+    {
+      "t_s": 59,
+      "backlog_requests": 885
+    },
+    {
+      "t_s": 60,
+      "backlog_requests": 900
+    },
+    {
+      "t_s": 61,
+      "backlog_requests": 895
+    },
+    {
+      "t_s": 62,
+      "backlog_requests": 890
+    },
+    {
+      "t_s": 63,
+      "backlog_requests": 885
+    },
+    {
+      "t_s": 64,
+      "backlog_requests": 880
+    },
+    {
+      "t_s": 65,
+      "backlog_requests": 875
+    },
+    {
+      "t_s": 66,
+      "backlog_requests": 870
+    },
+    {
+      "t_s": 67,
+      "backlog_requests": 865
+    },
+    {
+      "t_s": 68,
+      "backlog_requests": 860
+    },
+    {
+      "t_s": 69,
+      "backlog_requests": 855
+    },
+    {
+      "t_s": 70,
+      "backlog_requests": 850
+    },
+    {
+      "t_s": 71,
+      "backlog_requests": 845
+    },
+    {
+      "t_s": 72,
+      "backlog_requests": 840
+    },
+    {
+      "t_s": 73,
+      "backlog_requests": 835
+    },
+    {
+      "t_s": 74,
+      "backlog_requests": 830
+    },
+    {
+      "t_s": 75,
+      "backlog_requests": 825
+    },
+    {
+      "t_s": 76,
+      "backlog_requests": 820
+    },
+    {
+      "t_s": 77,
+      "backlog_requests": 815
+    },
+    {
+      "t_s": 78,
+      "backlog_requests": 810
+    },
+    {
+      "t_s": 79,
+      "backlog_requests": 805
+    },
+    {
+      "t_s": 80,
+      "backlog_requests": 800
+    },
+    {
+      "t_s": 81,
+      "backlog_requests": 795
+    },
+    {
+      "t_s": 82,
+      "backlog_requests": 790
+    },
+    {
+      "t_s": 83,
+      "backlog_requests": 785
+    },
+    {
+      "t_s": 84,
+      "backlog_requests": 780
+    },
+    {
+      "t_s": 85,
+      "backlog_requests": 775
+    },
+    {
+      "t_s": 86,
+      "backlog_requests": 770
+    },
+    {
+      "t_s": 87,
+      "backlog_requests": 765
+    },
+    {
+      "t_s": 88,
+      "backlog_requests": 760
+    },
+    {
+      "t_s": 89,
+      "backlog_requests": 755
+    },
+    {
+      "t_s": 90,
+      "backlog_requests": 750
+    },
+    {
+      "t_s": 91,
+      "backlog_requests": 745
+    },
+    {
+      "t_s": 92,
+      "backlog_requests": 740
+    },
+    {
+      "t_s": 93,
+      "backlog_requests": 735
+    },
+    {
+      "t_s": 94,
+      "backlog_requests": 730
+    },
+    {
+      "t_s": 95,
+      "backlog_requests": 725
+    },
+    {
+      "t_s": 96,
+      "backlog_requests": 720
+    },
+    {
+      "t_s": 97,
+      "backlog_requests": 715
+    },
+    {
+      "t_s": 98,
+      "backlog_requests": 710
+    },
+    {
+      "t_s": 99,
+      "backlog_requests": 705
+    },
+    {
+      "t_s": 100,
+      "backlog_requests": 700
+    },
+    {
+      "t_s": 101,
+      "backlog_requests": 695
+    },
+    {
+      "t_s": 102,
+      "backlog_requests": 690
+    },
+    {
+      "t_s": 103,
+      "backlog_requests": 685
+    },
+    {
+      "t_s": 104,
+      "backlog_requests": 680
+    },
+    {
+      "t_s": 105,
+      "backlog_requests": 675
+    },
+    {
+      "t_s": 106,
+      "backlog_requests": 670
+    },
+    {
+      "t_s": 107,
+      "backlog_requests": 665
+    },
+    {
+      "t_s": 108,
+      "backlog_requests": 660
+    },
+    {
+      "t_s": 109,
+      "backlog_requests": 655
+    },
+    {
+      "t_s": 110,
+      "backlog_requests": 650
+    },
+    {
+      "t_s": 111,
+      "backlog_requests": 645
+    },
+    {
+      "t_s": 112,
+      "backlog_requests": 640
+    },
+    {
+      "t_s": 113,
+      "backlog_requests": 635
+    },
+    {
+      "t_s": 114,
+      "backlog_requests": 630
+    },
+    {
+      "t_s": 115,
+      "backlog_requests": 625
+    },
+    {
+      "t_s": 116,
+      "backlog_requests": 620
+    },
+    {
+      "t_s": 117,
+      "backlog_requests": 615
+    },
+    {
+      "t_s": 118,
+      "backlog_requests": 610
+    },
+    {
+      "t_s": 119,
+      "backlog_requests": 605
+    },
+    {
+      "t_s": 120,
+      "backlog_requests": 600
+    },
+    {
+      "t_s": 121,
+      "backlog_requests": 595
+    },
+    {
+      "t_s": 122,
+      "backlog_requests": 590
+    },
+    {
+      "t_s": 123,
+      "backlog_requests": 585
+    },
+    {
+      "t_s": 124,
+      "backlog_requests": 580
+    },
+    {
+      "t_s": 125,
+      "backlog_requests": 575
+    },
+    {
+      "t_s": 126,
+      "backlog_requests": 570
+    },
+    {
+      "t_s": 127,
+      "backlog_requests": 565
+    },
+    {
+      "t_s": 128,
+      "backlog_requests": 560
+    },
+    {
+      "t_s": 129,
+      "backlog_requests": 555
+    },
+    {
+      "t_s": 130,
+      "backlog_requests": 550
+    },
+    {
+      "t_s": 131,
+      "backlog_requests": 545
+    },
+    {
+      "t_s": 132,
+      "backlog_requests": 540
+    },
+    {
+      "t_s": 133,
+      "backlog_requests": 535
+    },
+    {
+      "t_s": 134,
+      "backlog_requests": 530
+    },
+    {
+      "t_s": 135,
+      "backlog_requests": 525
+    },
+    {
+      "t_s": 136,
+      "backlog_requests": 520
+    },
+    {
+      "t_s": 137,
+      "backlog_requests": 515
+    },
+    {
+      "t_s": 138,
+      "backlog_requests": 510
+    },
+    {
+      "t_s": 139,
+      "backlog_requests": 505
+    },
+    {
+      "t_s": 140,
+      "backlog_requests": 500
+    },
+    {
+      "t_s": 141,
+      "backlog_requests": 495
+    },
+    {
+      "t_s": 142,
+      "backlog_requests": 490
+    },
+    {
+      "t_s": 143,
+      "backlog_requests": 485
+    },
+    {
+      "t_s": 144,
+      "backlog_requests": 480
+    },
+    {
+      "t_s": 145,
+      "backlog_requests": 475
+    },
+    {
+      "t_s": 146,
+      "backlog_requests": 470
+    },
+    {
+      "t_s": 147,
+      "backlog_requests": 465
+    },
+    {
+      "t_s": 148,
+      "backlog_requests": 460
+    },
+    {
+      "t_s": 149,
+      "backlog_requests": 455
+    },
+    {
+      "t_s": 150,
+      "backlog_requests": 450
+    },
+    {
+      "t_s": 151,
+      "backlog_requests": 445
+    },
+    {
+      "t_s": 152,
+      "backlog_requests": 440
+    },
+    {
+      "t_s": 153,
+      "backlog_requests": 435
+    },
+    {
+      "t_s": 154,
+      "backlog_requests": 430
+    },
+    {
+      "t_s": 155,
+      "backlog_requests": 425
+    },
+    {
+      "t_s": 156,
+      "backlog_requests": 420
+    },
+    {
+      "t_s": 157,
+      "backlog_requests": 415
+    },
+    {
+      "t_s": 158,
+      "backlog_requests": 410
+    },
+    {
+      "t_s": 159,
+      "backlog_requests": 405
+    },
+    {
+      "t_s": 160,
+      "backlog_requests": 400
+    },
+    {
+      "t_s": 161,
+      "backlog_requests": 395
+    },
+    {
+      "t_s": 162,
+      "backlog_requests": 390
+    },
+    {
+      "t_s": 163,
+      "backlog_requests": 385
+    },
+    {
+      "t_s": 164,
+      "backlog_requests": 380
+    },
+    {
+      "t_s": 165,
+      "backlog_requests": 375
+    },
+    {
+      "t_s": 166,
+      "backlog_requests": 370
+    },
+    {
+      "t_s": 167,
+      "backlog_requests": 365
+    },
+    {
+      "t_s": 168,
+      "backlog_requests": 360
+    },
+    {
+      "t_s": 169,
+      "backlog_requests": 355
+    },
+    {
+      "t_s": 170,
+      "backlog_requests": 350
+    },
+    {
+      "t_s": 171,
+      "backlog_requests": 345
+    },
+    {
+      "t_s": 172,
+      "backlog_requests": 340
+    },
+    {
+      "t_s": 173,
+      "backlog_requests": 335
+    },
+    {
+      "t_s": 174,
+      "backlog_requests": 330
+    },
+    {
+      "t_s": 175,
+      "backlog_requests": 325
+    },
+    {
+      "t_s": 176,
+      "backlog_requests": 320
+    },
+    {
+      "t_s": 177,
+      "backlog_requests": 315
+    },
+    {
+      "t_s": 178,
+      "backlog_requests": 310
+    },
+    {
+      "t_s": 179,
+      "backlog_requests": 305
+    },
+    {
+      "t_s": 180,
+      "backlog_requests": 300
+    },
+    {
+      "t_s": 181,
+      "backlog_requests": 295
+    },
+    {
+      "t_s": 182,
+      "backlog_requests": 290
+    },
+    {
+      "t_s": 183,
+      "backlog_requests": 285
+    },
+    {
+      "t_s": 184,
+      "backlog_requests": 280
+    },
+    {
+      "t_s": 185,
+      "backlog_requests": 275
+    },
+    {
+      "t_s": 186,
+      "backlog_requests": 270
+    },
+    {
+      "t_s": 187,
+      "backlog_requests": 265
+    },
+    {
+      "t_s": 188,
+      "backlog_requests": 260
+    },
+    {
+      "t_s": 189,
+      "backlog_requests": 255
+    },
+    {
+      "t_s": 190,
+      "backlog_requests": 250
+    },
+    {
+      "t_s": 191,
+      "backlog_requests": 245
+    },
+    {
+      "t_s": 192,
+      "backlog_requests": 240
+    },
+    {
+      "t_s": 193,
+      "backlog_requests": 235
+    },
+    {
+      "t_s": 194,
+      "backlog_requests": 230
+    },
+    {
+      "t_s": 195,
+      "backlog_requests": 225
+    },
+    {
+      "t_s": 196,
+      "backlog_requests": 220
+    },
+    {
+      "t_s": 197,
+      "backlog_requests": 215
+    },
+    {
+      "t_s": 198,
+      "backlog_requests": 210
+    },
+    {
+      "t_s": 199,
+      "backlog_requests": 205
+    },
+    {
+      "t_s": 200,
+      "backlog_requests": 200
+    },
+    {
+      "t_s": 201,
+      "backlog_requests": 195
+    },
+    {
+      "t_s": 202,
+      "backlog_requests": 190
+    },
+    {
+      "t_s": 203,
+      "backlog_requests": 185
+    },
+    {
+      "t_s": 204,
+      "backlog_requests": 180
+    },
+    {
+      "t_s": 205,
+      "backlog_requests": 175
+    },
+    {
+      "t_s": 206,
+      "backlog_requests": 170
+    },
+    {
+      "t_s": 207,
+      "backlog_requests": 165
+    },
+    {
+      "t_s": 208,
+      "backlog_requests": 160
+    },
+    {
+      "t_s": 209,
+      "backlog_requests": 155
+    },
+    {
+      "t_s": 210,
+      "backlog_requests": 150
+    },
+    {
+      "t_s": 211,
+      "backlog_requests": 145
+    },
+    {
+      "t_s": 212,
+      "backlog_requests": 140
+    },
+    {
+      "t_s": 213,
+      "backlog_requests": 135
+    },
+    {
+      "t_s": 214,
+      "backlog_requests": 130
+    },
+    {
+      "t_s": 215,
+      "backlog_requests": 125
+    },
+    {
+      "t_s": 216,
+      "backlog_requests": 120
+    },
+    {
+      "t_s": 217,
+      "backlog_requests": 115
+    },
+    {
+      "t_s": 218,
+      "backlog_requests": 110
+    },
+    {
+      "t_s": 219,
+      "backlog_requests": 105
+    },
+    {
+      "t_s": 220,
+      "backlog_requests": 100
+    },
+    {
+      "t_s": 221,
+      "backlog_requests": 95
+    },
+    {
+      "t_s": 222,
+      "backlog_requests": 90
+    },
+    {
+      "t_s": 223,
+      "backlog_requests": 85
+    },
+    {
+      "t_s": 224,
+      "backlog_requests": 80
+    },
+    {
+      "t_s": 225,
+      "backlog_requests": 75
+    },
+    {
+      "t_s": 226,
+      "backlog_requests": 70
+    },
+    {
+      "t_s": 227,
+      "backlog_requests": 65
+    },
+    {
+      "t_s": 228,
+      "backlog_requests": 60
+    },
+    {
+      "t_s": 229,
+      "backlog_requests": 55
+    },
+    {
+      "t_s": 230,
+      "backlog_requests": 50
+    },
+    {
+      "t_s": 231,
+      "backlog_requests": 45
+    },
+    {
+      "t_s": 232,
+      "backlog_requests": 40
+    },
+    {
+      "t_s": 233,
+      "backlog_requests": 35
+    },
+    {
+      "t_s": 234,
+      "backlog_requests": 30
+    },
+    {
+      "t_s": 235,
+      "backlog_requests": 25
+    },
+    {
+      "t_s": 236,
+      "backlog_requests": 20
+    },
+    {
+      "t_s": 237,
+      "backlog_requests": 15
+    },
+    {
+      "t_s": 238,
+      "backlog_requests": 10
+    },
+    {
+      "t_s": 239,
+      "backlog_requests": 5
+    },
+    {
+      "t_s": 240,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 241,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 242,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 243,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 244,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 245,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 246,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 247,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 248,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 249,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 250,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 251,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 252,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 253,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 254,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 255,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 256,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 257,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 258,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 259,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 260,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 261,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 262,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 263,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 264,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 265,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 266,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 267,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 268,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 269,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 270,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 271,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 272,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 273,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 274,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 275,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 276,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 277,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 278,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 279,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 280,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 281,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 282,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 283,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 284,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 285,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 286,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 287,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 288,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 289,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 290,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 291,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 292,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 293,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 294,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 295,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 296,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 297,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 298,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 299,
+      "backlog_requests": 0
+    },
+    {
+      "t_s": 300,
+      "backlog_requests": 0
+    }
+  ],
+  "display_table": "| 时点/s | 积压 | 该时点后到达率/req每秒 | 服务率/req每秒 |\n|---|---|---|---|\n| 0 | 0 | 40 | 25 |\n| 60 | 900 | 20 | 25 |\n| 120 | 600 | 20 | 25 |\n| 180 | 300 | 20 | 25 |\n| 240 | 0 | 20 | 25 |"
+}

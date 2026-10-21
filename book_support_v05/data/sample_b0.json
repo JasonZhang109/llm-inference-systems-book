@@ -1,0 +1,20 @@
+{
+  "run_type": "EXAMPLE",
+  "clock_domains_calibrated": false,
+  "server_ms": {
+    "queued": 21,
+    "first_token": 634,
+    "first_content_written": 641,
+    "first_visible_written": 1180,
+    "last_content": 4210,
+    "terminal": 4213
+  },
+  "client_ms": {
+    "send": 0,
+    "first_content": 668,
+    "first_visible": 1207,
+    "terminal": 4250
+  },
+  "output_tokens": 301,
+  "content_events": 20
+}

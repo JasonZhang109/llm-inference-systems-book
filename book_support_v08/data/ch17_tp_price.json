@@ -1,0 +1,68 @@
+{
+  "id": "ch17_tp_price",
+  "chapter": 17,
+  "figure_id": "图17-T1",
+  "title": "标价下降很快，但那是价格不是成本（第三方分析）",
+  "evidence_type": "THIRD_PARTY_ANALYSIS",
+  "source_id": "Z12",
+  "columns": [
+    "口径",
+    "起点",
+    "终点",
+    "降幅",
+    "单位"
+  ],
+  "rows": [
+    [
+      "a16z LLMflation（MMLU 门槛最便宜模型）",
+      60,
+      0.06,
+      "约 1000×",
+      "美元/百万 token（API 标价）"
+    ],
+    [
+      "Epoch AI：任务间下降率区间",
+      null,
+      null,
+      "9×–900×",
+      "区间（对数线性回归）"
+    ]
+  ],
+  "conditions": "a16z《LLMflation》（价格取自 Internet Archive 历史标价，MMLU 为等效性能锚，输入输出价取平均）；Epoch AI 数据洞察（以\"达到某基准分数的最便宜模型\"标价做对数线性回归）。",
+  "limitations": "【口径警示】两者都是 API 标价（list price），不是厂商成本，含利润率变化；样本仅覆盖部分厂商与第三方托管，存在选择偏差；MMLU 锚点受基准污染影响；Epoch 的区间极宽（9×–900×），不宜作为单一预测常数。",
+  "interpretation": "标价从约 60 美元/百万 token 降到约 0.06 美元，约 1000 倍；但 Epoch 对\"不同任务\"的下降率给出 9×–900× 的极宽区间。**这两个数字都不能直接写进成本模型**：标价下降同时混合了硬件进步、模型变小、竞争定价与补贴。做第17章的收益测算时，用标价当成本会系统性高估节省。",
+  "display_table": "| 口径 | 起点 | 终点 | 降幅 | 单位 |\n|---|---|---|---|---|\n| a16z LLMflation（MMLU 门槛最便宜模型） | 60 | 0.06 | 约 1000× | 美元/百万 token（API 标价） |\n| Epoch AI：任务间下降率区间 | — | — | 9×–900× | 区间（对数线性回归） |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "range_panels",
+    "panels": [
+      {
+        "title": "a16z LLMflation：最便宜达标模型标价",
+        "xlabel": "美元 / 百万 token（对数轴）",
+        "items": [
+          [
+            "60 → 0.06",
+            0.06,
+            60,
+            "约 1000×"
+          ]
+        ]
+      },
+      {
+        "title": "Epoch AI：任务间下降率区间",
+        "xlabel": "下降倍数（对数轴）",
+        "items": [
+          [
+            "9× – 900×",
+            9,
+            900,
+            "对数线性回归区间"
+          ]
+        ]
+      }
+    ],
+    "id": "ch17_tp_price",
+    "title": "标价下降很快，但那是价格不是成本（第三方分析）"
+  },
+  "plot_note": "左为 API 标价（list price），右为跨任务下降率区间；都是价格口径，不是自建成本或单次推理成本。"
+}

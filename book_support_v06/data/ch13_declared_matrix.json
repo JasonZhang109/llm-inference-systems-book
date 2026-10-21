@@ -1,0 +1,35 @@
+{
+  "figure_id": "图13-V1",
+  "slug": "ch13_declared_matrix",
+  "chapter": 13,
+  "title": "官方验证过哪些组合？空白不等于不支持",
+  "evidence_type": "DOCUMENTED_COVERAGE",
+  "source": "X09 Models",
+  "conditions": "仅保留报告列出的模型、精度、节点数、EP/DP和1P1D组合",
+  "limitations": "未声明≠不支持；蓝格也不代表本书已验证；不得展开为任意功能笛卡尔积。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "GLM-5.2 · W8A8C8",
+      "4节点 EP / 1P1D",
+      "未声明"
+    ],
+    [
+      "Kimi K3 · W4A8",
+      "8节点 EP / 1P1D",
+      "4节点 EP / 1P1D"
+    ],
+    [
+      "DeepSeek-V4-Flash · W8A8C8",
+      "4节点 DP / 1P1D",
+      "未声明"
+    ],
+    [
+      "DeepSeek-V4-Pro · W8A8C8",
+      "2节点 EP / 1P1D",
+      "未声明"
+    ]
+  ],
+  "display_table": "| 模型/量化 | A3部署 | Ascend950部署 |\n|---|---|---|\n| GLM-5.2 · W8A8C8 | 4节点 EP / 1P1D | 未声明 |\n| Kimi K3 · W4A8 | 8节点 EP / 1P1D | 4节点 EP / 1P1D |\n| DeepSeek-V4-Flash · W8A8C8 | 4节点 DP / 1P1D | 未声明 |\n| DeepSeek-V4-Pro · W8A8C8 | 2节点 EP / 1P1D | 未声明 |"
+}

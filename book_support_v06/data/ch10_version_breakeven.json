@@ -1,0 +1,25 @@
+{
+  "figure_id": "图10-V2",
+  "slug": "ch10_version_breakeven",
+  "chapter": 10,
+  "title": "版本变化会移动FP8的收益交点",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X05 Table 3",
+  "conditions": "Llama-3.1-8B；H100/FA3单请求上下文；before与after比较；交点由原文拟合得到",
+  "limitations": "是整版本比较，不可把全部收益归因于单个开关；交点不是最大可用上下文。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "v0.10.2",
+      24889,
+      63
+    ],
+    [
+      "v0.19.1",
+      7010,
+      54
+    ]
+  ],
+  "display_table": "| 版本 | 公开拟合交点/Token | FP8斜率为BF16的/% |\n|---|---|---|\n| v0.10.2 | 24889 | 63 |\n| v0.19.1 | 7010 | 54 |"
+}

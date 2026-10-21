@@ -1,0 +1,73 @@
+{
+  "id": "ch16_tp_burst",
+  "chapter": 16,
+  "figure_id": "图16-T1",
+  "title": "突发是尺度相关的：换一个窗口，倍数就变了（第三方真实 trace）",
+  "evidence_type": "THIRD_PARTY_TRACE",
+  "source_id": "Z10",
+  "columns": [
+    "统计窗口",
+    "峰值/均值比",
+    "口径"
+  ],
+  "rows": [
+    [
+      "1 s",
+      49.5,
+      "BurstGPT 非空窗口"
+    ],
+    [
+      "10 s",
+      53.0,
+      "BurstGPT 非空窗口"
+    ],
+    [
+      "60 s",
+      53.2,
+      "BurstGPT 非空窗口"
+    ],
+    [
+      "300 s",
+      56.3,
+      "BurstGPT 非空窗口"
+    ],
+    [
+      "3600 s",
+      33.3,
+      "BurstGPT 非空窗口"
+    ]
+  ],
+  "conditions": "BurstGPT（KDD'25）data/BurstGPT_1.csv，本次复算：61 天、1,429,737 条请求、平均到达率 0.2713 RPS；峰值/均值比仅统计非空（active）窗口。",
+  "limitations": "单一区域服务商子集（会话与 API 混合），非全行业代表；原始 RPS 很低（0.2713），用于容量规划须按目标 RPS 缩放；失败请求未逐条区分原因。",
+  "interpretation": "峰值/均值比在 1 秒窗口是 49.5 倍，到 1 小时窗口降到 33.3 倍。**\"系统有 50 倍突发\"这句话如果不写窗口就没有意义。** 容量规划里真正要问的是：你的扩容生效时间尺度上，突发倍数是多少——这正是算例里\"突发只有 1 分钟\"那个假设的现实版本。",
+  "display_table": "| 统计窗口 | 峰值/均值比 | 口径 |\n|---|---|---|\n| 1 s | 49.5 | BurstGPT 非空窗口 |\n| 10 s | 53.0 | BurstGPT 非空窗口 |\n| 60 s | 53.2 | BurstGPT 非空窗口 |\n| 300 s | 56.3 | BurstGPT 非空窗口 |\n| 3600 s | 33.3 | BurstGPT 非空窗口 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_simple",
+    "groups": [
+      "1 s",
+      "10 s",
+      "60 s",
+      "300 s",
+      "3600 s"
+    ],
+    "values": [
+      49.5,
+      53.0,
+      53.2,
+      56.3,
+      33.3
+    ],
+    "colors": [
+      "#176b96",
+      "#176b96",
+      "#176b96",
+      "#176b96",
+      "#176b96"
+    ],
+    "ylabel": "峰值 / 均值比",
+    "id": "ch16_tp_burst",
+    "title": "突发是尺度相关的：换一个窗口，倍数就变了（第三方真实 trace）"
+  },
+  "plot_note": "BurstGPT 真实 trace，非空窗口统计；突发倍数随统计窗口变化，报容量必须写清窗口口径。"
+}

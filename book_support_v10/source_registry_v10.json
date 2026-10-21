@@ -1,0 +1,263 @@
+[
+  {
+    "id": "V10-01",
+    "kind": "厂商官方文档",
+    "title": "vLLM：Tool Calling",
+    "url": "https://docs.vllm.ai/en/stable/features/tool_calling/",
+    "version": "stable 文档（2026-10 检索）",
+    "chapter": "第 1 章",
+    "used_for": "工具调用的服务端开关、请求/响应字段名、各解析器与模型对应、已知限制"
+  },
+  {
+    "id": "S10",
+    "kind": "厂商技术博客",
+    "title": "Introducing NVFP4 for Efficient and Accurate Low-Precision Inference",
+    "url": "https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/",
+    "version": "2025-06-24 发布",
+    "chapter": "第 3 章",
+    "used_for": "NVFP4 的块大小、缩放位宽、两级缩放、与 MXFP4 的差异、精度与支持面"
+  },
+  {
+    "id": "S21",
+    "kind": "厂商产品页",
+    "title": "NVIDIA GB300 NVL72",
+    "url": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
+    "version": "产品页（2026-10 检索）",
+    "chapter": "第 3、6、14、17 章",
+    "used_for": "机柜级配置与标称规格（72 GPU / 36 CPU、NVLink 130 TB/s、20 TB 显存、576 TB/s 聚合带宽、ConnectX-8 800 Gb/s）"
+  },
+  {
+    "id": "S22",
+    "kind": "厂商产品页",
+    "title": "AMD Instinct MI350 Series GPUs",
+    "url": "https://www.amd.com/en/products/accelerators/instinct/mi350.html",
+    "version": "产品页，脚注口径 2025-05-22",
+    "chapter": "第 3、13、14、17 章",
+    "used_for": "MI350P / MI350X / MI355X 的计算单元、显存、带宽、峰值算力与数据格式"
+  },
+  {
+    "id": "R01",
+    "kind": "厂商官方文档",
+    "title": "vLLM：Metrics",
+    "url": "https://docs.vllm.ai/en/stable/design/metrics/",
+    "version": "stable 文档（2026-10 检索）",
+    "chapter": "第 4、7 章",
+    "used_for": "前缀缓存 queries/hits 计数器、arrival_time 起算点、TTFT/ITL 指标定义、KV 驻留直方图"
+  },
+  {
+    "id": "R07",
+    "kind": "厂商官方文档",
+    "title": "vLLM：Automatic Prefix Caching（设计文档）",
+    "url": "https://docs.vllm.ai/en/stable/design/prefix_caching/",
+    "version": "stable 文档（2026-10 检索）",
+    "chapter": "第 4 章",
+    "used_for": "块哈希构成、LRU 驱逐、cache_salt 安全隔离"
+  },
+  {
+    "id": "R32",
+    "kind": "厂商官方文档",
+    "title": "SGLang：Hierarchical KV Caching (HiCache) 设计文档",
+    "url": "https://docs.sglang.ai/advanced_features/hicache_design.html",
+    "version": "官方文档（2026-10 检索）",
+    "chapter": "第 4 章",
+    "used_for": "L1/L2/L3 分层、全部 HiCache 开关与取值、存储后端与插件接口、写回/预取策略、分层边界与一致性"
+  },
+  {
+    "id": "S13",
+    "kind": "厂商官方文档",
+    "title": "LMCache 文档",
+    "url": "https://docs.lmcache.ai/",
+    "version": "官方文档（2026-10 检索）",
+    "chapter": "第 4、11 章",
+    "used_for": "KV 缓存管理层的分层与后端清单、非前缀复用（CacheBlend）语义"
+  },
+  {
+    "id": "S14",
+    "kind": "开源项目主页",
+    "title": "Mooncake（kvcache-ai/Mooncake）",
+    "url": "https://github.com/kvcache-ai/Mooncake",
+    "version": "0.3.14（README 与 tag 口径）",
+    "chapter": "第 4、12 章",
+    "used_for": "组件划分、Transfer Engine 传输与带宽、存储分层、故障转移与 rank 恢复"
+  },
+  {
+    "id": "S15",
+    "kind": "开源项目主页",
+    "title": "NIXL（ai-dynamo/nixl）",
+    "url": "https://github.com/ai-dynamo/nixl",
+    "version": "README 页未标注版本号",
+    "chapter": "第 4、12 章",
+    "used_for": "插件清单、API 形态、平台限制（仅 Linux、ROCm 侧缺口）"
+  },
+  {
+    "id": "S01",
+    "kind": "厂商发布说明",
+    "title": "vLLM v0.29.0 发布说明",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+    "version": "v0.29.0，2026-09-09，commit 98dff2a8",
+    "chapter": "第 5、10、11 章",
+    "used_for": "准入控制开关、prefix_cache_retention_interval、MRV1 废弃、草稿路径条目、移除项"
+  },
+  {
+    "id": "S02",
+    "kind": "厂商发布说明",
+    "title": "vLLM v0.30.0 发布说明",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0",
+    "version": "v0.30.0，2026-09-22，commit ced6857",
+    "chapter": "第 5、8、10、11、16 章",
+    "used_for": "Fast Start 权重缓存、HiSparse、MRV2 图捕获数字、抢占直方图、移除与默认值变更"
+  },
+  {
+    "id": "S03",
+    "kind": "厂商发布说明",
+    "title": "SGLang Releases",
+    "url": "https://github.com/sgl-project/sglang/releases",
+    "version": "v0.5.19 / v0.5.20 / v0.5.21（2026-09-05 / 09-18 / 10-02）",
+    "chapter": "第 8、10、11、16 章",
+    "used_for": "SGLang Simulator 与偏差口径、统一 radix 树与命中率数字、草稿路径条目、prefill CP v1 移除"
+  },
+  {
+    "id": "S06",
+    "kind": "厂商官方文档",
+    "title": "NVIDIA Dynamo v1.5.0 发布参考",
+    "url": "https://docs.dynamo.nvidia.com/dynamo/reference/releases/v1-5-0",
+    "version": "Dynamo v1.5.0（第 18 个功能版本）",
+    "chapter": "第 5、6、8、12、13、16 章",
+    "used_for": "路由策略与过滤器、引擎版本矩阵、弃用项、AISimulate、实验性能力清单"
+  },
+  {
+    "id": "S07",
+    "kind": "厂商官方博客",
+    "title": "llm-d v0.9: Hardened for Scale",
+    "url": "https://llm-d.ai/blog/llm-d-v0.9-hardened-for-scale",
+    "version": "llm-d v0.9，2026-08-28",
+    "chapter": "第 5、6、12、17 章",
+    "used_for": "控制面组件职责划分、路由策略名、流控默认值、优雅退出与孵化阶段边界"
+  },
+  {
+    "id": "S16",
+    "kind": "开源项目主页",
+    "title": "DeepEP（deepseek-ai/DeepEP）",
+    "url": "https://github.com/deepseek-ai/DeepEP",
+    "version": "DeepEP V2.5，2026-09-29，commit def8651",
+    "chapter": "第 6 章",
+    "used_for": "EPBuffer 统一接口、通信—计算重叠原语、V1 与 NVSHMEM 移除、环境要求与已知限制"
+  },
+  {
+    "id": "R19",
+    "kind": "厂商官方文档",
+    "title": "vLLM Ascend：Supported Features 支持矩阵",
+    "url": "https://docs.vllm.ai/projects/ascend/en/latest/user_guide/support_matrix/supported_features.html",
+    "version": "latest 文档（2026-10 检索）",
+    "chapter": "第 6、12 章",
+    "used_for": "并行/量化/图模式/PD 分离等能力的支持状态矩阵"
+  },
+  {
+    "id": "S20",
+    "kind": "厂商发布说明",
+    "title": "vLLM-Ascend v0.26.0rc1 发布说明",
+    "url": "https://github.com/vllm-project/vllm-ascend/releases/tag/v0.26.0rc1",
+    "version": "v0.26.0rc1，2026-09-03，commit f2f74a16",
+    "chapter": "第 11、13、15 章",
+    "used_for": "限定模型范围、依赖矩阵、移除与弃用清单、已知问题清单"
+  },
+  {
+    "id": "S17",
+    "kind": "厂商官方文档",
+    "title": "AI Perf：Migrating from GenAI-Perf",
+    "url": "https://docs.nvidia.com/aiperf/getting-started/migrating-from-gen-ai-perf",
+    "version": "AI Perf 官方文档（2026-10 检索）",
+    "chapter": "第 7、13 章",
+    "used_for": "TTFO 定义与 TTFT/OSL 口径变化、CLI 与输入格式的迁移映射"
+  },
+  {
+    "id": "S18",
+    "kind": "厂商官方文档",
+    "title": "AI Perf：Conversation DAG Benchmarks",
+    "url": "https://docs.nvidia.com/aiperf/benchmark-modes/conversation-dag-benchmarks",
+    "version": "AI Perf 官方文档（2026-10 检索）",
+    "chapter": "第 8 章",
+    "used_for": "会话 DAG 的字段、FORK/SPAWN 语义、树拓扑边界与未实现构造"
+  },
+  {
+    "id": "R18",
+    "kind": "标准组织文档",
+    "title": "OpenTelemetry GenAI 语义约定（指标页）",
+    "url": "https://github.com/open-telemetry/semantic-conventions-genai",
+    "version": "Development 级；引用 semconv v1.44.0 / OTel spec v1.55.0",
+    "chapter": "第 7、12 章",
+    "used_for": "GenAI 客户端与服务端指标名、仪器类型、单位、属性要求、桶边界与稳定性状态"
+  },
+  {
+    "id": "R16",
+    "kind": "厂商官方文档",
+    "title": "PyTorch：torch.profiler",
+    "url": "https://docs.pytorch.org/docs/stable/profiler.html",
+    "version": "PyTorch 2.14 稳定版文档",
+    "chapter": "第 10、13 章",
+    "used_for": "活动项与参数、CUPTI 回退行为、XPU 硬件指标的权限要求、开销与导出限制"
+  },
+  {
+    "id": "R17",
+    "kind": "厂商官方文档",
+    "title": "NVIDIA Nsight Systems User Guide",
+    "url": "https://docs.nvidia.com/nsight-systems/UserGuide/index.html",
+    "version": "User Guide（2026-10 检索）",
+    "chapter": "第 10、14 章",
+    "used_for": "采集入口、--trace 取值、CUDA/NVTX/采样参数、权限要求、开销标注、多机与进程终止行为"
+  },
+  {
+    "id": "S08",
+    "kind": "开源项目主页",
+    "title": "FlashAttention（Dao-AILab/flash-attention）",
+    "url": "https://github.com/Dao-AILab/flash-attention",
+    "version": "README（含 FA2 / FA3 beta / FA4 世代说明）",
+    "chapter": "第 11 章",
+    "used_for": "各世代支持的架构、版本与安装要求、分页 KV 与 head dim 限制"
+  },
+  {
+    "id": "S09",
+    "kind": "开源项目主页",
+    "title": "FlashInfer（flashinfer-ai/flashinfer）",
+    "url": "https://github.com/flashinfer-ai/flashinfer",
+    "version": "README（Blackwell 支持自 v0.4.0 起）",
+    "chapter": "第 11 章",
+    "used_for": "内核族与后端、支持的架构与 CUDA 版本、安装包拆分、被哪些引擎采用"
+  },
+  {
+    "id": "S24",
+    "kind": "厂商官方文档",
+    "title": "昇腾 msprof 采集命令文档（CANN oam-tools）",
+    "url": "https://www.hiascend.com/document/detail/zh/mindstudio/2610/msTT_msIT/msProf/docs/zh/profiling/msprof_cmd/ai_runtime_profile_data.md",
+    "version": "CANN oam-tools 仓库源码与文档口径",
+    "chapter": "第 9、13、15、18 章",
+    "used_for": "msprof 命令形态、全部采集开关与默认值、--aic-metrics 取值与产品支持、落盘结构、EP/RC 差异、废弃项"
+  },
+  {
+    "id": "S25",
+    "kind": "厂商官方文档",
+    "title": "昇腾 HCCL Test（HCCL 性能测试工具）",
+    "url": "https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/850alpha002/hccl/hcclug",
+    "version": "CANN 社区版 HCCL 工具文档口径",
+    "chapter": "第 15、18 章",
+    "used_for": "输出字段 data_size/aveg_time/alg_bandwidth/check_result、-c 与 -p 规格、结果校验的最大卡数上界"
+  },
+  {
+    "id": "S26",
+    "kind": "厂商官方文档",
+    "title": "MindIE 产品页与 3.1.0 发布公告",
+    "url": "https://www.hiascend.com/software/mindie",
+    "version": "社区版 MindIE 3.1.0，公告日 2026-08-21",
+    "chapter": "第 12、15、18 章",
+    "used_for": "组件划分与更名、服务化能力、PD 实例级故障隔离与恢复时间口径、AutoPD"
+  },
+  {
+    "id": "S23",
+    "kind": "厂商官方文档",
+    "title": "AMD ROCm / HIP 性能分析文档",
+    "url": "https://rocm.docs.amd.com/projects/HIP/en/docs-7.14.0/understand/performance_optimization.html",
+    "version": "ROCm 文档 7.14.0",
+    "chapter": "第 9、13、14 章",
+    "used_for": "rocprofv3 / amd-smi / rocminfo / ROCProfiler 的定位、SQ_* 计数器名、roofline 与占用率的边界"
+  }
+]

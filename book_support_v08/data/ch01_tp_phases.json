@@ -1,0 +1,99 @@
+{
+  "id": "ch01_tp_phases",
+  "chapter": 1,
+  "figure_id": "图1-T1",
+  "title": "一次请求的阶段拆分：Decode 主导端到端（第三方实测）",
+  "evidence_type": "THIRD_PARTY_MEASURED",
+  "source_id": "Z01",
+  "columns": [
+    "负载",
+    "阶段",
+    "A100/ms",
+    "H100/ms"
+  ],
+  "rows": [
+    [
+      "Coding",
+      "TTFT(prefill)",
+      185,
+      95
+    ],
+    [
+      "Coding",
+      "TBT(decode,每token)",
+      52,
+      31
+    ],
+    [
+      "Coding",
+      "E2E",
+      856,
+      493
+    ],
+    [
+      "Conversation",
+      "TTFT(prefill)",
+      155,
+      84
+    ],
+    [
+      "Conversation",
+      "TBT(decode,每token)",
+      40,
+      28
+    ],
+    [
+      "Conversation",
+      "E2E",
+      4957,
+      3387
+    ]
+  ],
+  "conditions": "Splitwise（微软研究院，HPCA 2024）Table IV；DGX-A100 与 DGX-H100，batch size 1，P50；Llama2-70B；生产 trace（coding 中位输入 1500/输出 13；conversation 中位输入 1020/输出 129）。",
+  "limitations": "batch size 1 的 P50，非高并发；仅一个模型与两类 trace；2023 年 H100 SXM 数据。论文为自研方案方，非中立基准组织。",
+  "interpretation": "同一负载下 E2E 远大于 TTFT，说明端到端时间主要由 decode 累积；Conversation 的 E2E（4957/3387 ms）比 Coding（856/493 ms）高一个量级，因为输出更长。A100→H100 的 TTFT 约减半，但 E2E 只降到 0.58–0.68，再次说明 decode 段的权重。",
+  "display_table": "| 负载 | 阶段 | A100/ms | H100/ms |\n|---|---|---|---|\n| Coding | TTFT(prefill) | 185 | 95 |\n| Coding | TBT(decode,每token) | 52 | 31 |\n| Coding | E2E | 856 | 493 |\n| Conversation | TTFT(prefill) | 155 | 84 |\n| Conversation | TBT(decode,每token) | 40 | 28 |\n| Conversation | E2E | 4957 | 3387 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_group",
+    "groups": [
+      "Coding·TTFT(prefill)",
+      "Coding·TBT(decode,每token)",
+      "Coding·E2E",
+      "Conversation·TTFT(prefill)",
+      "Conversation·TBT(decode,每token)",
+      "Conversation·E2E"
+    ],
+    "series": [
+      [
+        "A100/ms",
+        [
+          185.0,
+          52.0,
+          856.0,
+          155.0,
+          40.0,
+          4957.0
+        ]
+      ],
+      [
+        "H100/ms",
+        [
+          95.0,
+          31.0,
+          493.0,
+          84.0,
+          28.0,
+          3387.0
+        ]
+      ]
+    ],
+    "logy": true,
+    "xlabel": "负载 · 阶段",
+    "ylabel": "毫秒（对数轴）",
+    "rotate": 22,
+    "id": "ch01_tp_phases",
+    "title": "一次请求的阶段拆分：Decode 主导端到端（第三方实测）"
+  },
+  "plot_note": "Splitwise Table IV：batch=1 的 P50；Coding 与 Conversation 是两类负载，不能混算同一容量。"
+}

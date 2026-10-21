@@ -1,0 +1,33 @@
+{
+  "figure_id": "图10-V1",
+  "slug": "ch10_factorial",
+  "chapter": 10,
+  "title": "四格交叉对照：版本效应会随长度改变",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书10.8.1",
+  "conditions": "四格数据均为原稿设定；每格待以匹配负载、多次运行替换",
+  "limitations": "80ms是差中之差，不是统计显著性；没有原始重复记录，不计算置信区间。",
+  "formula": "interaction=(900-660)-(780-620)=80ms",
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "A",
+      620,
+      780,
+      160
+    ],
+    [
+      "B",
+      660,
+      900,
+      240
+    ],
+    [
+      "B−A",
+      40,
+      120,
+      80
+    ]
+  ],
+  "display_table": "| 版本 | 1250Token/ms | 1650Token/ms | 长度增量/ms |\n|---|---|---|---|\n| A | 620 | 780 | 160 |\n| B | 660 | 900 | 240 |\n| B−A | 40 | 120 | 80 |"
+}

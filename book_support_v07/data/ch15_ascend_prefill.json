@@ -1,0 +1,33 @@
+{
+  "id": "ch15_ascend_prefill",
+  "chapter": 15,
+  "title": "昇腾Prefill：先把单阶段实测与服务能力分开",
+  "evidence_type": "PUBLISHED_STAGE_EXPERIMENT",
+  "source_id": "Y06",
+  "columns": [
+    "输入×总batch",
+    "Prefill卡均输入Token/s"
+  ],
+  "rows": [
+    [
+      "2K × 8",
+      1622
+    ],
+    [
+      "1K × 16",
+      1650
+    ]
+  ],
+  "conditions": "Atlas800I A2，Prefill2节点/16卡，MLA TP16；总输入16K；DeepSeek V3/R1报告A8W8C16路径；表3。",
+  "limitations": "卡均输入吞吐不是输出吞吐或完整PD能力；具体芯片、权重revision、软件精确commit未披露，不补造。",
+  "plot": {
+    "type": "bars",
+    "x": 0,
+    "y": 1,
+    "ylabel": "Prefill卡均输入Token/s"
+  },
+  "interpretation": "相同总Token量不代表相同请求数。两根柱只反映报告列出的阶段实验，不据此推一次请求延迟或其他精度结果。",
+  "author_hardware_measured": false,
+  "figure_id": "图15-E1",
+  "display_table": "| 输入×总batch | Prefill卡均输入Token/s |\n|---|---|\n| 2K × 8 | 1622 |\n| 1K × 16 | 1650 |"
+}

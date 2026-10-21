@@ -1,0 +1,283 @@
+{
+  "scope": "E0 arithmetic and artifact structure only; no hardware experiments",
+  "tests": [
+    {
+      "name": "task_limit_3.60",
+      "passed": true
+    },
+    {
+      "name": "Qwen56KiB",
+      "passed": true
+    },
+    {
+      "name": "DSV3_68.625KiB",
+      "passed": true
+    },
+    {
+      "name": "H100_ridge_295",
+      "passed": true
+    },
+    {
+      "name": "fp8_gain_14.9",
+      "passed": true
+    },
+    {
+      "name": "hrrn_normalized",
+      "passed": true
+    },
+    {
+      "name": "rank_total_8192",
+      "passed": true
+    },
+    {
+      "name": "rank_skew_1.5",
+      "passed": true
+    },
+    {
+      "name": "joint_bounds",
+      "passed": true
+    },
+    {
+      "name": "rounded_fit_crossover",
+      "passed": true
+    },
+    {
+      "name": "sampling26",
+      "passed": true
+    },
+    {
+      "name": "interaction80",
+      "passed": true
+    },
+    {
+      "name": "breakeven_shift_positive",
+      "passed": true
+    },
+    {
+      "name": "eagle_2.357",
+      "passed": true
+    },
+    {
+      "name": "quality_loss78",
+      "passed": true
+    },
+    {
+      "name": "transfer20_26.84",
+      "passed": true
+    },
+    {
+      "name": "backlog_peak",
+      "passed": true
+    },
+    {
+      "name": "backlog_clear240",
+      "passed": true
+    },
+    {
+      "name": "payback3.77",
+      "passed": true
+    },
+    {
+      "name": "first_year78640",
+      "passed": true
+    },
+    {
+      "name": "FWER20_64.15",
+      "passed": true
+    },
+    {
+      "name": "18_chapters",
+      "passed": true
+    },
+    {
+      "name": "23_figures",
+      "passed": true
+    },
+    {
+      "name": "ch01_task_limit_assets",
+      "passed": true
+    },
+    {
+      "name": "ch01_task_limit_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch02_config_kv_assets",
+      "passed": true
+    },
+    {
+      "name": "ch02_config_kv_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch03_spec_roofline_assets",
+      "passed": true
+    },
+    {
+      "name": "ch03_spec_roofline_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch04_fp8_workload_assets",
+      "passed": true
+    },
+    {
+      "name": "ch04_fp8_workload_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch05_hrrn_relative_assets",
+      "passed": true
+    },
+    {
+      "name": "ch05_hrrn_relative_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch06_rank_skew_assets",
+      "passed": true
+    },
+    {
+      "name": "ch06_rank_skew_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch07_joint_slo_assets",
+      "passed": true
+    },
+    {
+      "name": "ch07_joint_slo_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch08_public_lengths_assets",
+      "passed": true
+    },
+    {
+      "name": "ch08_public_lengths_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch09_public_fit_assets",
+      "passed": true
+    },
+    {
+      "name": "ch09_public_fit_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch09_sampling_assets",
+      "passed": true
+    },
+    {
+      "name": "ch09_sampling_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch10_factorial_assets",
+      "passed": true
+    },
+    {
+      "name": "ch10_factorial_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch10_version_breakeven_assets",
+      "passed": true
+    },
+    {
+      "name": "ch10_version_breakeven_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch11_eagle_assets",
+      "passed": true
+    },
+    {
+      "name": "ch11_eagle_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch11_hybrid_fp8_assets",
+      "passed": true
+    },
+    {
+      "name": "ch11_hybrid_fp8_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch11_quality_failure_assets",
+      "passed": true
+    },
+    {
+      "name": "ch11_quality_failure_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch12_transfer_floor_assets",
+      "passed": true
+    },
+    {
+      "name": "ch12_transfer_floor_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch12_slo_contract_assets",
+      "passed": true
+    },
+    {
+      "name": "ch12_slo_contract_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch13_declared_matrix_assets",
+      "passed": true
+    },
+    {
+      "name": "ch13_declared_matrix_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch14_two_tracks_assets",
+      "passed": true
+    },
+    {
+      "name": "ch14_two_tracks_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch15_quality_scales_assets",
+      "passed": true
+    },
+    {
+      "name": "ch15_quality_scales_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch16_backlog_assets",
+      "passed": true
+    },
+    {
+      "name": "ch16_backlog_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch17_payback_assets",
+      "passed": true
+    },
+    {
+      "name": "ch17_payback_not_hardware",
+      "passed": true
+    },
+    {
+      "name": "ch18_multiple_tests_assets",
+      "passed": true
+    },
+    {
+      "name": "ch18_multiple_tests_not_hardware",
+      "passed": true
+    }
+  ],
+  "passed": 69,
+  "failed": 0
+}

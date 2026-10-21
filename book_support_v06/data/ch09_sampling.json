@@ -1,0 +1,419 @@
+{
+  "figure_id": "图9-V2",
+  "slug": "ch09_sampling",
+  "chapter": 9,
+  "title": "只采样1%，会漏掉多少罕见异常？",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书9.2、9.8",
+  "conditions": "窗口内恰有30个异常请求；每次独立伯努利采样；采样不依赖异常",
+  "limitations": "真实请求/采样若相关，公式不成立；此图不是采样工具实测。",
+  "formula": "P=1-(1-p)^30",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "sample_percent": 0.0,
+      "capture_percent": 0.0
+    },
+    {
+      "sample_percent": 0.2,
+      "capture_percent": 5.8292046042449535
+    },
+    {
+      "sample_percent": 0.4,
+      "capture_percent": 11.329296784701636
+    },
+    {
+      "sample_percent": 0.6,
+      "capture_percent": 16.518252410369517
+    },
+    {
+      "sample_percent": 0.8,
+      "capture_percent": 21.413098727512924
+    },
+    {
+      "sample_percent": 1.0,
+      "capture_percent": 26.02996266117198
+    },
+    {
+      "sample_percent": 1.2,
+      "capture_percent": 30.3841167472088
+    },
+    {
+      "sample_percent": 1.4000000000000001,
+      "capture_percent": 34.49002280669611
+    },
+    {
+      "sample_percent": 1.6,
+      "capture_percent": 38.361373469388795
+    },
+    {
+      "sample_percent": 1.8000000000000003,
+      "capture_percent": 42.01113164817356
+    },
+    {
+      "sample_percent": 2.0,
+      "capture_percent": 45.45156806175631
+    },
+    {
+      "sample_percent": 2.1999999999999997,
+      "capture_percent": 48.69429689841404
+    },
+    {
+      "sample_percent": 2.4,
+      "capture_percent": 51.75030970939864
+    },
+    {
+      "sample_percent": 2.6,
+      "capture_percent": 54.63000761652624
+    },
+    {
+      "sample_percent": 2.8000000000000003,
+      "capture_percent": 57.34323191460938
+    },
+    {
+      "sample_percent": 3.0,
+      "capture_percent": 59.899293145684254
+    },
+    {
+      "sample_percent": 3.2,
+      "capture_percent": 62.30699871844202
+    },
+    {
+      "sample_percent": 3.4000000000000004,
+      "capture_percent": 64.57467914288766
+    },
+    {
+      "sample_percent": 3.6000000000000005,
+      "capture_percent": 66.71021294701278
+    },
+    {
+      "sample_percent": 3.8,
+      "capture_percent": 68.72105033917613
+    },
+    {
+      "sample_percent": 4.0,
+      "capture_percent": 70.61423567692945
+    },
+    {
+      "sample_percent": 4.2,
+      "capture_percent": 72.39642880020219
+    },
+    {
+      "sample_percent": 4.3999999999999995,
+      "capture_percent": 74.07392528405974
+    },
+    {
+      "sample_percent": 4.6,
+      "capture_percent": 75.65267566367275
+    },
+    {
+      "sample_percent": 4.8,
+      "capture_percent": 77.13830368167123
+    },
+    {
+      "sample_percent": 5.0,
+      "capture_percent": 78.53612360570628
+    },
+    {
+      "sample_percent": 5.2,
+      "capture_percent": 79.85115666179495
+    },
+    {
+      "sample_percent": 5.4,
+      "capture_percent": 81.08814662687884
+    },
+    {
+      "sample_percent": 5.6000000000000005,
+      "capture_percent": 82.25157462197821
+    },
+    {
+      "sample_percent": 5.800000000000001,
+      "capture_percent": 83.3456731453679
+    },
+    {
+      "sample_percent": 6.0,
+      "capture_percent": 84.37443938333354
+    },
+    {
+      "sample_percent": 6.2,
+      "capture_percent": 85.3416478342845
+    },
+    {
+      "sample_percent": 6.4,
+      "capture_percent": 86.25086228029808
+    },
+    {
+      "sample_percent": 6.6000000000000005,
+      "capture_percent": 87.10544713854603
+    },
+    {
+      "sample_percent": 6.800000000000001,
+      "capture_percent": 87.90857822350453
+    },
+    {
+      "sample_percent": 7.000000000000001,
+      "capture_percent": 88.66325294937
+    },
+    {
+      "sample_percent": 7.200000000000001,
+      "capture_percent": 89.37230000069212
+    },
+    {
+      "sample_percent": 7.3999999999999995,
+      "capture_percent": 90.03838849788958
+    },
+    {
+      "sample_percent": 7.6,
+      "capture_percent": 90.66403668303015
+    },
+    {
+      "sample_percent": 7.8,
+      "capture_percent": 91.2516201500306
+    },
+    {
+      "sample_percent": 8.0,
+      "capture_percent": 91.80337964226617
+    },
+    {
+      "sample_percent": 8.200000000000001,
+      "capture_percent": 92.32142843946282
+    },
+    {
+      "sample_percent": 8.4,
+      "capture_percent": 92.807759354685
+    },
+    {
+      "sample_percent": 8.600000000000001,
+      "capture_percent": 93.26425136121782
+    },
+    {
+      "sample_percent": 8.799999999999999,
+      "capture_percent": 93.69267586817766
+    },
+    {
+      "sample_percent": 9.0,
+      "capture_percent": 94.09470266276425
+    },
+    {
+      "sample_percent": 9.2,
+      "capture_percent": 94.47190553619042
+    },
+    {
+      "sample_percent": 9.4,
+      "capture_percent": 94.825767609489
+    },
+    {
+      "sample_percent": 9.6,
+      "capture_percent": 95.15768637460053
+    },
+    {
+      "sample_percent": 9.8,
+      "capture_percent": 95.46897846538498
+    },
+    {
+      "sample_percent": 10.0,
+      "capture_percent": 95.76088417247838
+    },
+    {
+      "sample_percent": 10.200000000000001,
+      "capture_percent": 96.03457171522577
+    },
+    {
+      "sample_percent": 10.4,
+      "capture_percent": 96.29114128326523
+    },
+    {
+      "sample_percent": 10.6,
+      "capture_percent": 96.53162885971305
+    },
+    {
+      "sample_percent": 10.8,
+      "capture_percent": 96.75700983730427
+    },
+    {
+      "sample_percent": 11.0,
+      "capture_percent": 96.96820243827638
+    },
+    {
+      "sample_percent": 11.200000000000001,
+      "capture_percent": 97.16607094824354
+    },
+    {
+      "sample_percent": 11.4,
+      "capture_percent": 97.35142877379528
+    },
+    {
+      "sample_percent": 11.600000000000001,
+      "capture_percent": 97.5250413330641
+    },
+    {
+      "sample_percent": 11.8,
+      "capture_percent": 97.68762878804105
+    },
+    {
+      "sample_percent": 12.0,
+      "capture_percent": 97.83986862697483
+    },
+    {
+      "sample_percent": 12.2,
+      "capture_percent": 97.98239810476865
+    },
+    {
+      "sample_percent": 12.4,
+      "capture_percent": 98.11581654888741
+    },
+    {
+      "sample_percent": 12.6,
+      "capture_percent": 98.2406875379065
+    },
+    {
+      "sample_percent": 12.8,
+      "capture_percent": 98.35754095946979
+    },
+    {
+      "sample_percent": 13.0,
+      "capture_percent": 98.46687495407946
+    },
+    {
+      "sample_percent": 13.200000000000001,
+      "capture_percent": 98.56915775081147
+    },
+    {
+      "sample_percent": 13.4,
+      "capture_percent": 98.66482940073817
+    },
+    {
+      "sample_percent": 13.600000000000001,
+      "capture_percent": 98.75430341354252
+    },
+    {
+      "sample_percent": 13.8,
+      "capture_percent": 98.83796830252581
+    },
+    {
+      "sample_percent": 14.000000000000002,
+      "capture_percent": 98.9161890429426
+    },
+    {
+      "sample_percent": 14.200000000000001,
+      "capture_percent": 98.98930844834094
+    },
+    {
+      "sample_percent": 14.400000000000002,
+      "capture_percent": 99.05764846934366
+    },
+    {
+      "sample_percent": 14.6,
+      "capture_percent": 99.12151141907636
+    },
+    {
+      "sample_percent": 14.799999999999999,
+      "capture_percent": 99.18118112922774
+    },
+    {
+      "sample_percent": 15.0,
+      "capture_percent": 99.23692404052106
+    },
+    {
+      "sample_percent": 15.2,
+      "capture_percent": 99.28899023117685
+    },
+    {
+      "sample_percent": 15.4,
+      "capture_percent": 99.33761438675991
+    },
+    {
+      "sample_percent": 15.6,
+      "capture_percent": 99.38301671462479
+    },
+    {
+      "sample_percent": 15.8,
+      "capture_percent": 99.42540380600522
+    },
+    {
+      "sample_percent": 16.0,
+      "capture_percent": 99.46496944863168
+    },
+    {
+      "sample_percent": 16.2,
+      "capture_percent": 99.5018953926088
+    },
+    {
+      "sample_percent": 16.400000000000002,
+      "capture_percent": 99.53635207213952
+    },
+    {
+      "sample_percent": 16.6,
+      "capture_percent": 99.56849928554543
+    },
+    {
+      "sample_percent": 16.8,
+      "capture_percent": 99.59848683590184
+    },
+    {
+      "sample_percent": 17.0,
+      "capture_percent": 99.62645513448282
+    },
+    {
+      "sample_percent": 17.200000000000003,
+      "capture_percent": 99.65253576909345
+    },
+    {
+      "sample_percent": 17.400000000000002,
+      "capture_percent": 99.67685203925537
+    },
+    {
+      "sample_percent": 17.599999999999998,
+      "capture_percent": 99.69951946010596
+    },
+    {
+      "sample_percent": 17.8,
+      "capture_percent": 99.7206462367708
+    },
+    {
+      "sample_percent": 18.0,
+      "capture_percent": 99.74033371087478
+    },
+    {
+      "sample_percent": 18.2,
+      "capture_percent": 99.75867678076588
+    },
+    {
+      "sample_percent": 18.4,
+      "capture_percent": 99.7757642969415
+    },
+    {
+      "sample_percent": 18.6,
+      "capture_percent": 99.79167943408501
+    },
+    {
+      "sample_percent": 18.8,
+      "capture_percent": 99.80650004104393
+    },
+    {
+      "sample_percent": 19.0,
+      "capture_percent": 99.82029897000857
+    },
+    {
+      "sample_percent": 19.2,
+      "capture_percent": 99.83314438608019
+    },
+    {
+      "sample_percent": 19.400000000000002,
+      "capture_percent": 99.84510005835358
+    },
+    {
+      "sample_percent": 19.6,
+      "capture_percent": 99.85622563357545
+    },
+    {
+      "sample_percent": 19.8,
+      "capture_percent": 99.86657689338317
+    },
+    {
+      "sample_percent": 20.0,
+      "capture_percent": 99.87620599607146
+    }
+  ],
+  "display_table": "| 采样概率/% | 至少捕获一次/% |\n|---|---|\n| 1 | 26.03 |\n| 2 | 45.452 |\n| 5 | 78.536 |\n| 10 | 95.761 |\n| 20 | 99.876 |"
+}

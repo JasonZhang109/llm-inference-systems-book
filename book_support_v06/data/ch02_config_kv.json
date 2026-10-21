@@ -1,0 +1,63 @@
+{
+  "figure_id": "图2-V1",
+  "slug": "ch02_config_kv",
+  "chapter": 2,
+  "title": "真实模型配置：随上下文增长的逻辑KV状态",
+  "evidence_type": "CONFIG_DERIVED",
+  "source": "X01 / X02",
+  "conditions": "Qwen:28层/4KV头/头维128；DSV3:61层/(512+64)；全部按2字节存储、单序列、未分片",
+  "limitations": "不是模型优劣比较；不含块对齐、复制、MTP、分配器、工作区或物理显存。",
+  "formula": "GQA=2*L*h_kv*d_head*b; MLA=L*(d_c+d_r)*b",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "model": "Qwen2.5-7B GQA",
+      "length_tokens": 4096,
+      "bytes_per_token": 57344,
+      "logical_mib": 224.0
+    },
+    {
+      "model": "Qwen2.5-7B GQA",
+      "length_tokens": 8192,
+      "bytes_per_token": 57344,
+      "logical_mib": 448.0
+    },
+    {
+      "model": "Qwen2.5-7B GQA",
+      "length_tokens": 16384,
+      "bytes_per_token": 57344,
+      "logical_mib": 896.0
+    },
+    {
+      "model": "Qwen2.5-7B GQA",
+      "length_tokens": 32768,
+      "bytes_per_token": 57344,
+      "logical_mib": 1792.0
+    },
+    {
+      "model": "DeepSeek-V3 压缩MLA",
+      "length_tokens": 4096,
+      "bytes_per_token": 70272,
+      "logical_mib": 274.5
+    },
+    {
+      "model": "DeepSeek-V3 压缩MLA",
+      "length_tokens": 8192,
+      "bytes_per_token": 70272,
+      "logical_mib": 549.0
+    },
+    {
+      "model": "DeepSeek-V3 压缩MLA",
+      "length_tokens": 16384,
+      "bytes_per_token": 70272,
+      "logical_mib": 1098.0
+    },
+    {
+      "model": "DeepSeek-V3 压缩MLA",
+      "length_tokens": 32768,
+      "bytes_per_token": 70272,
+      "logical_mib": 2196.0
+    }
+  ],
+  "display_table": "| 配置 | Token | KiB/Token | MiB |\n|---|---|---|---|\n| Qwen2.5-7B GQA | 4096 | 56.0 | 224.0 |\n| Qwen2.5-7B GQA | 8192 | 56.0 | 448.0 |\n| Qwen2.5-7B GQA | 16384 | 56.0 | 896.0 |\n| Qwen2.5-7B GQA | 32768 | 56.0 | 1792.0 |\n| DeepSeek-V3 压缩MLA | 4096 | 68.625 | 274.5 |\n| DeepSeek-V3 压缩MLA | 8192 | 68.625 | 549.0 |\n| DeepSeek-V3 压缩MLA | 16384 | 68.625 | 1098.0 |\n| DeepSeek-V3 压缩MLA | 32768 | 68.625 | 2196.0 |"
+}

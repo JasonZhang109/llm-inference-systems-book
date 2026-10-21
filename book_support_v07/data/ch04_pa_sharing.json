@@ -1,0 +1,49 @@
+{
+  "id": "ch04_pa_sharing",
+  "chapter": 4,
+  "title": "共享收益取决于生成结构：并行采样与Beam Search",
+  "evidence_type": "PUBLISHED_EXPERIMENT",
+  "source_id": "Y01",
+  "columns": [
+    "输出序列数或Beam宽度",
+    "Parallel sampling节省/%",
+    "Beam search节省/%"
+  ],
+  "rows": [
+    [
+      2,
+      6.09,
+      37.56
+    ],
+    [
+      4,
+      8.53,
+      53.13
+    ],
+    [
+      6,
+      9.79,
+      55.16
+    ]
+  ],
+  "conditions": "OPT-13B；Alpaca trace；论文1×A100 40GB配置；Figure15，分别按并行采样输出数/Beam宽度扫描。",
+  "limitations": "指标为共享KV块的平均内存节省，不是所有显存；两种生成算法不同，不作质量等价声明。",
+  "plot": {
+    "type": "lines",
+    "x": 0,
+    "ys": [
+      1,
+      2
+    ],
+    "xlabel": "输出序列数 / Beam宽度",
+    "ylabel": "KV共享平均节省 / %",
+    "ylim": [
+      0,
+      65
+    ]
+  },
+  "interpretation": "宽度6时为9.79%与55.16%。共享Token占比与解码分叉结构决定节省，而不是看到缓存就假定固定倍率。",
+  "author_hardware_measured": false,
+  "figure_id": "图4-E1",
+  "display_table": "| 输出序列数或Beam宽度 | Parallel sampling节省/% | Beam search节省/% |\n|---|---|---|\n| 2 | 6.09 | 37.56 |\n| 4 | 8.53 | 53.13 |\n| 6 | 9.79 | 55.16 |"
+}

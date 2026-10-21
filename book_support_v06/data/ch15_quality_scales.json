@@ -1,0 +1,40 @@
+{
+  "figure_id": "图15-V1",
+  "slug": "ch15_quality_scales",
+  "chapter": 15,
+  "title": "国产推理栈公开质量数据：先保留量表，再谈结论",
+  "evidence_type": "PUBLISHED_RESULT",
+  "source": "X09 Accuracy",
+  "conditions": "报告4模型GPQA与1模型OCRBench原值；对应部署见图13-V1；量表分开",
+  "limitations": "报告未给GPQA子集/题数及逐样本数据；保留Score，不由0.88反推880个正确，也不做显著排名。",
+  "formula": null,
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "GPQA",
+      "GLM-5.2",
+      92.165
+    ],
+    [
+      "GPQA",
+      "Kimi K3",
+      92.42
+    ],
+    [
+      "GPQA",
+      "DeepSeek-V4-Flash",
+      91.67
+    ],
+    [
+      "GPQA",
+      "DeepSeek-V4-Pro",
+      91.92
+    ],
+    [
+      "OCRBench",
+      "Kimi K3",
+      0.88
+    ]
+  ],
+  "display_table": "| 基准 | 模型 | 报告Score |\n|---|---|---|\n| GPQA | GLM-5.2 | 92.165 |\n| GPQA | Kimi K3 | 92.42 |\n| GPQA | DeepSeek-V4-Flash | 91.67 |\n| GPQA | DeepSeek-V4-Pro | 91.92 |\n| OCRBench | Kimi K3 | 0.88 |"
+}

@@ -1,0 +1,131 @@
+{
+  "scope": "numeric and artifact validation only; no hardware experiment",
+  "passed": 31,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "ch04_pa_sharing_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch04_pa_sharing_assets",
+      "passed": true
+    },
+    {
+      "name": "ch04_lmcache_load_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch04_lmcache_load_assets",
+      "passed": true
+    },
+    {
+      "name": "ch05_pa_batching_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch05_pa_batching_assets",
+      "passed": true
+    },
+    {
+      "name": "ch06_deepep_latency_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch06_deepep_latency_assets",
+      "passed": true
+    },
+    {
+      "name": "ch06_nvlink_batch_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch06_nvlink_batch_assets",
+      "passed": true
+    },
+    {
+      "name": "ch06_nvlink_ep_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch06_nvlink_ep_assets",
+      "passed": true
+    },
+    {
+      "name": "ch11_dispatch_precision_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch11_dispatch_precision_assets",
+      "passed": true
+    },
+    {
+      "name": "ch12_distserve_calibration_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch12_distserve_calibration_assets",
+      "passed": true
+    },
+    {
+      "name": "ch15_ascend_prefill_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch15_ascend_prefill_assets",
+      "passed": true
+    },
+    {
+      "name": "ch15_ascend_mtp_not_author_measurement",
+      "passed": true
+    },
+    {
+      "name": "ch15_ascend_mtp_assets",
+      "passed": true
+    },
+    {
+      "name": "ten_new_charts",
+      "passed": true
+    },
+    {
+      "name": "six_target_chapters",
+      "passed": true
+    },
+    {
+      "name": "Gbps_to_GBs",
+      "passed": true
+    },
+    {
+      "name": "load_ratio",
+      "passed": true
+    },
+    {
+      "name": "pa_sharegpt_batch_ratio",
+      "passed": true
+    },
+    {
+      "name": "pa_alpaca_batch_ratio",
+      "passed": true
+    },
+    {
+      "name": "nvfp4_payload",
+      "passed": true
+    },
+    {
+      "name": "dispatch_speedup",
+      "passed": true
+    },
+    {
+      "name": "phase_prefill_not_decode",
+      "passed": true
+    },
+    {
+      "name": "mtp_folded_not_measured",
+      "passed": true
+    },
+    {
+      "name": "simulation_max_error_pp",
+      "passed": true
+    }
+  ]
+}

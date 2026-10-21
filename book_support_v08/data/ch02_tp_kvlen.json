@@ -1,0 +1,89 @@
+{
+  "id": "ch02_tp_kvlen",
+  "chapter": 2,
+  "figure_id": "图2-T2",
+  "title": "KV 随序列长度线性增长：估算表而非实测（第三方估算）",
+  "evidence_type": "THIRD_PARTY_ESTIMATE",
+  "source_id": "Z04",
+  "columns": [
+    "模型",
+    "32K/GB",
+    "128K/GB",
+    "1M/GB"
+  ],
+  "rows": [
+    [
+      "LLaMA-7B",
+      16,
+      64,
+      512
+    ],
+    [
+      "LLaMA-13B",
+      25,
+      100,
+      800
+    ],
+    [
+      "LLaMA-30B",
+      49,
+      195,
+      1560
+    ],
+    [
+      "LLaMA-65B",
+      80,
+      320,
+      2560
+    ]
+  ],
+  "conditions": "KVQuant（arXiv:2401.18079v3，NeurIPS 2024）Table 7/8；FP16 KV，batch size 1；闭式公式估算。",
+  "limitations": "【非实测】原表标题明确为 estimates；仅 BS=1 与 BS=4 两点，无随并发的连续曲线；未评测精度。",
+  "interpretation": "1M 上下文下 LLaMA-7B 的 KV 需约 512 GB——远超单卡 80 GB。**这张图的价值不在精确值，而在量级：长上下文不是\"开个参数\"，而是把内存需求推到需要量化或多卡分片的地步。**（KVQuant 同文给出 int4 后 128K 可降至 16 GB。）",
+  "display_table": "| 模型 | 32K/GB | 128K/GB | 1M/GB |\n|---|---|---|---|\n| LLaMA-7B | 16 | 64 | 512 |\n| LLaMA-13B | 25 | 100 | 800 |\n| LLaMA-30B | 49 | 195 | 1560 |\n| LLaMA-65B | 80 | 320 | 2560 |",
+  "author_hardware_measured": false,
+  "plot": {
+    "type": "bar_group",
+    "groups": [
+      "LLaMA-7B",
+      "LLaMA-13B",
+      "LLaMA-30B",
+      "LLaMA-65B"
+    ],
+    "series": [
+      [
+        "32K/GB",
+        [
+          16.0,
+          25.0,
+          49.0,
+          80.0
+        ]
+      ],
+      [
+        "128K/GB",
+        [
+          64.0,
+          100.0,
+          195.0,
+          320.0
+        ]
+      ],
+      [
+        "1M/GB",
+        [
+          512.0,
+          800.0,
+          1560.0,
+          2560.0
+        ]
+      ]
+    ],
+    "logy": true,
+    "xlabel": "模型",
+    "ylabel": "KV cache / GB（对数轴）",
+    "id": "ch02_tp_kvlen",
+    "title": "KV 随序列长度线性增长：估算表而非实测（第三方估算）"
+  },
+  "plot_note": "KVQuant 附录估算表（闭式公式），非 GPU 计数器实测；仅 BS=1/BS=4 两点，无并发连续曲线。"
+}

@@ -1,0 +1,2943 @@
+{
+  "figure_id": "图9-V1",
+  "slug": "ch09_public_fit",
+  "chapter": 9,
+  "title": "从公开拟合识别固定开销与随长度增长的成本",
+  "evidence_type": "PUBLIC_FIT_RECONSTRUCTION",
+  "source": "X05 Figure 2 / Table 3",
+  "conditions": "单H100、FA3、并发1、输出128、输入256到125k；采用文中舍入斜率和截距",
+  "limitations": "虚线非原始点；舍入参数给约7000Token，原表精确交点7010，两者不强行等同。",
+  "formula": "ITL=slope*input_len+intercept",
+  "author_hardware_measured": false,
+  "records": [
+    {
+      "kv": "BF16",
+      "length_tokens": 256,
+      "predicted_itl_ms": 6.451187200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 768,
+      "predicted_itl_ms": 6.4735616,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 1280,
+      "predicted_itl_ms": 6.495936,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 1792,
+      "predicted_itl_ms": 6.518310400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 2304,
+      "predicted_itl_ms": 6.5406848,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 2816,
+      "predicted_itl_ms": 6.5630592000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 3328,
+      "predicted_itl_ms": 6.5854336,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 3840,
+      "predicted_itl_ms": 6.607808,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 4352,
+      "predicted_itl_ms": 6.630182400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 4864,
+      "predicted_itl_ms": 6.6525568,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 5376,
+      "predicted_itl_ms": 6.6749312000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 5888,
+      "predicted_itl_ms": 6.6973056,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 6400,
+      "predicted_itl_ms": 6.71968,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 6912,
+      "predicted_itl_ms": 6.742054400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 7424,
+      "predicted_itl_ms": 6.7644288,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 7936,
+      "predicted_itl_ms": 6.7868032000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 8448,
+      "predicted_itl_ms": 6.8091776,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 8960,
+      "predicted_itl_ms": 6.831552,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 9472,
+      "predicted_itl_ms": 6.853926400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 9984,
+      "predicted_itl_ms": 6.8763008,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 10496,
+      "predicted_itl_ms": 6.8986752000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 11008,
+      "predicted_itl_ms": 6.9210496,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 11520,
+      "predicted_itl_ms": 6.943424,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 12032,
+      "predicted_itl_ms": 6.965798400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 12544,
+      "predicted_itl_ms": 6.9881728,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 13056,
+      "predicted_itl_ms": 7.0105472,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 13568,
+      "predicted_itl_ms": 7.0329216,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 14080,
+      "predicted_itl_ms": 7.055296,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 14592,
+      "predicted_itl_ms": 7.077670400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 15104,
+      "predicted_itl_ms": 7.1000448,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 15616,
+      "predicted_itl_ms": 7.1224192,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 16128,
+      "predicted_itl_ms": 7.144793600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 16640,
+      "predicted_itl_ms": 7.167168,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 17152,
+      "predicted_itl_ms": 7.1895424000000006,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 17664,
+      "predicted_itl_ms": 7.2119168,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 18176,
+      "predicted_itl_ms": 7.2342912,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 18688,
+      "predicted_itl_ms": 7.256665600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 19200,
+      "predicted_itl_ms": 7.27904,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 19712,
+      "predicted_itl_ms": 7.3014144000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 20224,
+      "predicted_itl_ms": 7.3237888,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 20736,
+      "predicted_itl_ms": 7.3461632,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 21248,
+      "predicted_itl_ms": 7.368537600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 21760,
+      "predicted_itl_ms": 7.390912,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 22272,
+      "predicted_itl_ms": 7.4132864000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 22784,
+      "predicted_itl_ms": 7.435660800000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 23296,
+      "predicted_itl_ms": 7.4580352,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 23808,
+      "predicted_itl_ms": 7.480409600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 24320,
+      "predicted_itl_ms": 7.502784,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 24832,
+      "predicted_itl_ms": 7.5251584000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 25344,
+      "predicted_itl_ms": 7.547532800000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 25856,
+      "predicted_itl_ms": 7.5699072,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 26368,
+      "predicted_itl_ms": 7.592281600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 26880,
+      "predicted_itl_ms": 7.614656,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 27392,
+      "predicted_itl_ms": 7.6370304,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 27904,
+      "predicted_itl_ms": 7.659404800000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 28416,
+      "predicted_itl_ms": 7.6817792,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 28928,
+      "predicted_itl_ms": 7.704153600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 29440,
+      "predicted_itl_ms": 7.726528,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 29952,
+      "predicted_itl_ms": 7.7489024,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 30464,
+      "predicted_itl_ms": 7.771276800000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 30976,
+      "predicted_itl_ms": 7.7936512,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 31488,
+      "predicted_itl_ms": 7.816025600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 32000,
+      "predicted_itl_ms": 7.8384,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 32512,
+      "predicted_itl_ms": 7.8607744,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 33024,
+      "predicted_itl_ms": 7.883148800000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 33536,
+      "predicted_itl_ms": 7.9055232,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 34048,
+      "predicted_itl_ms": 7.9278976000000005,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 34560,
+      "predicted_itl_ms": 7.950272,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 35072,
+      "predicted_itl_ms": 7.9726464,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 35584,
+      "predicted_itl_ms": 7.995020800000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 36096,
+      "predicted_itl_ms": 8.017395200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 36608,
+      "predicted_itl_ms": 8.0397696,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 37120,
+      "predicted_itl_ms": 8.062144,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 37632,
+      "predicted_itl_ms": 8.0845184,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 38144,
+      "predicted_itl_ms": 8.1068928,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 38656,
+      "predicted_itl_ms": 8.129267200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 39168,
+      "predicted_itl_ms": 8.1516416,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 39680,
+      "predicted_itl_ms": 8.174016,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 40192,
+      "predicted_itl_ms": 8.1963904,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 40704,
+      "predicted_itl_ms": 8.2187648,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 41216,
+      "predicted_itl_ms": 8.241139200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 41728,
+      "predicted_itl_ms": 8.2635136,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 42240,
+      "predicted_itl_ms": 8.285888,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 42752,
+      "predicted_itl_ms": 8.3082624,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 43264,
+      "predicted_itl_ms": 8.3306368,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 43776,
+      "predicted_itl_ms": 8.353011200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 44288,
+      "predicted_itl_ms": 8.3753856,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 44800,
+      "predicted_itl_ms": 8.39776,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 45312,
+      "predicted_itl_ms": 8.4201344,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 45824,
+      "predicted_itl_ms": 8.4425088,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 46336,
+      "predicted_itl_ms": 8.464883200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 46848,
+      "predicted_itl_ms": 8.4872576,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 47360,
+      "predicted_itl_ms": 8.509632,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 47872,
+      "predicted_itl_ms": 8.5320064,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 48384,
+      "predicted_itl_ms": 8.5543808,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 48896,
+      "predicted_itl_ms": 8.576755200000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 49408,
+      "predicted_itl_ms": 8.599129600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 49920,
+      "predicted_itl_ms": 8.621504,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 50432,
+      "predicted_itl_ms": 8.6438784,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 50944,
+      "predicted_itl_ms": 8.6662528,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 51456,
+      "predicted_itl_ms": 8.6886272,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 51968,
+      "predicted_itl_ms": 8.7110016,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 52480,
+      "predicted_itl_ms": 8.733376,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 52992,
+      "predicted_itl_ms": 8.7557504,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 53504,
+      "predicted_itl_ms": 8.7781248,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 54016,
+      "predicted_itl_ms": 8.8004992,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 54528,
+      "predicted_itl_ms": 8.822873600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 55040,
+      "predicted_itl_ms": 8.845248,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 55552,
+      "predicted_itl_ms": 8.8676224,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 56064,
+      "predicted_itl_ms": 8.8899968,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 56576,
+      "predicted_itl_ms": 8.9123712,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 57088,
+      "predicted_itl_ms": 8.9347456,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 57600,
+      "predicted_itl_ms": 8.95712,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 58112,
+      "predicted_itl_ms": 8.9794944,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 58624,
+      "predicted_itl_ms": 9.0018688,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 59136,
+      "predicted_itl_ms": 9.0242432,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 59648,
+      "predicted_itl_ms": 9.046617600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 60160,
+      "predicted_itl_ms": 9.068992,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 60672,
+      "predicted_itl_ms": 9.0913664,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 61184,
+      "predicted_itl_ms": 9.1137408,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 61696,
+      "predicted_itl_ms": 9.1361152,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 62208,
+      "predicted_itl_ms": 9.1584896,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 62720,
+      "predicted_itl_ms": 9.180864,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 63232,
+      "predicted_itl_ms": 9.2032384,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 63744,
+      "predicted_itl_ms": 9.2256128,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 64256,
+      "predicted_itl_ms": 9.2479872,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 64768,
+      "predicted_itl_ms": 9.270361600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 65280,
+      "predicted_itl_ms": 9.292736,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 65792,
+      "predicted_itl_ms": 9.3151104,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 66304,
+      "predicted_itl_ms": 9.3374848,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 66816,
+      "predicted_itl_ms": 9.3598592,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 67328,
+      "predicted_itl_ms": 9.3822336,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 67840,
+      "predicted_itl_ms": 9.404608,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 68352,
+      "predicted_itl_ms": 9.4269824,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 68864,
+      "predicted_itl_ms": 9.4493568,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 69376,
+      "predicted_itl_ms": 9.4717312,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 69888,
+      "predicted_itl_ms": 9.494105600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 70400,
+      "predicted_itl_ms": 9.516480000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 70912,
+      "predicted_itl_ms": 9.5388544,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 71424,
+      "predicted_itl_ms": 9.5612288,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 71936,
+      "predicted_itl_ms": 9.5836032,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 72448,
+      "predicted_itl_ms": 9.6059776,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 72960,
+      "predicted_itl_ms": 9.628352,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 73472,
+      "predicted_itl_ms": 9.6507264,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 73984,
+      "predicted_itl_ms": 9.6731008,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 74496,
+      "predicted_itl_ms": 9.6954752,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 75008,
+      "predicted_itl_ms": 9.717849600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 75520,
+      "predicted_itl_ms": 9.740224000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 76032,
+      "predicted_itl_ms": 9.7625984,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 76544,
+      "predicted_itl_ms": 9.7849728,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 77056,
+      "predicted_itl_ms": 9.8073472,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 77568,
+      "predicted_itl_ms": 9.8297216,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 78080,
+      "predicted_itl_ms": 9.852096,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 78592,
+      "predicted_itl_ms": 9.8744704,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 79104,
+      "predicted_itl_ms": 9.8968448,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 79616,
+      "predicted_itl_ms": 9.9192192,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 80128,
+      "predicted_itl_ms": 9.941593600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 80640,
+      "predicted_itl_ms": 9.963968000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 81152,
+      "predicted_itl_ms": 9.9863424,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 81664,
+      "predicted_itl_ms": 10.0087168,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 82176,
+      "predicted_itl_ms": 10.0310912,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 82688,
+      "predicted_itl_ms": 10.053465600000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 83200,
+      "predicted_itl_ms": 10.07584,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 83712,
+      "predicted_itl_ms": 10.0982144,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 84224,
+      "predicted_itl_ms": 10.1205888,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 84736,
+      "predicted_itl_ms": 10.1429632,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 85248,
+      "predicted_itl_ms": 10.1653376,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 85760,
+      "predicted_itl_ms": 10.187712000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 86272,
+      "predicted_itl_ms": 10.2100864,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 86784,
+      "predicted_itl_ms": 10.2324608,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 87296,
+      "predicted_itl_ms": 10.2548352,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 87808,
+      "predicted_itl_ms": 10.2772096,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 88320,
+      "predicted_itl_ms": 10.299584,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 88832,
+      "predicted_itl_ms": 10.3219584,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 89344,
+      "predicted_itl_ms": 10.3443328,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 89856,
+      "predicted_itl_ms": 10.3667072,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 90368,
+      "predicted_itl_ms": 10.3890816,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 90880,
+      "predicted_itl_ms": 10.411456000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 91392,
+      "predicted_itl_ms": 10.4338304,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 91904,
+      "predicted_itl_ms": 10.4562048,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 92416,
+      "predicted_itl_ms": 10.4785792,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 92928,
+      "predicted_itl_ms": 10.500953599999999,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 93440,
+      "predicted_itl_ms": 10.523328,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 93952,
+      "predicted_itl_ms": 10.5457024,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 94464,
+      "predicted_itl_ms": 10.5680768,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 94976,
+      "predicted_itl_ms": 10.5904512,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 95488,
+      "predicted_itl_ms": 10.6128256,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 96000,
+      "predicted_itl_ms": 10.635200000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 96512,
+      "predicted_itl_ms": 10.657574400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 97024,
+      "predicted_itl_ms": 10.6799488,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 97536,
+      "predicted_itl_ms": 10.7023232,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 98048,
+      "predicted_itl_ms": 10.724697599999999,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 98560,
+      "predicted_itl_ms": 10.747072,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 99072,
+      "predicted_itl_ms": 10.7694464,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 99584,
+      "predicted_itl_ms": 10.7918208,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 100096,
+      "predicted_itl_ms": 10.8141952,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 100608,
+      "predicted_itl_ms": 10.8365696,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 101120,
+      "predicted_itl_ms": 10.858944000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 101632,
+      "predicted_itl_ms": 10.881318400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 102144,
+      "predicted_itl_ms": 10.9036928,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 102656,
+      "predicted_itl_ms": 10.9260672,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 103168,
+      "predicted_itl_ms": 10.9484416,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 103680,
+      "predicted_itl_ms": 10.970816,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 104192,
+      "predicted_itl_ms": 10.9931904,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 104704,
+      "predicted_itl_ms": 11.0155648,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 105216,
+      "predicted_itl_ms": 11.0379392,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 105728,
+      "predicted_itl_ms": 11.0603136,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 106240,
+      "predicted_itl_ms": 11.082688000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 106752,
+      "predicted_itl_ms": 11.105062400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 107264,
+      "predicted_itl_ms": 11.1274368,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 107776,
+      "predicted_itl_ms": 11.1498112,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 108288,
+      "predicted_itl_ms": 11.1721856,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 108800,
+      "predicted_itl_ms": 11.19456,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 109312,
+      "predicted_itl_ms": 11.2169344,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 109824,
+      "predicted_itl_ms": 11.2393088,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 110336,
+      "predicted_itl_ms": 11.2616832,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 110848,
+      "predicted_itl_ms": 11.2840576,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 111360,
+      "predicted_itl_ms": 11.306432000000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 111872,
+      "predicted_itl_ms": 11.328806400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 112384,
+      "predicted_itl_ms": 11.3511808,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 112896,
+      "predicted_itl_ms": 11.3735552,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 113408,
+      "predicted_itl_ms": 11.3959296,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 113920,
+      "predicted_itl_ms": 11.418304,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 114432,
+      "predicted_itl_ms": 11.4406784,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 114944,
+      "predicted_itl_ms": 11.4630528,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 115456,
+      "predicted_itl_ms": 11.4854272,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 115968,
+      "predicted_itl_ms": 11.5078016,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 116480,
+      "predicted_itl_ms": 11.530176,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 116992,
+      "predicted_itl_ms": 11.552550400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 117504,
+      "predicted_itl_ms": 11.5749248,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 118016,
+      "predicted_itl_ms": 11.5972992,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 118528,
+      "predicted_itl_ms": 11.6196736,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 119040,
+      "predicted_itl_ms": 11.642047999999999,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 119552,
+      "predicted_itl_ms": 11.6644224,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 120064,
+      "predicted_itl_ms": 11.6867968,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 120576,
+      "predicted_itl_ms": 11.7091712,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 121088,
+      "predicted_itl_ms": 11.7315456,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 121600,
+      "predicted_itl_ms": 11.75392,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 122112,
+      "predicted_itl_ms": 11.776294400000001,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 122624,
+      "predicted_itl_ms": 11.798668800000002,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 123136,
+      "predicted_itl_ms": 11.8210432,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 123648,
+      "predicted_itl_ms": 11.8434176,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 124160,
+      "predicted_itl_ms": 11.865791999999999,
+      "measured": false
+    },
+    {
+      "kv": "BF16",
+      "length_tokens": 124672,
+      "predicted_itl_ms": 11.8881664,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 256,
+      "predicted_itl_ms": 6.5860672000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 768,
+      "predicted_itl_ms": 6.5982016,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 1280,
+      "predicted_itl_ms": 6.610336,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 1792,
+      "predicted_itl_ms": 6.6224704,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 2304,
+      "predicted_itl_ms": 6.6346048,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 2816,
+      "predicted_itl_ms": 6.6467392,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 3328,
+      "predicted_itl_ms": 6.6588736,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 3840,
+      "predicted_itl_ms": 6.6710080000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 4352,
+      "predicted_itl_ms": 6.6831424,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 4864,
+      "predicted_itl_ms": 6.6952768,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 5376,
+      "predicted_itl_ms": 6.7074112,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 5888,
+      "predicted_itl_ms": 6.7195456,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 6400,
+      "predicted_itl_ms": 6.73168,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 6912,
+      "predicted_itl_ms": 6.7438144,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 7424,
+      "predicted_itl_ms": 6.7559488,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 7936,
+      "predicted_itl_ms": 6.7680832,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 8448,
+      "predicted_itl_ms": 6.7802176,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 8960,
+      "predicted_itl_ms": 6.792352,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 9472,
+      "predicted_itl_ms": 6.8044864,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 9984,
+      "predicted_itl_ms": 6.8166208,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 10496,
+      "predicted_itl_ms": 6.8287552,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 11008,
+      "predicted_itl_ms": 6.8408896,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 11520,
+      "predicted_itl_ms": 6.8530240000000004,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 12032,
+      "predicted_itl_ms": 6.8651584,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 12544,
+      "predicted_itl_ms": 6.8772928,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 13056,
+      "predicted_itl_ms": 6.8894272,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 13568,
+      "predicted_itl_ms": 6.9015616,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 14080,
+      "predicted_itl_ms": 6.913696,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 14592,
+      "predicted_itl_ms": 6.9258304,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 15104,
+      "predicted_itl_ms": 6.9379648000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 15616,
+      "predicted_itl_ms": 6.9500992,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 16128,
+      "predicted_itl_ms": 6.9622336,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 16640,
+      "predicted_itl_ms": 6.974368,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 17152,
+      "predicted_itl_ms": 6.9865024,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 17664,
+      "predicted_itl_ms": 6.9986368,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 18176,
+      "predicted_itl_ms": 7.0107712,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 18688,
+      "predicted_itl_ms": 7.0229056,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 19200,
+      "predicted_itl_ms": 7.03504,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 19712,
+      "predicted_itl_ms": 7.0471744,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 20224,
+      "predicted_itl_ms": 7.0593088,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 20736,
+      "predicted_itl_ms": 7.0714432,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 21248,
+      "predicted_itl_ms": 7.0835776,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 21760,
+      "predicted_itl_ms": 7.095712,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 22272,
+      "predicted_itl_ms": 7.1078464,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 22784,
+      "predicted_itl_ms": 7.1199808,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 23296,
+      "predicted_itl_ms": 7.1321152,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 23808,
+      "predicted_itl_ms": 7.1442496,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 24320,
+      "predicted_itl_ms": 7.156384,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 24832,
+      "predicted_itl_ms": 7.1685184,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 25344,
+      "predicted_itl_ms": 7.1806528,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 25856,
+      "predicted_itl_ms": 7.1927872,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 26368,
+      "predicted_itl_ms": 7.2049216000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 26880,
+      "predicted_itl_ms": 7.217056,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 27392,
+      "predicted_itl_ms": 7.2291904,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 27904,
+      "predicted_itl_ms": 7.2413248,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 28416,
+      "predicted_itl_ms": 7.2534592,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 28928,
+      "predicted_itl_ms": 7.2655936,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 29440,
+      "predicted_itl_ms": 7.277728,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 29952,
+      "predicted_itl_ms": 7.2898624000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 30464,
+      "predicted_itl_ms": 7.3019968,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 30976,
+      "predicted_itl_ms": 7.3141312,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 31488,
+      "predicted_itl_ms": 7.3262656,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 32000,
+      "predicted_itl_ms": 7.3384,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 32512,
+      "predicted_itl_ms": 7.3505344,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 33024,
+      "predicted_itl_ms": 7.3626688,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 33536,
+      "predicted_itl_ms": 7.374803200000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 34048,
+      "predicted_itl_ms": 7.3869376,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 34560,
+      "predicted_itl_ms": 7.399072,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 35072,
+      "predicted_itl_ms": 7.4112064,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 35584,
+      "predicted_itl_ms": 7.4233408,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 36096,
+      "predicted_itl_ms": 7.4354752,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 36608,
+      "predicted_itl_ms": 7.4476096,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 37120,
+      "predicted_itl_ms": 7.459744,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 37632,
+      "predicted_itl_ms": 7.4718784,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 38144,
+      "predicted_itl_ms": 7.4840128,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 38656,
+      "predicted_itl_ms": 7.4961472,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 39168,
+      "predicted_itl_ms": 7.5082816,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 39680,
+      "predicted_itl_ms": 7.520416,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 40192,
+      "predicted_itl_ms": 7.5325504,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 40704,
+      "predicted_itl_ms": 7.5446848,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 41216,
+      "predicted_itl_ms": 7.5568192,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 41728,
+      "predicted_itl_ms": 7.5689536,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 42240,
+      "predicted_itl_ms": 7.581088,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 42752,
+      "predicted_itl_ms": 7.5932224,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 43264,
+      "predicted_itl_ms": 7.6053568,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 43776,
+      "predicted_itl_ms": 7.6174912,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 44288,
+      "predicted_itl_ms": 7.6296256,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 44800,
+      "predicted_itl_ms": 7.64176,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 45312,
+      "predicted_itl_ms": 7.6538944,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 45824,
+      "predicted_itl_ms": 7.6660288,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 46336,
+      "predicted_itl_ms": 7.6781632,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 46848,
+      "predicted_itl_ms": 7.6902976,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 47360,
+      "predicted_itl_ms": 7.702432,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 47872,
+      "predicted_itl_ms": 7.7145664,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 48384,
+      "predicted_itl_ms": 7.7267008,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 48896,
+      "predicted_itl_ms": 7.7388352000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 49408,
+      "predicted_itl_ms": 7.7509696,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 49920,
+      "predicted_itl_ms": 7.763104,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 50432,
+      "predicted_itl_ms": 7.7752384,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 50944,
+      "predicted_itl_ms": 7.7873728,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 51456,
+      "predicted_itl_ms": 7.7995072,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 51968,
+      "predicted_itl_ms": 7.8116416,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 52480,
+      "predicted_itl_ms": 7.8237760000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 52992,
+      "predicted_itl_ms": 7.8359104,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 53504,
+      "predicted_itl_ms": 7.8480448,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 54016,
+      "predicted_itl_ms": 7.8601792,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 54528,
+      "predicted_itl_ms": 7.8723136,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 55040,
+      "predicted_itl_ms": 7.884448,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 55552,
+      "predicted_itl_ms": 7.8965824,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 56064,
+      "predicted_itl_ms": 7.9087168000000005,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 56576,
+      "predicted_itl_ms": 7.9208511999999995,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 57088,
+      "predicted_itl_ms": 7.9329856,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 57600,
+      "predicted_itl_ms": 7.94512,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 58112,
+      "predicted_itl_ms": 7.9572544,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 58624,
+      "predicted_itl_ms": 7.9693888,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 59136,
+      "predicted_itl_ms": 7.9815232,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 59648,
+      "predicted_itl_ms": 7.993657600000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 60160,
+      "predicted_itl_ms": 8.005792,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 60672,
+      "predicted_itl_ms": 8.0179264,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 61184,
+      "predicted_itl_ms": 8.0300608,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 61696,
+      "predicted_itl_ms": 8.0421952,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 62208,
+      "predicted_itl_ms": 8.054329599999999,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 62720,
+      "predicted_itl_ms": 8.066464,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 63232,
+      "predicted_itl_ms": 8.0785984,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 63744,
+      "predicted_itl_ms": 8.0907328,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 64256,
+      "predicted_itl_ms": 8.1028672,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 64768,
+      "predicted_itl_ms": 8.1150016,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 65280,
+      "predicted_itl_ms": 8.127136,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 65792,
+      "predicted_itl_ms": 8.139270400000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 66304,
+      "predicted_itl_ms": 8.1514048,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 66816,
+      "predicted_itl_ms": 8.1635392,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 67328,
+      "predicted_itl_ms": 8.1756736,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 67840,
+      "predicted_itl_ms": 8.187808,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 68352,
+      "predicted_itl_ms": 8.1999424,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 68864,
+      "predicted_itl_ms": 8.2120768,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 69376,
+      "predicted_itl_ms": 8.2242112,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 69888,
+      "predicted_itl_ms": 8.2363456,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 70400,
+      "predicted_itl_ms": 8.24848,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 70912,
+      "predicted_itl_ms": 8.2606144,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 71424,
+      "predicted_itl_ms": 8.2727488,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 71936,
+      "predicted_itl_ms": 8.2848832,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 72448,
+      "predicted_itl_ms": 8.2970176,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 72960,
+      "predicted_itl_ms": 8.309152000000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 73472,
+      "predicted_itl_ms": 8.3212864,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 73984,
+      "predicted_itl_ms": 8.3334208,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 74496,
+      "predicted_itl_ms": 8.3455552,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 75008,
+      "predicted_itl_ms": 8.3576896,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 75520,
+      "predicted_itl_ms": 8.369824,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 76032,
+      "predicted_itl_ms": 8.3819584,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 76544,
+      "predicted_itl_ms": 8.3940928,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 77056,
+      "predicted_itl_ms": 8.4062272,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 77568,
+      "predicted_itl_ms": 8.4183616,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 78080,
+      "predicted_itl_ms": 8.430496,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 78592,
+      "predicted_itl_ms": 8.4426304,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 79104,
+      "predicted_itl_ms": 8.4547648,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 79616,
+      "predicted_itl_ms": 8.4668992,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 80128,
+      "predicted_itl_ms": 8.479033600000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 80640,
+      "predicted_itl_ms": 8.491168,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 81152,
+      "predicted_itl_ms": 8.5033024,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 81664,
+      "predicted_itl_ms": 8.5154368,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 82176,
+      "predicted_itl_ms": 8.5275712,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 82688,
+      "predicted_itl_ms": 8.5397056,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 83200,
+      "predicted_itl_ms": 8.55184,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 83712,
+      "predicted_itl_ms": 8.5639744,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 84224,
+      "predicted_itl_ms": 8.5761088,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 84736,
+      "predicted_itl_ms": 8.5882432,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 85248,
+      "predicted_itl_ms": 8.6003776,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 85760,
+      "predicted_itl_ms": 8.612512,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 86272,
+      "predicted_itl_ms": 8.6246464,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 86784,
+      "predicted_itl_ms": 8.6367808,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 87296,
+      "predicted_itl_ms": 8.648915200000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 87808,
+      "predicted_itl_ms": 8.6610496,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 88320,
+      "predicted_itl_ms": 8.673184,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 88832,
+      "predicted_itl_ms": 8.6853184,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 89344,
+      "predicted_itl_ms": 8.6974528,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 89856,
+      "predicted_itl_ms": 8.7095872,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 90368,
+      "predicted_itl_ms": 8.7217216,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 90880,
+      "predicted_itl_ms": 8.733856,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 91392,
+      "predicted_itl_ms": 8.7459904,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 91904,
+      "predicted_itl_ms": 8.758124800000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 92416,
+      "predicted_itl_ms": 8.7702592,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 92928,
+      "predicted_itl_ms": 8.7823936,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 93440,
+      "predicted_itl_ms": 8.794528,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 93952,
+      "predicted_itl_ms": 8.8066624,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 94464,
+      "predicted_itl_ms": 8.8187968,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 94976,
+      "predicted_itl_ms": 8.8309312,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 95488,
+      "predicted_itl_ms": 8.8430656,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 96000,
+      "predicted_itl_ms": 8.8552,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 96512,
+      "predicted_itl_ms": 8.8673344,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 97024,
+      "predicted_itl_ms": 8.8794688,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 97536,
+      "predicted_itl_ms": 8.8916032,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 98048,
+      "predicted_itl_ms": 8.9037376,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 98560,
+      "predicted_itl_ms": 8.915872,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 99072,
+      "predicted_itl_ms": 8.928006400000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 99584,
+      "predicted_itl_ms": 8.9401408,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 100096,
+      "predicted_itl_ms": 8.952275199999999,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 100608,
+      "predicted_itl_ms": 8.9644096,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 101120,
+      "predicted_itl_ms": 8.976544,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 101632,
+      "predicted_itl_ms": 8.9886784,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 102144,
+      "predicted_itl_ms": 9.0008128,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 102656,
+      "predicted_itl_ms": 9.0129472,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 103168,
+      "predicted_itl_ms": 9.0250816,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 103680,
+      "predicted_itl_ms": 9.037216,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 104192,
+      "predicted_itl_ms": 9.0493504,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 104704,
+      "predicted_itl_ms": 9.0614848,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 105216,
+      "predicted_itl_ms": 9.0736192,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 105728,
+      "predicted_itl_ms": 9.0857536,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 106240,
+      "predicted_itl_ms": 9.097888000000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 106752,
+      "predicted_itl_ms": 9.1100224,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 107264,
+      "predicted_itl_ms": 9.122156799999999,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 107776,
+      "predicted_itl_ms": 9.1342912,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 108288,
+      "predicted_itl_ms": 9.1464256,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 108800,
+      "predicted_itl_ms": 9.15856,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 109312,
+      "predicted_itl_ms": 9.1706944,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 109824,
+      "predicted_itl_ms": 9.1828288,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 110336,
+      "predicted_itl_ms": 9.1949632,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 110848,
+      "predicted_itl_ms": 9.2070976,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 111360,
+      "predicted_itl_ms": 9.219232,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 111872,
+      "predicted_itl_ms": 9.2313664,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 112384,
+      "predicted_itl_ms": 9.2435008,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 112896,
+      "predicted_itl_ms": 9.2556352,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 113408,
+      "predicted_itl_ms": 9.267769600000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 113920,
+      "predicted_itl_ms": 9.279904,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 114432,
+      "predicted_itl_ms": 9.2920384,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 114944,
+      "predicted_itl_ms": 9.3041728,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 115456,
+      "predicted_itl_ms": 9.3163072,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 115968,
+      "predicted_itl_ms": 9.3284416,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 116480,
+      "predicted_itl_ms": 9.340576,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 116992,
+      "predicted_itl_ms": 9.3527104,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 117504,
+      "predicted_itl_ms": 9.3648448,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 118016,
+      "predicted_itl_ms": 9.376979200000001,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 118528,
+      "predicted_itl_ms": 9.3891136,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 119040,
+      "predicted_itl_ms": 9.401248,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 119552,
+      "predicted_itl_ms": 9.4133824,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 120064,
+      "predicted_itl_ms": 9.4255168,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 120576,
+      "predicted_itl_ms": 9.4376512,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 121088,
+      "predicted_itl_ms": 9.4497856,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 121600,
+      "predicted_itl_ms": 9.46192,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 122112,
+      "predicted_itl_ms": 9.4740544,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 122624,
+      "predicted_itl_ms": 9.4861888,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 123136,
+      "predicted_itl_ms": 9.4983232,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 123648,
+      "predicted_itl_ms": 9.5104576,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 124160,
+      "predicted_itl_ms": 9.522592,
+      "measured": false
+    },
+    {
+      "kv": "FP8",
+      "length_tokens": 124672,
+      "predicted_itl_ms": 9.5347264,
+      "measured": false
+    }
+  ],
+  "display_table": "| 格式 | 斜率/ms每Token | 截距/ms |\n|---|---|---|\n| BF16 | 4.37e-05 | 6.44 |\n| FP8 | 2.37e-05 | 6.58 |"
+}

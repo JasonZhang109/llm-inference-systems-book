@@ -1,0 +1,1420 @@
+[
+  {
+    "id": "ch01_tp_phases",
+    "chapter": 1,
+    "figure_id": "图1-T1",
+    "title": "一次请求的阶段拆分：Decode 主导端到端（第三方实测）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z01",
+    "columns": [
+      "负载",
+      "阶段",
+      "A100/ms",
+      "H100/ms"
+    ],
+    "rows": [
+      [
+        "Coding",
+        "TTFT(prefill)",
+        185,
+        95
+      ],
+      [
+        "Coding",
+        "TBT(decode,每token)",
+        52,
+        31
+      ],
+      [
+        "Coding",
+        "E2E",
+        856,
+        493
+      ],
+      [
+        "Conversation",
+        "TTFT(prefill)",
+        155,
+        84
+      ],
+      [
+        "Conversation",
+        "TBT(decode,每token)",
+        40,
+        28
+      ],
+      [
+        "Conversation",
+        "E2E",
+        4957,
+        3387
+      ]
+    ],
+    "conditions": "Splitwise（微软研究院，HPCA 2024）Table IV；DGX-A100 与 DGX-H100，batch size 1，P50；Llama2-70B；生产 trace（coding 中位输入 1500/输出 13；conversation 中位输入 1020/输出 129）。",
+    "limitations": "batch size 1 的 P50，非高并发；仅一个模型与两类 trace；2023 年 H100 SXM 数据。论文为自研方案方，非中立基准组织。",
+    "interpretation": "同一负载下 E2E 远大于 TTFT，说明端到端时间主要由 decode 累积；Conversation 的 E2E（4957/3387 ms）比 Coding（856/493 ms）高一个量级，因为输出更长。A100→H100 的 TTFT 约减半，但 E2E 只降到 0.58–0.68，再次说明 decode 段的权重。",
+    "display_table": "| 负载 | 阶段 | A100/ms | H100/ms |\n|---|---|---|---|\n| Coding | TTFT(prefill) | 185 | 95 |\n| Coding | TBT(decode,每token) | 52 | 31 |\n| Coding | E2E | 856 | 493 |\n| Conversation | TTFT(prefill) | 155 | 84 |\n| Conversation | TBT(decode,每token) | 40 | 28 |\n| Conversation | E2E | 4957 | 3387 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "Coding·TTFT(prefill)",
+        "Coding·TBT(decode,每token)",
+        "Coding·E2E",
+        "Conversation·TTFT(prefill)",
+        "Conversation·TBT(decode,每token)",
+        "Conversation·E2E"
+      ],
+      "series": [
+        [
+          "A100/ms",
+          [
+            185.0,
+            52.0,
+            856.0,
+            155.0,
+            40.0,
+            4957.0
+          ]
+        ],
+        [
+          "H100/ms",
+          [
+            95.0,
+            31.0,
+            493.0,
+            84.0,
+            28.0,
+            3387.0
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "负载 · 阶段",
+      "ylabel": "毫秒（对数轴）",
+      "rotate": 22,
+      "id": "ch01_tp_phases",
+      "title": "一次请求的阶段拆分：Decode 主导端到端（第三方实测）"
+    },
+    "plot_note": "Splitwise Table IV：batch=1 的 P50；Coding 与 Conversation 是两类负载，不能混算同一容量。"
+  },
+  {
+    "id": "ch01_tp_tail",
+    "chapter": 1,
+    "figure_id": "图1-T2",
+    "title": "尾延迟放大：p50 到 p99 不是同一个世界（第三方实测）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z02",
+    "columns": [
+      "模型",
+      "框架",
+      "分位",
+      "TTFT/s",
+      "总时延/s",
+      "TPOT/s"
+    ],
+    "rows": [
+      [
+        "LLaMA-2-70B",
+        "vLLM",
+        "p50",
+        0.87,
+        31.24,
+        0.122
+      ],
+      [
+        "LLaMA-2-70B",
+        "vLLM",
+        "p95",
+        2.34,
+        58.92,
+        0.231
+      ],
+      [
+        "LLaMA-2-70B",
+        "vLLM",
+        "p99",
+        3.67,
+        87.45,
+        0.343
+      ],
+      [
+        "LLaMA-2-70B",
+        "TGI",
+        "p50",
+        0.64,
+        39.87,
+        0.157
+      ],
+      [
+        "LLaMA-2-70B",
+        "TGI",
+        "p95",
+        1.45,
+        82.14,
+        0.323
+      ],
+      [
+        "LLaMA-2-70B",
+        "TGI",
+        "p99",
+        2.18,
+        127.39,
+        0.501
+      ]
+    ],
+    "conditions": "Kolluru（arXiv:2511.17593v1）Table 1；4×A100-80GB，25 并发，ShareGPT，prompt 均值 512 / 生成均值 256 tokens，每配置 1000 请求取中位数；vLLM v0.6.1 与 TGI v2.3.0。",
+    "limitations": "单作者预印本，未经同行评审；无误差棒；框架版本为 2024 年。",
+    "interpretation": "vLLM 的 TTFT p50 比 TGI 高（0.87 对 0.64 s），但总时延与 TPOT 全面更低。更关键的是放大倍数：总时延 p99/p50，vLLM 为 2.80 倍、TGI 为 3.20 倍。**只报平均值会同时掩盖两件事：框架间的取舍，以及尾部被放大后的真实体验。**",
+    "display_table": "| 模型 | 框架 | 分位 | TTFT/s | 总时延/s | TPOT/s |\n|---|---|---|---|---|---|\n| LLaMA-2-70B | vLLM | p50 | 0.87 | 31.24 | 0.122 |\n| LLaMA-2-70B | vLLM | p95 | 2.34 | 58.92 | 0.231 |\n| LLaMA-2-70B | vLLM | p99 | 3.67 | 87.45 | 0.343 |\n| LLaMA-2-70B | TGI | p50 | 0.64 | 39.87 | 0.157 |\n| LLaMA-2-70B | TGI | p95 | 1.45 | 82.14 | 0.323 |\n| LLaMA-2-70B | TGI | p99 | 2.18 | 127.39 | 0.501 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "vLLM p50",
+        "vLLM p95",
+        "vLLM p99",
+        "TGI p50",
+        "TGI p95",
+        "TGI p99"
+      ],
+      "series": [
+        [
+          "TTFT",
+          [
+            0.87,
+            2.34,
+            3.67,
+            0.64,
+            1.45,
+            2.18
+          ]
+        ],
+        [
+          "总时延",
+          [
+            31.24,
+            58.92,
+            87.45,
+            39.87,
+            82.14,
+            127.39
+          ]
+        ],
+        [
+          "TPOT",
+          [
+            0.122,
+            0.231,
+            0.343,
+            0.157,
+            0.323,
+            0.501
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "框架 · 分位",
+      "ylabel": "秒（对数轴）",
+      "rotate": 22,
+      "id": "ch01_tp_tail",
+      "title": "尾延迟放大：p50 到 p99 不是同一个世界（第三方实测）"
+    },
+    "plot_note": "4×A100-80GB、25 并发、ShareGPT；单作者预印本，无误差棒；TTFT/总时延/TPOT 单位均为秒。"
+  },
+  {
+    "id": "ch02_tp_kvpool",
+    "chapter": 2,
+    "figure_id": "图2-T1",
+    "title": "KV 池不是整卡显存：三个规模的公开部署配置（第三方实测部署）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z03",
+    "columns": [
+      "模型规模",
+      "参数量/GB",
+      "KV池/GB",
+      "总显存/GB",
+      "最大KV槽位"
+    ],
+    "rows": [
+      [
+        "13B（1×A100 40GB）",
+        26,
+        12,
+        40,
+        "15.7K"
+      ],
+      [
+        "66B（4×A100）",
+        132,
+        21,
+        160,
+        "9.7K"
+      ],
+      [
+        "175B（8×A100-80GB）",
+        346,
+        264,
+        640,
+        "60.1K"
+      ]
+    ],
+    "conditions": "PagedAttention/vLLM（SOSP 2023）Table 1；OPT-13B/66B/175B；GCP A2 实例；KV 池为部署配置推算（总显存−权重−开销）。",
+    "limitations": "【原文数值自相矛盾】正文称 OPT-13B 每 token KV 为 800 KB，但其自身算式 2×5120×40×2 B ≈ 1.6 MB，相差 2 倍，引用时须同时标注。KV 池为部署配置推算，非 nvidia-smi 隔离实测。",
+    "interpretation": "KV 池占总显存的 30%（13B）到 41%（175B），而参数量占 65%–54%。**\"KV Cache 是瓶颈\"这句话只在特定规模与长度下成立**：13B 单卡时权重仍是最大项。这也是为什么分页管理（提高池内利用率）比单纯加显存更先被采用。",
+    "display_table": "| 模型规模 | 参数量/GB | KV池/GB | 总显存/GB | 最大KV槽位 |\n|---|---|---|---|---|\n| 13B（1×A100 40GB） | 26 | 12 | 40 | 15.7K |\n| 66B（4×A100） | 132 | 21 | 160 | 9.7K |\n| 175B（8×A100-80GB） | 346 | 264 | 640 | 60.1K |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_stacked",
+      "groups": [
+        "13B（1×A100 40GB）",
+        "66B（4×A100）",
+        "175B（8×A100-80GB）"
+      ],
+      "stack": [
+        [
+          "参数量/GB",
+          [
+            26.0,
+            132.0,
+            346.0
+          ]
+        ],
+        [
+          "KV池/GB",
+          [
+            12.0,
+            21.0,
+            264.0
+          ]
+        ]
+      ],
+      "totals": [
+        40.0,
+        160.0,
+        640.0
+      ],
+      "extra": [
+        "最大KV槽位 15.7K",
+        "最大KV槽位 9.7K",
+        "最大KV槽位 60.1K"
+      ],
+      "ylabel": "显存 / GB",
+      "xlabel": "公开部署配置",
+      "id": "ch02_tp_kvpool",
+      "title": "KV 池不是整卡显存：三个规模的公开部署配置（第三方实测部署）"
+    },
+    "plot_note": "PagedAttention Table 1：KV 池为部署配置推算，非 nvidia-smi 隔离实测；三行硬件规模不同。"
+  },
+  {
+    "id": "ch02_tp_kvlen",
+    "chapter": 2,
+    "figure_id": "图2-T2",
+    "title": "KV 随序列长度线性增长：估算表而非实测（第三方估算）",
+    "evidence_type": "THIRD_PARTY_ESTIMATE",
+    "source_id": "Z04",
+    "columns": [
+      "模型",
+      "32K/GB",
+      "128K/GB",
+      "1M/GB"
+    ],
+    "rows": [
+      [
+        "LLaMA-7B",
+        16,
+        64,
+        512
+      ],
+      [
+        "LLaMA-13B",
+        25,
+        100,
+        800
+      ],
+      [
+        "LLaMA-30B",
+        49,
+        195,
+        1560
+      ],
+      [
+        "LLaMA-65B",
+        80,
+        320,
+        2560
+      ]
+    ],
+    "conditions": "KVQuant（arXiv:2401.18079v3，NeurIPS 2024）Table 7/8；FP16 KV，batch size 1；闭式公式估算。",
+    "limitations": "【非实测】原表标题明确为 estimates；仅 BS=1 与 BS=4 两点，无随并发的连续曲线；未评测精度。",
+    "interpretation": "1M 上下文下 LLaMA-7B 的 KV 需约 512 GB——远超单卡 80 GB。**这张图的价值不在精确值，而在量级：长上下文不是\"开个参数\"，而是把内存需求推到需要量化或多卡分片的地步。**（KVQuant 同文给出 int4 后 128K 可降至 16 GB。）",
+    "display_table": "| 模型 | 32K/GB | 128K/GB | 1M/GB |\n|---|---|---|---|\n| LLaMA-7B | 16 | 64 | 512 |\n| LLaMA-13B | 25 | 100 | 800 |\n| LLaMA-30B | 49 | 195 | 1560 |\n| LLaMA-65B | 80 | 320 | 2560 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "LLaMA-7B",
+        "LLaMA-13B",
+        "LLaMA-30B",
+        "LLaMA-65B"
+      ],
+      "series": [
+        [
+          "32K/GB",
+          [
+            16.0,
+            25.0,
+            49.0,
+            80.0
+          ]
+        ],
+        [
+          "128K/GB",
+          [
+            64.0,
+            100.0,
+            195.0,
+            320.0
+          ]
+        ],
+        [
+          "1M/GB",
+          [
+            512.0,
+            800.0,
+            1560.0,
+            2560.0
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "模型",
+      "ylabel": "KV cache / GB（对数轴）",
+      "id": "ch02_tp_kvlen",
+      "title": "KV 随序列长度线性增长：估算表而非实测（第三方估算）"
+    },
+    "plot_note": "KVQuant 附录估算表（闭式公式），非 GPU 计数器实测；仅 BS=1/BS=4 两点，无并发连续曲线。"
+  },
+  {
+    "id": "ch03_tp_achieved",
+    "chapter": 3,
+    "figure_id": "图3-T1",
+    "title": "标称不等于可达：第三方微基准的达成率（第三方实测）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z05",
+    "columns": [
+      "项目",
+      "RTX 4090",
+      "A100",
+      "H800"
+    ],
+    "rows": [
+      [
+        "显存带宽达成率/%",
+        92,
+        90,
+        91
+      ],
+      [
+        "Tensor Core mma 达成率/%",
+        "—",
+        95,
+        62.9
+      ]
+    ],
+    "conditions": "Hopper 架构剖析（arXiv:2402.13499v1）Table V/III/VII/VIII；CUDA 12.1/12.2；指令级微基准。",
+    "limitations": "【重要】被测 Hopper 卡是 H800 PCIe（NVLink 削减、350W 功耗墙），不是 H100 SXM；未测 H100 SXM 的 HBM3 3352 GB/s 达成率；A100 的 95% 为\"超过 95%\"的表述。",
+    "interpretation": "显存带宽普遍能到标称的 90%–92%，属于\"标称可信\"的量级；但 Tensor Core 的 mma 指令在 Hopper 上平均只到 62.9%，而同卡的 wgmma 指令超过 95%。**同一个\"峰值算力\"数字，换一条指令路径就能差 1.5 倍。**Roofline 用标称值算出的屋顶，必须再乘一个\"用哪条指令\"的折扣。",
+    "display_table": "| 项目 | RTX 4090 | A100 | H800 |\n|---|---|---|---|\n| 显存带宽达成率/% | 92 | 90 | 91 |\n| Tensor Core mma 达成率/% | — | 95 | 62.9 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "显存带宽达成率/%",
+        "Tensor Core mma 达成率/%"
+      ],
+      "series": [
+        [
+          "RTX 4090",
+          [
+            92.0,
+            null
+          ]
+        ],
+        [
+          "A100",
+          [
+            90.0,
+            95.0
+          ]
+        ],
+        [
+          "H800",
+          [
+            91.0,
+            62.9
+          ]
+        ]
+      ],
+      "logy": false,
+      "ylim": [
+        0,
+        110
+      ],
+      "xlabel": "项目",
+      "ylabel": "达成率 / %",
+      "id": "ch03_tp_achieved",
+      "title": "标称不等于可达：第三方微基准的达成率（第三方实测）"
+    },
+    "plot_note": "第三方 GPU 解剖微基准；\"达成率\"是微基准测得/标称之比，不等于应用内核可达比例。"
+  },
+  {
+    "id": "ch03_tp_latency",
+    "chapter": 3,
+    "figure_id": "图3-T2",
+    "title": "存储层级的代价：四个数量级的延迟差（第三方实测）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z05",
+    "columns": [
+      "层级",
+      "RTX 4090/cycles",
+      "A100/cycles",
+      "H800/cycles"
+    ],
+    "rows": [
+      [
+        "Shared Memory",
+        30.1,
+        29.0,
+        29.0
+      ],
+      [
+        "L1 Cache",
+        43.4,
+        37.9,
+        40.7
+      ],
+      [
+        "L2 Cache",
+        273.0,
+        261.5,
+        263.0
+      ],
+      [
+        "Global Memory",
+        541.5,
+        466.3,
+        478.8
+      ]
+    ],
+    "conditions": "Hopper 架构剖析（arXiv:2402.13499v1）Table IV；另与 Ampere 剖析（arXiv:2208.11174，A100 Global 290 / L2 200 / L1 33 / Shared 23-19）互为交叉参考。",
+    "limitations": "单 SM/warp 级微基准；两篇论文的测量方法不同（Hopper 用 P-chase 变体），跨论文数值不完全可比。",
+    "interpretation": "从 Shared 到 Global 延迟相差约 18 倍，且 Global 比 L2 又高约 2 倍。**这解释了为什么 FlashAttention 这类 IO-aware 算法收益巨大：它不是减少了计算，而是把访存从 Global 挪到了片上。**也说明\"带宽够不够\"和\"延迟忍不忍得住\"是两个独立问题。",
+    "display_table": "| 层级 | RTX 4090/cycles | A100/cycles | H800/cycles |\n|---|---|---|---|\n| Shared Memory | 30.1 | 29.0 | 29.0 |\n| L1 Cache | 43.4 | 37.9 | 40.7 |\n| L2 Cache | 273.0 | 261.5 | 263.0 |\n| Global Memory | 541.5 | 466.3 | 478.8 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "Shared Memory",
+        "L1 Cache",
+        "L2 Cache",
+        "Global Memory"
+      ],
+      "series": [
+        [
+          "RTX 4090/cycles",
+          [
+            30.1,
+            43.4,
+            273.0,
+            541.5
+          ]
+        ],
+        [
+          "A100/cycles",
+          [
+            29.0,
+            37.9,
+            261.5,
+            466.3
+          ]
+        ],
+        [
+          "H800/cycles",
+          [
+            29.0,
+            40.7,
+            263.0,
+            478.8
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "存储层级",
+      "ylabel": "延迟 / cycles（对数轴）",
+      "id": "ch03_tp_latency",
+      "title": "存储层级的代价：四个数量级的延迟差（第三方实测）"
+    },
+    "plot_note": "第三方 GPU 解剖微基准的 cycles 值；跨架构 cycles 与 ns 不可直接换算，只作层级量级对比。"
+  },
+  {
+    "id": "ch07_tp_slo",
+    "chapter": 7,
+    "figure_id": "图7-T1",
+    "title": "SLO 档位决定目标：Interactive 比 Conversational 紧一个量级（第三方规则）",
+    "evidence_type": "THIRD_PARTY_RULES",
+    "source_id": "Z07",
+    "columns": [
+      "基准/模型",
+      "档位",
+      "TTFT约束/ms",
+      "TPOT约束/ms"
+    ],
+    "rows": [
+      [
+        "Llama2-70B (QA)",
+        "Conversational",
+        2000,
+        200
+      ],
+      [
+        "Llama2-70b-interactive",
+        "Interactive",
+        450,
+        40
+      ],
+      [
+        "Llama3.1-8B (摘要)",
+        "Conversational",
+        2000,
+        100
+      ],
+      [
+        "Llama3.1-8B (摘要)",
+        "Interactive",
+        500,
+        30
+      ],
+      [
+        "Llama3.1-405B (文本生成)",
+        "Server",
+        6000,
+        175
+      ],
+      [
+        "Llama3.1-405B (文本生成)",
+        "Interactive",
+        4500,
+        80
+      ],
+      [
+        "DeepSeek-r1 (推理)",
+        "Server",
+        2000,
+        80
+      ],
+      [
+        "DeepSeek-r1 (推理)",
+        "Interactive",
+        1500,
+        15
+      ]
+    ],
+    "conditions": "MLCommons 现行 inference_rules.adoc 的 LLM TTFT/TPOT 目标列；Server 场景尾延迟取 P99，指标为约束下最大 Poisson 吞吐参数。",
+    "limitations": "规则文本随轮次演进，与历史轮次（如 v4.1）可能存在模型与约束差异；规则本身不含实测数值；这是\"门槛\"，不是\"达成值\"。",
+    "interpretation": "同为 Llama2-70B，从 Conversational 切到 Interactive，TTFT 门槛收紧 4.4 倍、TPOT 收紧 5 倍。**这意味着同一套硬件在两个档位下的\"可交付吞吐\"根本不是同一个数。**报容量时若不说档位，数字就没有意义——这正是第7章联合 SLO 讨论的现实依据。",
+    "display_table": "| 基准/模型 | 档位 | TTFT约束/ms | TPOT约束/ms |\n|---|---|---|---|\n| Llama2-70B (QA) | Conversational | 2000 | 200 |\n| Llama2-70b-interactive | Interactive | 450 | 40 |\n| Llama3.1-8B (摘要) | Conversational | 2000 | 100 |\n| Llama3.1-8B (摘要) | Interactive | 500 | 30 |\n| Llama3.1-405B (文本生成) | Server | 6000 | 175 |\n| Llama3.1-405B (文本生成) | Interactive | 4500 | 80 |\n| DeepSeek-r1 (推理) | Server | 2000 | 80 |\n| DeepSeek-r1 (推理) | Interactive | 1500 | 15 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "barh_group",
+      "groups": [
+        "Llama2-70B (QA)\nConversational",
+        "Llama2-70b-interactive\nInteractive",
+        "Llama3.1-8B (摘要)\nConversational",
+        "Llama3.1-8B (摘要)\nInteractive",
+        "Llama3.1-405B (文本生成)\nServer",
+        "Llama3.1-405B (文本生成)\nInteractive",
+        "DeepSeek-r1 (推理)\nServer",
+        "DeepSeek-r1 (推理)\nInteractive"
+      ],
+      "series": [
+        [
+          "TTFT约束/ms",
+          [
+            2000.0,
+            450.0,
+            2000.0,
+            500.0,
+            6000.0,
+            4500.0,
+            2000.0,
+            1500.0
+          ]
+        ],
+        [
+          "TPOT约束/ms",
+          [
+            200.0,
+            40.0,
+            100.0,
+            30.0,
+            175.0,
+            80.0,
+            80.0,
+            15.0
+          ]
+        ]
+      ],
+      "logx": true,
+      "xlabel": "毫秒（对数轴，越左越紧）",
+      "ylabel": "基准/模型 · 档位",
+      "id": "ch07_tp_slo",
+      "title": "SLO 档位决定目标：Interactive 比 Conversational 紧一个量级（第三方规则）"
+    },
+    "plot_note": "MLPerf Inference 约束档位；Interactive 比 Conversational 紧一个量级；同一行的两根柱是同一配置的两个约束。"
+  },
+  {
+    "id": "ch07_tp_percentiles",
+    "chapter": 7,
+    "figure_id": "图7-T2",
+    "title": "约束卡在 P99：实测分位数与门槛的贴合程度（第三方实测）",
+    "evidence_type": "THIRD_PARTY_BENCHMARK",
+    "source_id": "Z08",
+    "columns": [
+      "指标",
+      "min",
+      "P50",
+      "P90",
+      "P95",
+      "P97",
+      "P99",
+      "P99.9"
+    ],
+    "rows": [
+      [
+        "TTFT/ms",
+        41.61,
+        224.66,
+        380.21,
+        433.13,
+        466.44,
+        510.35,
+        769.62
+      ],
+      [
+        "TPOT/ms",
+        47.91,
+        160.32,
+        170.44,
+        173.47,
+        175.75,
+        181.53,
+        200.53
+      ]
+    ],
+    "conditions": "MLPerf Inference v4.1，H200-SXM-141GB×8 + TensorRT-LLM，llama2-70b-99.9，Server 场景（Poisson 到达，P99 尾延迟约束 TTFT≤2s、TPOT≤200ms）；原始单位 ns 已换算为 ms。",
+    "limitations": "提交方为硬件厂商 NVIDIA（在 MLCommons 统一规则下运行并经合规审查）；系统级结果不能拆为单卡；单一软件栈。",
+    "interpretation": "TTFT 的 P99 为 510.35 ms，离 2 s 门槛还有近 4 倍余量；TPOT 的 P99 为 181.53 ms，距 200 ms 只剩约 10%。**门槛真正约束的是 TPOT 这一侧**，且 P99.9 已经到 200.53 ms（超出 200 ms 属正常，因为约束针对 P99）。这说明：当约束卡在 P99 时，P99.9 就是下一个会被追问的指标。",
+    "display_table": "| 指标 | min | P50 | P90 | P95 | P97 | P99 | P99.9 |\n|---|---|---|---|---|---|---|---|\n| TTFT/ms | 41.61 | 224.66 | 380.21 | 433.13 | 466.44 | 510.35 | 769.62 |\n| TPOT/ms | 47.91 | 160.32 | 170.44 | 173.47 | 175.75 | 181.53 | 200.53 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "line",
+      "xs": [
+        "min",
+        "P50",
+        "P90",
+        "P95",
+        "P97",
+        "P99",
+        "P99.9"
+      ],
+      "series": [
+        [
+          "TTFT/ms",
+          [
+            41.61,
+            224.66,
+            380.21,
+            433.13,
+            466.44,
+            510.35,
+            769.62
+          ]
+        ],
+        [
+          "TPOT/ms",
+          [
+            47.91,
+            160.32,
+            170.44,
+            173.47,
+            175.75,
+            181.53,
+            200.53
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "分位数",
+      "ylabel": "毫秒（对数轴）",
+      "id": "ch07_tp_percentiles",
+      "title": "约束卡在 P99：实测分位数与门槛的贴合程度（第三方实测）"
+    },
+    "plot_note": "H200 单轮实测分位数；min→P99.9 的抬升说明约束卡在尾部分位，均值不能代表 SLO。"
+  },
+  {
+    "id": "ch14_tp_throughput",
+    "chapter": 14,
+    "figure_id": "图14-T1",
+    "title": "同规则同条件下的跨平台吞吐：可比的三个与不可比的一个（第三方实测）",
+    "evidence_type": "THIRD_PARTY_BENCHMARK",
+    "source_id": "Z09",
+    "columns": [
+      "系统",
+      "加速器数",
+      "可用性",
+      "tokens/s",
+      "是否可直接比较"
+    ],
+    "rows": [
+      [
+        "H200-SXM-141GB ×8",
+        8,
+        "Available",
+        32789.74,
+        "可（同轮次/同模型/同场景/同加速器数）"
+      ],
+      [
+        "DGX-H100 H100-SXM-80GB ×8",
+        8,
+        "Available",
+        21605.79,
+        "可"
+      ],
+      [
+        "8×MI300X + 2×EPYC-9374F",
+        8,
+        "Available",
+        21028.23,
+        "可"
+      ],
+      [
+        "B200-SXM-180GB ×1",
+        1,
+        "Preview",
+        10755.59,
+        "不可（加速器数=1 且可用性=Preview）"
+      ]
+    ],
+    "conditions": "MLPerf Inference v4.1，Closed division，llama2-70b-99.9，Server 场景，统一约束 TTFT≤2s 且 TPOT≤200ms；各系统 performance/run_1/mlperf_log_summary.txt。",
+    "limitations": "提交方为各硬件厂商（NVIDIA/AMD），运行于 MLCommons 统一规则并经受审收录；仅覆盖 NVIDIA 与 AMD 两家具备可比条目的 LLM 加速器；软件栈不同。",
+    "interpretation": "同为 8 加速器、同模型、同精度档、同场景、同可用性时，H200×8 为 32,789.74、H100×8 为 21,605.79、MI300X×8 为 21,028.23 tokens/s。**第四根柱是刻意放进来的反例**：B200×1 的 10,755.59 不能与前三个排名，因为加速器数量与可用性分类都不同。跨平台比较的第一条纪律不是\"选哪个指标\"，而是\"条件是否等价\"。",
+    "display_table": "| 系统 | 加速器数 | 可用性 | tokens/s | 是否可直接比较 |\n|---|---|---|---|---|\n| H200-SXM-141GB ×8 | 8 | Available | 32789.74 | 可（同轮次/同模型/同场景/同加速器数） |\n| DGX-H100 H100-SXM-80GB ×8 | 8 | Available | 21605.79 | 可 |\n| 8×MI300X + 2×EPYC-9374F | 8 | Available | 21028.23 | 可 |\n| B200-SXM-180GB ×1 | 1 | Preview | 10755.59 | 不可（加速器数=1 且可用性=Preview） |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "barh_simple",
+      "groups": [
+        "H200-SXM-141GB ×8\n8卡 · Available",
+        "DGX-H100 H100-SXM-80GB ×8\n8卡 · Available",
+        "8×MI300X + 2×EPYC-9374F\n8卡 · Available",
+        "B200-SXM-180GB ×1\n1卡 · Preview"
+      ],
+      "values": [
+        32789.74,
+        21605.79,
+        21028.23,
+        10755.59
+      ],
+      "colors": [
+        "#198779",
+        "#198779",
+        "#198779",
+        "#c0504d"
+      ],
+      "xlabel": "tokens/s",
+      "id": "ch14_tp_throughput",
+      "title": "同规则同条件下的跨平台吞吐：可比的三个与不可比的一个（第三方实测）"
+    },
+    "plot_note": "MLPerf Inference 同轮次/同模型/同场景；绿色=可比较，红色=B200 为 1 卡且 Preview，不可直接比较。"
+  },
+  {
+    "id": "ch14_tp_latency",
+    "chapter": 14,
+    "figure_id": "图14-T2",
+    "title": "跨平台不只看吞吐：尾延迟的形态差得更远（第三方实测）",
+    "evidence_type": "THIRD_PARTY_BENCHMARK",
+    "source_id": "Z09",
+    "columns": [
+      "系统",
+      "TTFT P50/ms",
+      "TTFT P99/ms",
+      "TPOT P50/ms",
+      "TPOT P99/ms"
+    ],
+    "rows": [
+      [
+        "H200 ×8",
+        224.66,
+        510.35,
+        160.32,
+        181.53
+      ],
+      [
+        "H100 ×8",
+        272.95,
+        461.28,
+        156.42,
+        175.35
+      ],
+      [
+        "MI300X ×8",
+        990.2,
+        1604.17,
+        143.94,
+        197.87
+      ]
+    ],
+    "conditions": "同图14-T1 的三个可比条目；约束同为 TTFT≤2s、TPOT≤200ms（P99）。",
+    "limitations": "提交方为各硬件厂商；软件栈不同；系统级结果。",
+    "interpretation": "吞吐上 MI300X×8 与 H100×8 接近（21,028 对 21,606），但 TTFT P50 是 990.2 对 272.95 ms——差 3.6 倍，P99 差 3.5 倍。**\"吞吐相当\"完全不代表\"体验相当\"**：前者反映稳态产能，后者反映每个请求要等多久才开始出字。同时 MI300X 的 TPOT P99 已达 197.87 ms，逼近 200 ms 门槛，余量远小于 Hopper 平台。",
+    "display_table": "| 系统 | TTFT P50/ms | TTFT P99/ms | TPOT P50/ms | TPOT P99/ms |\n|---|---|---|---|---|\n| H200 ×8 | 224.66 | 510.35 | 160.32 | 181.53 |\n| H100 ×8 | 272.95 | 461.28 | 156.42 | 175.35 |\n| MI300X ×8 | 990.2 | 1604.17 | 143.94 | 197.87 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "H200 ×8",
+        "H100 ×8",
+        "MI300X ×8"
+      ],
+      "series": [
+        [
+          "TTFT P50/ms",
+          [
+            224.66,
+            272.95,
+            990.2
+          ]
+        ],
+        [
+          "TTFT P99/ms",
+          [
+            510.35,
+            461.28,
+            1604.17
+          ]
+        ],
+        [
+          "TPOT P50/ms",
+          [
+            160.32,
+            156.42,
+            143.94
+          ]
+        ],
+        [
+          "TPOT P99/ms",
+          [
+            181.53,
+            175.35,
+            197.87
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "系统",
+      "ylabel": "毫秒（对数轴）",
+      "id": "ch14_tp_latency",
+      "title": "跨平台不只看吞吐：尾延迟的形态差得更远（第三方实测）"
+    },
+    "plot_note": "同一轮 MLPerf 数据；MI300X 的 TTFT 形态与 H200/H100 差异显著，吞吐可比不代表延迟形态可比。"
+  },
+  {
+    "id": "ch16_tp_burst",
+    "chapter": 16,
+    "figure_id": "图16-T1",
+    "title": "突发是尺度相关的：换一个窗口，倍数就变了（第三方真实 trace）",
+    "evidence_type": "THIRD_PARTY_TRACE",
+    "source_id": "Z10",
+    "columns": [
+      "统计窗口",
+      "峰值/均值比",
+      "口径"
+    ],
+    "rows": [
+      [
+        "1 s",
+        49.5,
+        "BurstGPT 非空窗口"
+      ],
+      [
+        "10 s",
+        53.0,
+        "BurstGPT 非空窗口"
+      ],
+      [
+        "60 s",
+        53.2,
+        "BurstGPT 非空窗口"
+      ],
+      [
+        "300 s",
+        56.3,
+        "BurstGPT 非空窗口"
+      ],
+      [
+        "3600 s",
+        33.3,
+        "BurstGPT 非空窗口"
+      ]
+    ],
+    "conditions": "BurstGPT（KDD'25）data/BurstGPT_1.csv，本次复算：61 天、1,429,737 条请求、平均到达率 0.2713 RPS；峰值/均值比仅统计非空（active）窗口。",
+    "limitations": "单一区域服务商子集（会话与 API 混合），非全行业代表；原始 RPS 很低（0.2713），用于容量规划须按目标 RPS 缩放；失败请求未逐条区分原因。",
+    "interpretation": "峰值/均值比在 1 秒窗口是 49.5 倍，到 1 小时窗口降到 33.3 倍。**\"系统有 50 倍突发\"这句话如果不写窗口就没有意义。** 容量规划里真正要问的是：你的扩容生效时间尺度上，突发倍数是多少——这正是算例里\"突发只有 1 分钟\"那个假设的现实版本。",
+    "display_table": "| 统计窗口 | 峰值/均值比 | 口径 |\n|---|---|---|\n| 1 s | 49.5 | BurstGPT 非空窗口 |\n| 10 s | 53.0 | BurstGPT 非空窗口 |\n| 60 s | 53.2 | BurstGPT 非空窗口 |\n| 300 s | 56.3 | BurstGPT 非空窗口 |\n| 3600 s | 33.3 | BurstGPT 非空窗口 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_simple",
+      "groups": [
+        "1 s",
+        "10 s",
+        "60 s",
+        "300 s",
+        "3600 s"
+      ],
+      "values": [
+        49.5,
+        53.0,
+        53.2,
+        56.3,
+        33.3
+      ],
+      "colors": [
+        "#176b96",
+        "#176b96",
+        "#176b96",
+        "#176b96",
+        "#176b96"
+      ],
+      "ylabel": "峰值 / 均值比",
+      "id": "ch16_tp_burst",
+      "title": "突发是尺度相关的：换一个窗口，倍数就变了（第三方真实 trace）"
+    },
+    "plot_note": "BurstGPT 真实 trace，非空窗口统计；突发倍数随统计窗口变化，报容量必须写清窗口口径。"
+  },
+  {
+    "id": "ch16_tp_lengths",
+    "chapter": 16,
+    "figure_id": "图16-T2",
+    "title": "请求与响应不是同一个分布：长度决定容量怎么算（第三方真实 trace）",
+    "evidence_type": "THIRD_PARTY_TRACE",
+    "source_id": "Z10",
+    "columns": [
+      "类型",
+      "均值/tokens",
+      "p50/tokens",
+      "p90/tokens",
+      "p99/tokens",
+      "最大/tokens"
+    ],
+    "rows": [
+      [
+        "请求（输入）",
+        610.6,
+        251,
+        1796,
+        3387,
+        29665
+      ],
+      [
+        "响应（输出）",
+        123.3,
+        34,
+        272,
+        1491,
+        7315
+      ]
+    ],
+    "conditions": "BurstGPT data/BurstGPT_1.csv 本次复算；1,429,737 条请求；长度单位为 token。",
+    "limitations": "单一区域服务商子集；未按模型或服务类型分层；最大值受长尾极端样本影响。",
+    "interpretation": "输入的均值 610.6、p99 3387；输出的均值 123.3、p99 1491。**输入是长尾重（均值≈2.4×p50），输出相对集中在低位（均值≈3.6×p50）。**这意味着容量规划不能只用一个\"平均长度\"：Prefill 侧被 p99 输入主导，Decode 侧被输出长度分布主导，两者要用不同的分位数。",
+    "display_table": "| 类型 | 均值/tokens | p50/tokens | p90/tokens | p99/tokens | 最大/tokens |\n|---|---|---|---|---|---|\n| 请求（输入） | 610.6 | 251 | 1796 | 3387 | 29665 |\n| 响应（输出） | 123.3 | 34 | 272 | 1491 | 7315 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "请求（输入）",
+        "响应（输出）"
+      ],
+      "series": [
+        [
+          "均值/tokens",
+          [
+            610.6,
+            123.3
+          ]
+        ],
+        [
+          "p50/tokens",
+          [
+            251.0,
+            34.0
+          ]
+        ],
+        [
+          "p90/tokens",
+          [
+            1796.0,
+            272.0
+          ]
+        ],
+        [
+          "p99/tokens",
+          [
+            3387.0,
+            1491.0
+          ]
+        ],
+        [
+          "最大/tokens",
+          [
+            29665.0,
+            7315.0
+          ]
+        ]
+      ],
+      "logy": true,
+      "xlabel": "类型",
+      "ylabel": "tokens（对数轴）",
+      "id": "ch16_tp_lengths",
+      "title": "请求与响应不是同一个分布：长度决定容量怎么算（第三方真实 trace）"
+    },
+    "plot_note": "BurstGPT 真实 trace；请求与响应分布不同，容量必须分别按输入/输出长度分布计算。"
+  },
+  {
+    "id": "ch17_tp_price",
+    "chapter": 17,
+    "figure_id": "图17-T1",
+    "title": "标价下降很快，但那是价格不是成本（第三方分析）",
+    "evidence_type": "THIRD_PARTY_ANALYSIS",
+    "source_id": "Z12",
+    "columns": [
+      "口径",
+      "起点",
+      "终点",
+      "降幅",
+      "单位"
+    ],
+    "rows": [
+      [
+        "a16z LLMflation（MMLU 门槛最便宜模型）",
+        60,
+        0.06,
+        "约 1000×",
+        "美元/百万 token（API 标价）"
+      ],
+      [
+        "Epoch AI：任务间下降率区间",
+        null,
+        null,
+        "9×–900×",
+        "区间（对数线性回归）"
+      ]
+    ],
+    "conditions": "a16z《LLMflation》（价格取自 Internet Archive 历史标价，MMLU 为等效性能锚，输入输出价取平均）；Epoch AI 数据洞察（以\"达到某基准分数的最便宜模型\"标价做对数线性回归）。",
+    "limitations": "【口径警示】两者都是 API 标价（list price），不是厂商成本，含利润率变化；样本仅覆盖部分厂商与第三方托管，存在选择偏差；MMLU 锚点受基准污染影响；Epoch 的区间极宽（9×–900×），不宜作为单一预测常数。",
+    "interpretation": "标价从约 60 美元/百万 token 降到约 0.06 美元，约 1000 倍；但 Epoch 对\"不同任务\"的下降率给出 9×–900× 的极宽区间。**这两个数字都不能直接写进成本模型**：标价下降同时混合了硬件进步、模型变小、竞争定价与补贴。做第17章的收益测算时，用标价当成本会系统性高估节省。",
+    "display_table": "| 口径 | 起点 | 终点 | 降幅 | 单位 |\n|---|---|---|---|---|\n| a16z LLMflation（MMLU 门槛最便宜模型） | 60 | 0.06 | 约 1000× | 美元/百万 token（API 标价） |\n| Epoch AI：任务间下降率区间 | — | — | 9×–900× | 区间（对数线性回归） |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "range_panels",
+      "panels": [
+        {
+          "title": "a16z LLMflation：最便宜达标模型标价",
+          "xlabel": "美元 / 百万 token（对数轴）",
+          "items": [
+            [
+              "60 → 0.06",
+              0.06,
+              60,
+              "约 1000×"
+            ]
+          ]
+        },
+        {
+          "title": "Epoch AI：任务间下降率区间",
+          "xlabel": "下降倍数（对数轴）",
+          "items": [
+            [
+              "9× – 900×",
+              9,
+              900,
+              "对数线性回归区间"
+            ]
+          ]
+        }
+      ],
+      "id": "ch17_tp_price",
+      "title": "标价下降很快，但那是价格不是成本（第三方分析）"
+    },
+    "plot_note": "左为 API 标价（list price），右为跨任务下降率区间；都是价格口径，不是自建成本或单次推理成本。"
+  },
+  {
+    "id": "ch17_tp_cost",
+    "chapter": 17,
+    "figure_id": "图17-T2",
+    "title": "成本口径必须先对齐：租金假设与能耗情景（第三方测算）",
+    "evidence_type": "THIRD_PARTY_MODELED_COST",
+    "source_id": "Z14",
+    "columns": [
+      "项目",
+      "数值",
+      "单位",
+      "口径"
+    ],
+    "rows": [
+      [
+        "H100 租金（Epoch 成本模型假设）",
+        2.0,
+        "美元/GPU-hour",
+        "作者选取的市场租金假设"
+      ],
+      [
+        "H100 租金（Silicon Data 指数读数）",
+        2.75,
+        "美元/GPU-hour",
+        "市场租赁价指数（含 neocloud 与私人租赁）"
+      ],
+      [
+        "美国数据中心用电（2023）",
+        176,
+        "TWh",
+        "历史估算"
+      ],
+      [
+        "美国数据中心用电（2028 情景）",
+        "325–580",
+        "TWh",
+        "情景区间"
+      ]
+    ],
+    "conditions": "Epoch AI《Inference economics of language models》（arXiv:2506.04645，H100 3.3 TB/s 显存带宽）；Silicon Data SDH100RT 指数（2026-10-01 读数）；LBNL《2024 United States Data Center Energy Usage Report》。",
+    "limitations": "【测算非实测】Epoch 成本模型作者自称 crude，口径只含 GPU 租金，未系统包含折旧、电费、PUE、运维与闲置；Silicon Data 为租赁价指数而非 TCO；LBNL 为国家/行业级情景估算，不能直接换算单次推理电费；2028 区间跨度大。",
+    "interpretation": "同为\"H100 一小时\"，成本模型的假设是 2.00 美元，市场租赁价指数读数是 2.75 美元——差 37.5%，而两者都还不含折旧、电费与运维。**做回本测算时，这个差异比大多数优化收益都大。**右侧的能耗情景则提醒另一件事：规模化推理的电费不是零头，176 TWh 到 325–580 TWh 的区间意味着单次推理成本里必须给电留位置。",
+    "display_table": "| 项目 | 数值 | 单位 | 口径 |\n|---|---|---|---|\n| H100 租金（Epoch 成本模型假设） | 2.00 | 美元/GPU-hour | 作者选取的市场租金假设 |\n| H100 租金（Silicon Data 指数读数） | 2.75 | 美元/GPU-hour | 市场租赁价指数（含 neocloud 与私人租赁） |\n| 美国数据中心用电（2023） | 176 | TWh | 历史估算 |\n| 美国数据中心用电（2028 情景） | 325–580 | TWh | 情景区间 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "range_panels",
+      "panels": [
+        {
+          "title": "H100 租金：模型假设 vs 市场指数",
+          "xlabel": "美元 / GPU-hour",
+          "kind": "bars",
+          "groups": [
+            "Epoch 成本模型假设",
+            "Silicon Data 指数读数"
+          ],
+          "values": [
+            2.0,
+            2.75
+          ],
+          "colors": [
+            "#176b96",
+            "#dd8830"
+          ],
+          "ylim": [
+            0,
+            3.4
+          ]
+        },
+        {
+          "title": "美国数据中心用电",
+          "xlabel": "TWh / 年",
+          "kind": "bars_range",
+          "groups": [
+            "2023 历史",
+            "2028 情景"
+          ],
+          "values": [
+            176,
+            176
+          ],
+          "range_hi": [
+            null,
+            580
+          ],
+          "range_lo": [
+            null,
+            325
+          ],
+          "colors": [
+            "#198779",
+            "#8e69af"
+          ],
+          "ylim": [
+            0,
+            700
+          ]
+        }
+      ],
+      "id": "ch17_tp_cost",
+      "title": "成本口径必须先对齐：租金假设与能耗情景（第三方测算）"
+    },
+    "plot_note": "同为\"H100 一小时\"：2.00 与 2.75 差 37.5%，且都不含折旧/电费/运维；右侧为国家/行业级情景，不能换算单次推理电费。"
+  },
+  {
+    "id": "ch18_tp_drift",
+    "chapter": 18,
+    "figure_id": "图18-T1",
+    "title": "同一个模型，三个月后就不一样了（第三方跨版本实测）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z17",
+    "columns": [
+      "任务",
+      "GPT-4 (2023-03)",
+      "GPT-4 (2023-06)",
+      "变化"
+    ],
+    "rows": [
+      [
+        "素数判定准确率/%",
+        84.0,
+        51.1,
+        "−32.9 个百分点"
+      ],
+      [
+        "代码可执行率/%",
+        52.0,
+        10.0,
+        "−42.0 个百分点"
+      ]
+    ],
+    "conditions": "Chen、Zaharia、Zou《How Is ChatGPT's Behavior Changing over Time?》（arXiv:2307.09009；HDSR 2024）；两版均为当时在售 API 版本，仅用 user prompt、默认 system prompt、temperature=0.1。",
+    "limitations": "仅两版快照、单一 provider、时间窗 3 个月，不能外推到所有版本升级；部分任务样本较小（代码 n=50）；未公开确切内部版本号。",
+    "interpretation": "同一 provider、同一批任务、同一套提示，三个月内素数判定从 84.0% 掉到 51.1%，代码可执行率从 52.0% 掉到 10.0%。**这不是\"模型变笨了\"的段子，而是回归治理的现实：升级可能是静默的，且方向不保证。**第18章的多重检验门槛讨论，前提就是\"确实会漂移\"。",
+    "display_table": "| 任务 | GPT-4 (2023-03) | GPT-4 (2023-06) | 变化 |\n|---|---|---|---|\n| 素数判定准确率/% | 84.0 | 51.1 | −32.9 个百分点 |\n| 代码可执行率/% | 52.0 | 10.0 | −42.0 个百分点 |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "bar_group",
+      "groups": [
+        "素数判定准确率/%",
+        "代码可执行率/%"
+      ],
+      "series": [
+        [
+          "GPT-4 (2023-03)",
+          [
+            84.0,
+            52.0
+          ]
+        ],
+        [
+          "GPT-4 (2023-06)",
+          [
+            51.1,
+            10.0
+          ]
+        ]
+      ],
+      "logy": false,
+      "ylim": [
+        0,
+        100
+      ],
+      "xlabel": "任务",
+      "ylabel": "准确率 / 可执行率 %",
+      "id": "ch18_tp_drift",
+      "title": "同一个模型，三个月后就不一样了（第三方跨版本实测）"
+    },
+    "plot_note": "同一 provider、同一批任务、同一套提示，三个月内跨版本下降；仅两版快照，不能外推到所有升级。"
+  },
+  {
+    "id": "ch18_tp_nondet",
+    "chapter": 18,
+    "figure_id": "图18-T2",
+    "title": "评测噪声的两个来源：基准污染与内核非确定性（第三方实测）",
+    "evidence_type": "THIRD_PARTY_MEASURED",
+    "source_id": "Z18",
+    "columns": [
+      "现象",
+      "数值",
+      "口径"
+    ],
+    "rows": [
+      [
+        "GSM8K 去污染后准确率下降",
+        22.9,
+        "%（Inference-Time Decontamination）"
+      ],
+      [
+        "MMLU 去污染后准确率下降",
+        19.0,
+        "%（Inference-Time Decontamination）"
+      ],
+      [
+        "temperature=0 重复 1000 次得到的不同结果数",
+        80,
+        "个（batch 不变性缺失）"
+      ],
+      [
+        "替换为 batch 不变内核后的不同结果数",
+        1,
+        "个（1000 次完全一致）"
+      ]
+    ],
+    "conditions": "ITD（arXiv:2406.13990）：对泄漏样本做难度保持改写，GSM8K 8-shot CoT、MMLU 官方 5-shot、greedy；Thinking Machines Lab：vLLM + FlexAttention，temperature=0，重复 1000 次贪心采样。",
+    "limitations": "ITD 去污染依赖检测器精度（报告检测到 62.7%/79.4% 泄漏），残留污染仍会高估；其证明性实验为人工注入污染，下降幅度不能等同真实污染程度。非确定性实验来自单一团队、集中于 vLLM 与少数内核；batch 不变内核的端到端开销随实现而变。",
+    "interpretation": "两个方向相反的噪声同时存在：**污染让分数虚高**（GSM8K −22.9%、MMLU −19.0% 是挤掉水分后的下降），**非确定性让分数抖动**（同一提示、temperature=0、重复 1000 次竟得到 80 个不同结果，换成 batch 不变内核后才收敛为 1 个）。第18章说\"版本对比要先固定制品与运行条件\"，依据就在这里：不固定内核与批处理，连自己和自己都比不了。",
+    "display_table": "| 现象 | 数值 | 口径 |\n|---|---|---|\n| GSM8K 去污染后准确率下降 | 22.9 | %（Inference-Time Decontamination） |\n| MMLU 去污染后准确率下降 | 19.0 | %（Inference-Time Decontamination） |\n| temperature=0 重复 1000 次得到的不同结果数 | 80 | 个（batch 不变性缺失） |\n| 替换为 batch 不变内核后的不同结果数 | 1 | 个（1000 次完全一致） |",
+    "author_hardware_measured": false,
+    "plot": {
+      "type": "range_panels",
+      "panels": [
+        {
+          "title": "去污染后准确率下降（百分点）",
+          "xlabel": "下降 / %",
+          "kind": "bars",
+          "groups": [
+            "GSM8K",
+            "MMLU"
+          ],
+          "values": [
+            22.9,
+            19.0
+          ],
+          "colors": [
+            "#c0504d",
+            "#dd8830"
+          ],
+          "ylim": [
+            0,
+            28
+          ]
+        },
+        {
+          "title": "temperature=0 重复 1000 次的不同结果数",
+          "xlabel": "不同结果数 / 个",
+          "kind": "bars",
+          "groups": [
+            "默认内核",
+            "batch 不变内核"
+          ],
+          "values": [
+            80,
+            1
+          ],
+          "colors": [
+            "#c0504d",
+            "#198779"
+          ],
+          "ylim": [
+            0,
+            96
+          ]
+        }
+      ],
+      "id": "ch18_tp_nondet",
+      "title": "评测噪声的两个来源：基准污染与内核非确定性（第三方实测）"
+    },
+    "plot_note": "左：污染让分数虚高；右：非确定性让分数抖动，换 batch 不变内核后 1000 次收敛为 1。两者方向相反，须分别治理。"
+  }
+]

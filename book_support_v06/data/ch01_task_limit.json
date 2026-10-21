@@ -1,0 +1,27 @@
+{
+  "figure_id": "图1-V1",
+  "slug": "ch01_task_limit",
+  "chapter": 1,
+  "title": "单段优化能把任务缩短多少？",
+  "evidence_type": "TEACHING_CALCULATION",
+  "source": "本书1.1、1.8",
+  "conditions": "S7独立预取被覆盖；其余阶段与依赖不变；原始6.70s、Decode3.10s",
+  "limitations": "3.60s是条件化乐观下界，不是设备可达性能。",
+  "formula": "T=6.70-3.10*r",
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "原始任务",
+      6.7
+    ],
+    [
+      "Decode 缩短30%",
+      5.7700000000000005
+    ],
+    [
+      "Decode 理想归零",
+      3.6
+    ]
+  ],
+  "display_table": "| 方案 | 端到端/s | 相对原值减少/% |\n|---|---|---|\n| 原始任务 | 6.7 | 0.0 |\n| Decode 缩短30% | 5.77 | 13.88 |\n| Decode 理想归零 | 3.6 | 46.27 |"
+}

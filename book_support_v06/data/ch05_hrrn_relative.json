@@ -1,0 +1,27 @@
+{
+  "figure_id": "图5-V1",
+  "slug": "ch05_hrrn_relative",
+  "chapter": 5,
+  "title": "调度策略：均值改善与尾部改善不是一回事",
+  "evidence_type": "PUBLIC_RELATIVE_RESULT",
+  "source": "X08",
+  "conditions": "GLM-5.2 production trace；同发布说明的HRRN vs FCFS条目；未披露硬件及绝对时间",
+  "limitations": "100是归一化基线，不是100ms；不由两个标量生成延迟分布。",
+  "formula": "normalized=100*(1-reduction)",
+  "author_hardware_measured": false,
+  "records": [
+    [
+      "Mean TTFT",
+      100,
+      31,
+      "下降69%"
+    ],
+    [
+      "P99 TTFT",
+      100,
+      92,
+      "下降8%"
+    ]
+  ],
+  "display_table": "| 指标 | FCFS指数 | HRRN指数 | 公开降幅 |\n|---|---|---|---|\n| Mean TTFT | 100 | 31 | 下降69% |\n| P99 TTFT | 100 | 92 | 下降8% |"
+}
