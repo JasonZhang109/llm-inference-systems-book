@@ -4,7 +4,7 @@
 
 **18 章 · 61 张图 · 45 条证据缺口逐条核对 · 正文 CC BY 4.0**
 
-**作者 Jason Zhang**　·　公众号 **AI算力局**　·　[在线阅读](https://jasonzhang109.github.io/llm-inference-systems-book/)
+**作者 Jason Zhang**　·　公众号 [**AI算力局**](#作者与公众号)（[扫码关注](#作者与公众号)）　·　[在线阅读](https://jasonzhang109.github.io/llm-inference-systems-book/)
 
 ---
 
