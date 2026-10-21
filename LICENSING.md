@@ -23,7 +23,7 @@
 
 ```
 本文内容改编自《大模型推理系统工程：性能、诊断与优化》v0.10，
-作者 JasonZhang109（https://github.com/JasonZhang109/llm-inference-systems-book），
+作者 Jason Zhang（JasonZhang109，https://github.com/JasonZhang109/llm-inference-systems-book），
 依 CC BY 4.0 使用。
 ```
 
