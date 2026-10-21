@@ -83,7 +83,7 @@ v0.10 轮把 45 条证据缺口逐条对照公开资料：**31 条已补齐**、
 Settings → Pages → Source: Deploy from a branch → Branch: main / docs → Save
 ```
 
-几分钟后 GitHub 会给出站点地址，点开就是可分享的阅读链接。
+几分钟后，访问 **<https://jasonzhang109.github.io/llm-inference-systems-book/>** 即可。
 
 ## 仓库结构
 
@@ -145,9 +145,8 @@ python book_support_v08/code/replot_v08.py     # 例：重绘 v0.8 轮的 16 张
 
 ```
 《大模型推理系统工程：性能、诊断与优化》v0.10（2026）。
+https://github.com/JasonZhang109/llm-inference-systems-book
 ```
-
-在论文或内部文档里引用时，把本仓库的 URL 附在后面即可。
 
 ---
 
