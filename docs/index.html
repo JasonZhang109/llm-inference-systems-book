@@ -164,17 +164,10 @@ figure.fig figcaption{font-size:14px;color:var(--muted);margin-top:8px;line-heig
 <div class="chapter-body">
 <p><a id="ch-01"></a></p>
 <h2>第1章 一次推理请求的完整路径</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>先确定研究对象和测量边界，再讨论模型快慢；一次业务任务、一次接口请求和一次模型执行不是同一个单位。</p>
 <p><strong>开篇场景：</strong>同一段提示词，本地调用很快，通过业务接口却很慢。第一步不是更换加速卡，而是找出两条路径实际经过了什么。</p>
 <p><strong>本章产出：</strong>请求生命周期图、端到端时间线、系统档案和失败状态字典。</p>
 <p><strong>边界与衔接：</strong>本章建立对象与边界；指标精确定义以本工程的《指标字典与最小测量样例》（book_support_v05/metrics_dict_v05.md，正式编排进第7—9章）为准，观测工具展开在第9章，不提前把慢归因到某个组件。</p>
-<h3>本版范围与阅读约定</h3>
-<p>本版包含全书18章，保留章节编号、负载族 W01—W08 和 LAB 设计。配套的指标契约、公开案例、计算程序与图表见 <code>book_support_v05/</code>。硬件实验仍按各章 LAB 状态登记，不能因本次文字修订或引用公开实验而改为“作者已实测”。</p>
-<p>资源层级仍为：E0 普通计算机；E1 经授权的接口；E2 主机与设备内部观测；E3 单节点多设备；E4 多节点；E5 两类平台。新增加的 E0 计算和测试只验证公式、状态机样例及指标程序，不验证设备吞吐。文献来源使用 R/S/N 或 DOC-W 编号，负载族继续使用 W 编号，避免同号混淆。</p>
 <h3>本章导航</h3>
 <p>读完本章，你应该能够：</p>
 <ol>
@@ -17408,10 +17401,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-02"></a></p>
 <h2>第2章 Prefill、Decode 与模型执行</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>模型结构决定需要做哪些工作，负载与实现决定这些工作怎样消耗资源；<strong>不能把阶段名称直接当成瓶颈结论</strong>。</p>
 <p><strong>开篇场景：</strong>同一模型处理长文档和生成长答案，耗时结构可能不同。本章先解释工作量如何形成，再为后面的测试设计建立变量。</p>
 <p><strong>本章产出：</strong>模型执行图、关键张量形状表、输入输出工作量分解、以及一份<strong>分项状态账本</strong>。</p>
@@ -29620,10 +29609,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-03"></a></p>
 <h2>第3章 计算、显存、带宽与通信模型</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>性能模型用于给出<strong>有条件的边界与可检验预测</strong>，不是把理论峰值包装成业务吞吐。</p>
 <p><strong>开篇场景：</strong>两套设备峰值算力接近，服务表现却不同。需要把计算、数据移动和系统开销放进同一张账本，而不是继续比较单一规格。</p>
 <p><strong>本章产出：</strong>资源预算表、下界估算表、模型校准记录与瓶颈候选清单。</p>
@@ -46822,10 +46807,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-04"></a></p>
 <h2>第4章 KV Cache 与容量管理</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>KV Cache 是<strong>计算复用、内存分配和请求调度的交汇点</strong>；容量、命中和收益必须分开衡量。</p>
 <p><strong>开篇场景：</strong>设备还有显存，服务却开始抢占；缓存命中率很高，业务也未必明显变快。本章用状态账本拆开这些表面矛盾。</p>
 <p><strong>本章产出：</strong>按层状态估算器设计、缓存策略矩阵、容量压力报告。</p>
@@ -57273,10 +57254,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-05"></a></p>
 <h2>第5章 批处理、排队与调度</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>调度优化改变的是<strong>请求之间如何分享资源</strong>；吞吐提升必须同时检查尾延迟、公平性与拒绝成本。</p>
 <p><strong>开篇场景：</strong>测试时只保持固定并发，生产中却按外部节奏持续来请求。两种负载机制的差异，会直接改变我们对容量的理解。</p>
 <p><strong>本章产出：</strong>到达契约、调度参数语义表、延迟与公平性对照报告。</p>
@@ -67905,10 +67882,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-06"></a></p>
 <h2>第6章 多卡并行、拓扑与 MoE</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>多卡策略同时改变<strong>驻留方式、通信位置、执行粒度与副本数</strong>；四种影响必须在同一服务目标下一起比较，任何只看其中一项的结论都可能反向。</p>
 <p><strong>开篇场景：</strong>模型能在更多卡上运行，不等于单请求更快，也不等于同样卡数的集群容量更高。增加设备只有三种用途——装下模型、缩短单请求、服务更多请求——它们互相竞争同一批设备。</p>
 <p><strong>本章产出：</strong>并行布局候选表、通信账本、扩展效率与可行部署比较表。</p>
@@ -86858,10 +86831,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-07"></a></p>
 <h2>第7章 服务目标与性能指标</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>性能指标首先是一份统计契约：事件、边界、单位、样本、分母和聚合方式缺一不可。</p>
 <p><strong>开篇场景：</strong>两份报告都写着 TPOT，却得出不同结论。问题可能不在系统性能，而在首 Token、单 Token 请求与流式分块的处理方式。</p>
 <p><strong>本章产出：</strong>指标字典的工程化落地、SLO 契约模板、质量门槛，以及一组可手算、可写成单元测试的指标校验样本。</p>
@@ -102479,10 +102448,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-08"></a></p>
 <h2>第8章 业务负载与基准设计</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>可信基准的关键不是运行某条命令，而是让负载、质量、计量和实验条件足以支持目标结论。</p>
 <p><strong>开篇场景：</strong>重复同一段提示词能跑出漂亮数字，但它回答的是缓存友好负载的表现，不一定是生产容量。</p>
 <p><strong>本章产出：</strong>负载数据卡、实验矩阵、发压器自检清单、版本化测试清单与基准报告规范。</p>
@@ -111303,10 +111268,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-09"></a></p>
 <h2>第9章 监控、日志与性能剖析</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>观测的价值在于区分候选解释；采集更多数据并不自动形成更强证据。</p>
 <p><strong>开篇场景：</strong>GPU 利用率接近满载，不能单独说明有效算力已经用尽；系统级时间线和请求证据才帮助解释忙在何处。</p>
 <p><strong>本章产出：</strong>最小观测方案、事件关联表、局部 trace 分析方法和采集开销报告。</p>
@@ -119131,10 +119092,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-10"></a></p>
 <h2>第10章 瓶颈假设与受控实验</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>诊断不是给现象贴标签，而是提出<strong>可被区分</strong>的解释，再用最小干预逐步缩小原因范围。</p>
 <p><strong>开篇场景：</strong>TTFT 变长，可能是排队变长、预处理变慢、输入变长，也可能是执行路径变了，甚至可能是指标口径本身变了。先把这些解释拆开，才知道下一项测量应该是什么。</p>
 <p><strong>本章产出：</strong>问题卡、假设台账、排除过程、根因证据、带退出条件的整改建议。</p>
@@ -126583,10 +126540,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-11"></a></p>
 <h2>第11章 配置、执行与内存优化</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>每项优化都必须说明<strong>改动什么机制、在什么条件下成立、质量风险是什么、怎么回退、端到端怎么验收</strong>——而不是默认把所有功能都打开。</p>
 <p><strong>开篇场景：</strong>量化、图执行、推测解码都可能有价值，但一次全部打开，既不知道收益来自哪里，也无法在失败时恢复。</p>
 <p><strong>本章产出：</strong>优化决策卡、配置差异、质量与性能对照、回归与回滚记录。</p>
@@ -151274,10 +151227,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-12"></a></p>
 <h2>第12章 分布式推理服务：P/D 分离、状态传输与控制平面</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>架构价值必须在<strong>模型数据面</strong>与<strong>服务控制面</strong>共同验证——阶段独立配置可以减少干扰，但状态转移、路由、流控、版本变化与恢复会新增成本。</p>
 <p><strong>开篇场景：</strong>P/D 分离能跑通，不等于服务可以持续交付。面对长请求、缓存失效、版本更新与局部故障，系统仍需回答三个问题：<strong>请求交给谁、状态属于谁、失败后如何收场。</strong></p>
 <p><strong>本章产出：</strong>固定集成栈的系统图、依赖矩阵、状态转移账本、路由与版本状态机、共置对照与故障恢复设计。</p>
@@ -167145,10 +167094,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-13"></a></p>
 <h2>第13章 软件栈与硬件适配</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>兼容性是<strong>具体版本、模型、算子与功能组合</strong>的属性，不是某个框架名称或 API 声明的属性。</p>
 <p><strong>开篇场景：</strong>服务成功启动，只说明加载路径走通了。长上下文、量化、多卡、流式返回和取消功能仍可能需要<strong>分别验收</strong>。</p>
 <p><strong>本章产出：</strong>软件栈分层图、版本锁定清单、功能能力矩阵与最小冒烟测试。</p>
@@ -171339,10 +171284,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-14"></a></p>
 <h2>第14章 跨平台比较与迁移验收</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>跨平台比较必须先确定<strong>比较对象</strong>——硬件、软件实现，还是完整交付方案；<strong>无法控制的差异不能被隐去。</strong></p>
 <p><strong>开篇场景：</strong>两套平台都运行同一模型，却采用不同精度、并行度与算子。这个实验可以比较<strong>方案</strong>，但不能直接推导纯硬件优劣。</p>
 <p><strong>本章产出：</strong>可比性契约、迁移能力矩阵、质量与性能验收、有边界的迁移建议。</p>
@@ -183136,10 +183077,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-15"></a></p>
 <h2>第15章 国产加速器推理实践</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>国产实践采用<strong>具体软件栈与具体实验</strong>说话：先验证功能与质量，再诊断执行、通信与服务边界。</p>
 <p><strong>开篇场景：</strong>"能跑模型"与"满足业务要求"之间，还隔着环境匹配、执行路径、通信、可观测性与长运行验证。</p>
 <p><strong>本章产出：</strong>一个主案例的环境、基准、诊断、优化与迁移证据，以及其它后端的扩展规范。</p>
@@ -198305,10 +198242,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-16"></a></p>
 <h2>第16章 容量规划与扩容决策</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>容量是一组<strong>负载、质量与服务目标约束下的可用边界</strong>，不是设备数量乘以单卡峰值。</p>
 <p><strong>开篇场景：</strong>同样每天处理一百万次请求，均匀到达与集中在短时高峰，对系统的要求完全不同。</p>
 <p><strong>本章产出：</strong>分层容量包络、峰值与故障情景、扩容触发与回退方案。</p>
@@ -213650,10 +213583,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-17"></a></p>
 <h2>第17章 成本、效率与优化收益</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>成本必须与<strong>同一质量和服务目标下的有效完成量</strong>对应；<strong>资源释放、能力增加与现金节省是三种不同结果。</strong></p>
 <p><strong>开篇场景：</strong>每秒输出更多 Token，并不意味着每个成功业务任务更便宜。还要看实际需求、空闲时间、失败与维护成本。</p>
 <p><strong>本章产出：</strong>成本边界表、单位有效完成成本、敏感性分析与优化价值评估。</p>
@@ -231647,10 +231576,6 @@ z
 <div class="chapter-body">
 <p><a id="ch-18"></a></p>
 <h2>第18章 端到端案例、回归测试与版本治理</h2>
-<p><strong>版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。</strong></p>
-<blockquote>
-<p><strong>来源约定：</strong>计算核验范围以<a class="orig-file" data-orig="book_support_v05/data/e0_test_results.md" title="原始文件：book_support_v05/data/e0_test_results.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/data/e0_test_results.md">测试清单</a>为准；N系列是<a class="orig-file" data-orig="book_support_v05/references.md" title="原始文件：book_support_v05/references.md" href="https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/book_support_v05/references.md">本轮来源记录</a>，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。</p>
-</blockquote>
 <p><strong>核心论点：</strong>工程能力的终点不是得到一次最好结果，而是形成<strong>可复核、可回退、能随版本持续更新</strong>的证据与决策体系。</p>
 <p><strong>开篇场景：</strong>一次优化报告通过验收，几周后模型或框架升级，原先结论可能不再适用。最后一章处理如何把经验变成持续资产。</p>
 <p><strong>本章产出：</strong>完整案例包、回归矩阵、版本与证据治理规范、公开发布清单。</p>
