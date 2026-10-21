@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "如果本书对你的工作有帮助，请按以下格式引用。"
+title: "大模型推理系统工程：性能、诊断与优化"
+abstract: >-
+  从一次推理请求的完整路径出发，逐层拆解大模型推理服务的性能问题：
+  计算与带宽的 roofline 边界、KV Cache 的显存账本、批处理与调度的尾延迟取舍、
+  多卡通信与拓扑、SLO 与压测设计、瓶颈假设的受控实验，直到容量规划与单位有效 token 成本。
+  全书数值均标注来源编号、版本与检索日期，图表由仓库内脚本从数据文件重绘。
+version: "0.10"
+date-released: "2026-10-16"
+type: book
+authors:
+  - given-names: "Jason"
+    family-names: "Zhang"
+    alias: "JasonZhang109"
+    website: "https://github.com/JasonZhang109"
+repository-code: "https://github.com/JasonZhang109/llm-inference-systems-book"
+url: "https://jasonzhang109.github.io/llm-inference-systems-book/"
+license: "CC-BY-4.0"
+keywords:
+  - 大模型推理
+  - 推理系统
+  - 性能优化
+  - 容量规划
+  - KV Cache
+  - LLM inference
+  - inference systems
+  - performance engineering
+  - roofline

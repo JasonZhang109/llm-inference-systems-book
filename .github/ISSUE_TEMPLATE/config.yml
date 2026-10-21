@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 在线阅读（不需要提 issue）
+    url: https://jasonzhang109.github.io/llm-inference-systems-book/
+    about: 单文件离线版，带侧栏导航、全文搜索与图表画廊
+  - name: 公众号「AI算力局」
+    url: https://github.com/JasonZhang109/llm-inference-systems-book#作者与公众号
+    about: 勘误、框架行为变化、推理与算力方向的工程笔记

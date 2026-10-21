@@ -1,0 +1,34 @@
+name: 其他建议
+description: 结构、表达、阅读体验方面的意见，或想翻译/转载
+title: "[建议] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        技术错误请走「数据或来源错误」那个模板，这样能带上来源信息。
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 想说什么
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 结构与组织
+        - 表述与可读性
+        - 想补充的章节或主题
+        - 翻译 / 转载 / 商用
+        - 其他
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        转载、翻译、商用不需要事先征求同意——[CC BY 4.0](https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/LICENSE) 已经授权了，
+        只要署名。这里只是想知道它被用到了哪里。

@@ -99,6 +99,8 @@ Settings → Pages → Source: Deploy from a branch → Branch: main / docs → 
 ├── 导读_v0.10.md                        按需求找文件
 ├── docs/index.html                      离线阅读版（单文件，供 Pages 使用）
 ├── assets/                              仓库配图（公众号二维码等）
+├── .github/ISSUE_TEMPLATE/              报错模板（数值/来源错误、其他建议）
+├── CITATION.cff                         机器可读的引用信息
 └── book_support_v05 … v10/              各轮增补的图表、数据与绘图脚本
     ├── figures/                         SVG（正文引用）+ PNG
     ├── data/                            图背后的数值（CSV / JSON）
@@ -152,6 +154,8 @@ python book_support_v08/code/replot_v08.py     # 例：重绘 v0.8 轮的 16 张
 《大模型推理系统工程：性能、诊断与优化》v0.10（2026）。
 Jason Zhang. https://github.com/JasonZhang109/llm-inference-systems-book
 ```
+
+同一份信息也写在 [`CITATION.cff`](CITATION.cff) 里，GitHub 右侧栏会因此出现 **Cite this repository** 按钮，可以一键导出 BibTeX / APA。
 
 ## 作者与公众号
 

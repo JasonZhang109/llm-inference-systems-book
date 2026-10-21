@@ -1,0 +1,58 @@
+name: 数据或来源错误
+description: 书里的某个数字、版本号、或来源链接与官方资料对不上
+title: "[数据] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        按 [CONTRIBUTING](https://github.com/JasonZhang109/llm-inference-systems-book/blob/main/CONTRIBUTING.md) 的硬规矩，
+        **涉及数值的改动必须附可定位的来源**：URL + 版本号（tag / commit / 文档版本）+ 引用的那一句 + 检索日期。
+        只有「我觉得不对」的反馈会先放着，等来源齐了再改。
+
+  - type: input
+    id: location
+    attributes:
+      label: 位置
+      description: 第几章 + 小节标题 + 那一句原文（能直接搜到最好）
+      placeholder: 第 03 章 · 3.4 显存账本 · 「H100 的 HBM 带宽为 3.35 TB/s」
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: 书里是怎么写的
+      description: 贴原文，或给出页码 / 行号。如果有推算过程，一并说明。
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: 官方来源
+      description: |
+        URL + 版本号 + 引用的那一句 + 检索日期。
+        例：https://docs.nvidia.com/... （2026-09-20 检索，v12.4）「HBM3 bandwidth up to 3.35 TB/s」
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 数值本身错了
+        - 数值对，但条件/边界没写清（峰值当实测之类）
+        - 来源链接失效或版本对不上
+        - 图与正文数据不一致
+        - 术语或定义不一致
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我理解本书的数值来自公开资料整理与工程推导，不是作者自建集群的实测
+          required: true
