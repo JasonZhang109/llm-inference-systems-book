@@ -383,7 +383,7 @@ $$G_p(\mathcal W)=\lfloor G/p\rfloor\,g_p(\mathcal W),$$
 <a id="sec-06-09"></a>
 ### 6.9 实验图表补充：把MoE偏斜从一句话变成rank负载图
 
-本章6.5节设置4096个Token、top-2路由、8个rank，总共8192次Token—专家指派。用原稿负载向量作图后，可直接看到最忙rank为1536，平均1024，偏斜系数1.5。这里只核验指派次数与算术，不声称拿到了真实路由trace。
+本章6.5节设置4096个Token、top-2路由、8个rank，总共8192次Token—专家指派。用 6.5 节的负载向量作图后，可直接看到最忙rank为1536，平均1024，偏斜系数1.5。这里只核验指派次数与算术，不声称拿到了真实路由trace。
 
 若每次指派的计算成本一致、同步步骤必须等最慢rank完成，那么用平均1024代替最忙1536，会把可服务能力高估约50%；等价地，最忙约束下的能力为均匀理想值的2/3。这不等于服务时延必然变成1.5倍，因为真实系统还有共享专家、不同内核效率、通信与计算重叠，以及不相等的专家Token分布。
 
@@ -417,7 +417,7 @@ $$G_p(\mathcal W)=\lfloor G/p\rfloor\,g_p(\mathcal W),$$
 <a id="sec-06-10"></a>
 ### 6.10 实验深化补充：通信成本既随批大小变，也随通信域变
 
-本章v0.6只有rank偏斜与官方规格roofline。本轮补三组可核验的通信微基准，把“多卡通信很贵”拆成可测的两条轴：**批大小**与**通信域**。
+本章前面只有 rank 偏斜与官方规格 roofline。这一节补三组可核验的通信微基准，把“多卡通信很贵”拆成可测的两条轴：**批大小**与**通信域**。
 
 **轴一，批大小（TensorRT-LLM NVLink One-Sided AlltoAll，GB200 NVL72，EP8，BF16，DeepSeek-V3结构profile）。**每rank batch从1增到2048时，dispatch从18.9μs升到311.8μs，combine从31.0μs升到322.6μs。batch1—32阶段时延近乎常数（dispatch 17.6—18.9μs），说明这是启动/固定开销主导；到batch128以后明显进入带宽项（逻辑GB/s由6.07升到753.28）。**这解释了为什么Decode小批和Prefill大批走的是不同的瓶颈路径。**
 
@@ -519,7 +519,7 @@ $$G_p(\mathcal W)=\lfloor G/p\rfloor\,g_p(\mathcal W),$$
 
 ---
 
-### 本版配套资料
+### 配套资料
 
 [新增图表与数据](book_support_v05/figures.md) · [来源登记](book_support_v05/references.md) · [E0测试清单](book_support_v05/data/e0_test_results.md) · [修订记录](book_support_v05/review/changes.md)
 

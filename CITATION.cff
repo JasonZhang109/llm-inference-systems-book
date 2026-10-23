@@ -6,8 +6,8 @@ abstract: >-
   计算与带宽的 roofline 边界、KV Cache 的显存账本、批处理与调度的尾延迟取舍、
   多卡通信与拓扑、SLO 与压测设计、瓶颈假设的受控实验，直到容量规划与单位有效 token 成本。
   全书数值均标注来源编号、版本与检索日期，图表由仓库内脚本从数据文件重绘。
-version: "0.10"
-date-released: "2026-10-16"
+version: "0.12"
+date-released: "2026-10-23"
 type: book
 authors:
   - given-names: "Jason"

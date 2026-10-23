@@ -636,9 +636,9 @@ Qwen每Token逻辑KV为 $2\times28\times4\times128\times2=57344$ 字节，即56 
 <!-- V06-END -->
 <!-- V08-START -->
 <a id="sec-02-10"></a>
-### 2.10 第三方数据补充（v0.8）：KV 池占多大，长上下文又把内存推到哪
+### 2.10 第三方数据补充：KV 池占多大，长上下文又把内存推到哪
 
-本章 v0.6 用配置推导说明"KV 随并发线性涨"。本轮补两组第三方数据：**公开部署里 KV 池的真实占比**，以及**长上下文把内存推到什么量级**。
+本章前面用配置推导说明"KV 随并发线性涨"。这一节补两组第三方数据：**公开部署里 KV 池的真实占比**，以及**长上下文把内存推到什么量级**。
 
 **KV 池占多大（PagedAttention/vLLM，SOSP 2023，Table 1；OPT-13B/66B/175B，GCP A2）。**三个部署配置里，KV 池分别为 12 GB、21 GB、264 GB，占总显存的 30%–41%；参数量占 65%–54%。**"KV Cache 是瓶颈"这句话只在特定规模与长度下成立**：13B 单卡部署时，权重仍是最大那一项。这也是为什么"把池内利用率提上去"（分页管理）比"单纯加显存"更先被采用。
 
@@ -712,7 +712,7 @@ Qwen每Token逻辑KV为 $2\times28\times4\times128\times2=57344$ 字节，即56 
 
 ---
 
-### 本版配套资料
+### 配套资料
 
 [新增图表与数据](book_support_v05/figures.md) · [来源登记](book_support_v05/references.md) · [E0测试清单](book_support_v05/data/e0_test_results.md) · [修订记录](book_support_v05/review/changes.md)
 
