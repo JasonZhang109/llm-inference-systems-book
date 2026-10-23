@@ -1,17 +1,7 @@
 <a id="ch-04"></a>
 ## 第4章 KV Cache 与容量管理
 
-**版本：v0.10 公开来源补齐版（2026-10-05）。保留 v0.5 正文与 v0.6／v0.7／v0.8／v0.9 各轮增补节；新增 x.11 口径核对节，逐条落到可定位版本的公开来源上。全书内容为公开资料整理与工程推理；引用公开数据处均标注可定位的来源。**
-
-> **来源约定：**计算核验范围以[测试清单](book_support_v05/data/e0_test_results.md)为准；N系列是[本轮来源记录](book_support_v05/references.md)，R/S及DOC别名保留原稿来源身份。各轮新增图均为可重绘资产。
-
 **核心论点：**KV Cache 是**计算复用、内存分配和请求调度的交汇点**；容量、命中和收益必须分开衡量。
-
-**开篇场景：**设备还有显存，服务却开始抢占；缓存命中率很高，业务也未必明显变快。本章用状态账本拆开这些表面矛盾。
-
-**本章产出：**按层状态估算器设计、缓存策略矩阵、容量压力报告。
-
-**边界与衔接：**本章解释缓存机制与资源后果；部署调参放第11章，跨节点状态转移放第12章。
 
 ### 本章贯穿的模型参数
 
@@ -488,5 +478,5 @@ Mooncake 的 Transfer Engine 支持 TCP、RDMA(RoCE)、AWS EFA、NVMe-oF、NVLin
 
 NIXL 通过插件抽象异构内存与存储，插件清单包括 UCX、GDS/GDS_MT、POSIX、OBJ、AZURE_BLOB、HF3FS、MOONCAKE、GUSLI、UCCL、LIBFABRIC 与 GPUNETIO。其限制是**仅支持 Linux**（官方声明 "supported on a Linux environment only"，测试于 Ubuntu 22.04/24.04 与 Fedora），macOS 与 Windows 不受支持；ROCm 上 LIBFABRIC 因头文件重构而禁用（列在 Known gaps），且尚无 NVSHMEM 等价后端。NIXL 的 README 页未在正文中写死版本号，也未提及与 vLLM / SGLang / TensorRT-LLM / LMCache 的集成关系——集成关系需另据各引擎文档确认，不能从 NIXL 侧单方面断言。
 
-> **v0.11 补充（检索日 2026-10-09）**：① NIXL 版本可由 **GitHub release** 定位，截至检索日最新为 **v1.5.0**（2026-09-30）；README 仅以徽章动态引用版本，故引用应写 tag。② v1.5.0 的 Known Issues 补充了一条平台限制：`pip install nixl` **不会自动安装 ROCm wheel**，新增的 dispatcher 支持需要另行安装 `nixl_rocm` 后端——即 ROCm 支持存在但不完整。③ **集成关系的证据等级**：NIXL 仓库未声明与上述引擎的集成；该说法出自 **NVIDIA 官方技术博客**（"NIXL is already a key component of many AI inference frameworks such as NVIDIA Dynamo, NVIDIA TensorRT LLM, vLLM, SGLang, Anyscale Ray, LMCache"）。书中引用时必须标明是"NVIDIA 博客声明"而非"NIXL 官方仓库声明"。④ Mooncake 的 87 / 190 GB/s 与 2.4× / 4.6× 是 **README 自述数据**，未随文披露可复现脚本与拓扑，只能写"官方 README 称"。
+> **核对补充（2026-10-09）**：① NIXL 版本可由 **GitHub release** 定位，截至检索日最新为 **v1.5.0**（2026-09-30）；README 仅以徽章动态引用版本，故引用应写 tag。② v1.5.0 的 Known Issues 补充了一条平台限制：`pip install nixl` **不会自动安装 ROCm wheel**，新增的 dispatcher 支持需要另行安装 `nixl_rocm` 后端——即 ROCm 支持存在但不完整。③ **集成关系的证据等级**：NIXL 仓库未声明与上述引擎的集成；该说法出自 **NVIDIA 官方技术博客**（"NIXL is already a key component of many AI inference frameworks such as NVIDIA Dynamo, NVIDIA TensorRT LLM, vLLM, SGLang, Anyscale Ray, LMCache"）。书中引用时必须标明是"NVIDIA 博客声明"而非"NIXL 官方仓库声明"。④ Mooncake 的 87 / 190 GB/s 与 2.4× / 4.6× 是 **README 自述数据**，未随文披露可复现脚本与拓扑，只能写"官方 README 称"。
 <!-- V10-END -->
